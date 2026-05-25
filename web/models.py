@@ -31,9 +31,11 @@ class Actor(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     notes = Column(Text, default="")
+    speaker_id = Column(Integer, ForeignKey("speakers.id", ondelete="SET NULL"), nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     projects = relationship("Project", secondary=project_actor, back_populates="actors")
+    speaker = relationship("Speaker")
 
 
 class AudioResource(Base):
