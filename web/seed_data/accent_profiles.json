@@ -1,0 +1,231 @@
+[
+  {
+    "name": "General American",
+    "description": "Standard American English reference accent, rhotic with no strongly marked regional features. Used as a broadcast standard and baseline for comparison.",
+    "region_path": "us",
+    "patterns": [
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.95, "notes": "Full rhoticity maintained in all positions"},
+      {"expected_phone": "ɑː", "actual_phone": "ɑ", "frequency": 0.90, "notes": "LOT vowel: unrounded open back"},
+      {"expected_phone": "ɔː", "actual_phone": "ɑ", "frequency": 0.70, "notes": "COT-CAUGHT merger (partial in many speakers)"},
+      {"expected_phone": "t", "actual_phone": "ɾ", "frequency": 0.85, "notes": "Intervocalic /t/ flapping (butter, water)"},
+      {"expected_phone": "ʌ", "actual_phone": "ə", "frequency": 0.60, "notes": "STRUT vowel reduced in unstressed positions"}
+    ]
+  },
+  {
+    "name": "Southern US",
+    "description": "Broad Southern American English accent, characterized by the Southern Vowel Shift, monophthongization, and pin-pen merger.",
+    "region_path": "us/south",
+    "patterns": [
+      {"expected_phone": "aɪ", "actual_phone": "aː", "frequency": 0.90, "notes": "PRICE monophthongization: /aɪ/ → [aː]"},
+      {"expected_phone": "ɪ", "actual_phone": "ɛ", "frequency": 0.80, "notes": "PIN-PEN merger: /ɪ/ → [ɛ] before nasals"},
+      {"expected_phone": "eɪ", "actual_phone": "ɛɪ", "frequency": 0.75, "notes": "FACE lowering (Southern Vowel Shift)"},
+      {"expected_phone": "iː", "actual_phone": "ɪi", "frequency": 0.70, "notes": "FLEECE diphthongization: /iː/ → [ɪi]"},
+      {"expected_phone": "ɛ", "actual_phone": "ɛɪ", "frequency": 0.65, "notes": "DRESS raising and diphthongization"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.85, "notes": "Rhoticity preserved (non-coastal Southern)"},
+      {"expected_phone": "aʊ", "actual_phone": "æə", "frequency": 0.55, "notes": "MOUTH fronting: /aʊ/ → [æə]"}
+    ]
+  },
+  {
+    "name": "New York City",
+    "description": "Classic New York City English accent with THOUGHT-raising, variable non-rhoticity, and distinctive short-a split.",
+    "region_path": "us/ny/new_york_city",
+    "patterns": [
+      {"expected_phone": "ɔː", "actual_phone": "ʊə", "frequency": 0.85, "notes": "THOUGHT raising: /ɔː/ → [ʊə]"},
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.55, "notes": "Non-rhoticity (variable, declining in younger speakers)"},
+      {"expected_phone": "æ", "actual_phone": "eə", "frequency": 0.80, "notes": "TRAP tensing/raising before nasals and voiced stops"},
+      {"expected_phone": "ɝ", "actual_phone": "ɜɪ", "frequency": 0.60, "notes": "NURSE vowel diphthongization (traditional)"},
+      {"expected_phone": "ɑː", "actual_phone": "ɑː", "frequency": 0.75, "notes": "LOT remains distinct from THOUGHT (no merger)"},
+      {"expected_phone": "t", "actual_phone": "ʔ", "frequency": 0.50, "notes": "Glottal stop for /t/ in certain positions"}
+    ]
+  },
+  {
+    "name": "Boston",
+    "description": "Eastern New England accent centered on Boston, characterized by non-rhoticity, BATH-broadening, and distinctive LOT vowel.",
+    "region_path": "us/ma/boston",
+    "patterns": [
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.75, "notes": "Non-rhoticity: r-dropping in coda position (pahk the cah)"},
+      {"expected_phone": "ɑː", "actual_phone": "ɒː", "frequency": 0.70, "notes": "LOT rounding: rounded open back vowel"},
+      {"expected_phone": "æ", "actual_phone": "ɑː", "frequency": 0.65, "notes": "BATH-broadening: /æ/ → [ɑː] in BATH words"},
+      {"expected_phone": "ɔː", "actual_phone": "ɔː", "frequency": 0.80, "notes": "THOUGHT vowel maintained distinct from LOT"},
+      {"expected_phone": "Ø", "actual_phone": "ɹ", "frequency": 0.45, "notes": "Intrusive /r/ between vowels (idea-r-of)"},
+      {"expected_phone": "aɪ", "actual_phone": "ɐɪ", "frequency": 0.50, "notes": "PRICE vowel with raised onset"}
+    ]
+  },
+  {
+    "name": "Philadelphia / Delaware County (Delco)",
+    "description": "Southeastern Pennsylvania accent, characterized by raised TRAP vowel, fronted GOAT, distinctive /oʊ/ realization, and local vocabulary.",
+    "region_path": "us/pa/delaware_county",
+    "patterns": [
+      {"expected_phone": "æ", "actual_phone": "eə", "frequency": 0.85, "notes": "TRAP raising before nasals (‘man’, ‘hand’)"},
+      {"expected_phone": "oʊ", "actual_phone": "əʊ", "frequency": 0.70, "notes": "GOAT fronting: /oʊ/ → [əʊ]"},
+      {"expected_phone": "l", "actual_phone": "ʊ", "frequency": 0.60, "notes": "L-vocalization in syllable-final position"},
+      {"expected_phone": "ɔː", "actual_phone": "ʊə", "frequency": 0.55, "notes": "THOUGHT vowel shift (water → wooder)"},
+      {"expected_phone": "aʊ", "actual_phone": "ɛə", "frequency": 0.50, "notes": "MOUTH fronting: /aʊ/ → [ɛə]"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.90, "notes": "Full rhoticity maintained"}
+    ]
+  },
+  {
+    "name": "Midwestern / North Central",
+    "description": "Upper Midwest accent (Minnesota, Wisconsin, Dakotas) with COT-CAUGHT merger, Canadian raising features, and Scandinavian-influenced prosody.",
+    "region_path": "us/midwest",
+    "patterns": [
+      {"expected_phone": "ɔː", "actual_phone": "ɑ", "frequency": 0.90, "notes": "COT-CAUGHT merger: complete in most speakers"},
+      {"expected_phone": "aʊ", "actual_phone": "əʊ", "frequency": 0.65, "notes": "Canadian raising of MOUTH: raised onset before voiceless"},
+      {"expected_phone": "aɪ", "actual_phone": "əɪ", "frequency": 0.60, "notes": "Canadian raising of PRICE: raised onset before voiceless"},
+      {"expected_phone": "æ", "actual_phone": "eə", "frequency": 0.55, "notes": "TRAP raising (part of Northern Cities Shift in some areas)"},
+      {"expected_phone": "oʊ", "actual_phone": "oː", "frequency": 0.50, "notes": "GOAT monophthongization: /oʊ/ → [oː]"},
+      {"expected_phone": "eɪ", "actual_phone": "eː", "frequency": 0.45, "notes": "FACE monophthongization in some speakers"}
+    ]
+  },
+  {
+    "name": "Pacific Northwest",
+    "description": "Pacific Northwest accent (Oregon, Washington) with COT-CAUGHT merger, Canadian raising, and fronted GOOSE vowel.",
+    "region_path": "us/pacific_northwest",
+    "patterns": [
+      {"expected_phone": "ɔː", "actual_phone": "ɑ", "frequency": 0.90, "notes": "COT-CAUGHT merger: complete"},
+      {"expected_phone": "uː", "actual_phone": "ʉː", "frequency": 0.70, "notes": "GOOSE fronting: /uː/ → [ʉː]"},
+      {"expected_phone": "aɪ", "actual_phone": "əɪ", "frequency": 0.45, "notes": "Canadian raising of PRICE (before voiceless consonants)"},
+      {"expected_phone": "æ", "actual_phone": "æ", "frequency": 0.85, "notes": "TRAP vowel remains low front (no raising)"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.95, "notes": "Full rhoticity maintained"}
+    ]
+  },
+  {
+    "name": "Appalachian",
+    "description": "Appalachian English accent found across the mountain regions of WV, KY, TN, and surrounding areas. Preserves older English features.",
+    "region_path": "us/appalachia",
+    "patterns": [
+      {"expected_phone": "aɪ", "actual_phone": "aː", "frequency": 0.90, "notes": "PRICE monophthongization in all environments"},
+      {"expected_phone": "ɪ", "actual_phone": "ɛ", "frequency": 0.75, "notes": "PIN-PEN merger: /ɪ/ → [ɛ] before nasals"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.90, "notes": "Strong rhoticity preserved"},
+      {"expected_phone": "ɛ", "actual_phone": "ɛə", "frequency": 0.55, "notes": "DRESS diphthongization before /l/"},
+      {"expected_phone": "aʊ", "actual_phone": "æʊ", "frequency": 0.60, "notes": "MOUTH fronting: raised and fronted onset"},
+      {"expected_phone": "z", "actual_phone": "d", "frequency": 0.40, "notes": "Final /z/ devoicing or stopping in some words (idn’t for isn’t)"},
+      {"expected_phone": "ŋ", "actual_phone": "n", "frequency": 0.65, "notes": "G-dropping: /ŋ/ → [n] in -ing words"}
+    ]
+  },
+  {
+    "name": "Received Pronunciation (RP)",
+    "description": "Standard British English reference accent, non-rhotic with clear distinction between LOT and THOUGHT, and traditional vowel system.",
+    "region_path": "gb",
+    "patterns": [
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.95, "notes": "Non-rhoticity: no /r/ in coda position"},
+      {"expected_phone": "ɑː", "actual_phone": "ɒ", "frequency": 0.90, "notes": "LOT vowel: rounded open back [ɒ]"},
+      {"expected_phone": "æ", "actual_phone": "ɑː", "frequency": 0.80, "notes": "BATH-broadening: /æ/ → [ɑː] in BATH words"},
+      {"expected_phone": "oʊ", "actual_phone": "əʊ", "frequency": 0.85, "notes": "GOAT centralized onset: /oʊ/ → [əʊ]"},
+      {"expected_phone": "t", "actual_phone": "t", "frequency": 0.90, "notes": "Fully released /t/ (no flapping or glottalization)"},
+      {"expected_phone": "ʌ", "actual_phone": "ʌ", "frequency": 0.85, "notes": "STRUT vowel distinct from FOOT (FOOT-STRUT split)"}
+    ]
+  },
+  {
+    "name": "Cockney",
+    "description": "Traditional working-class London accent with TH-fronting, H-dropping, L-vocalization, and distinctive vowel shifts.",
+    "region_path": "gb/england/london",
+    "patterns": [
+      {"expected_phone": "θ", "actual_phone": "f", "frequency": 0.90, "notes": "TH-fronting: voiceless /θ/ → [f]"},
+      {"expected_phone": "ð", "actual_phone": "v", "frequency": 0.85, "notes": "TH-fronting: voiced /ð/ → [v]"},
+      {"expected_phone": "h", "actual_phone": "Ø", "frequency": 0.90, "notes": "H-dropping: initial /h/ deleted"},
+      {"expected_phone": "l", "actual_phone": "ʊ", "frequency": 0.85, "notes": "L-vocalization: dark /l/ → [ʊ] (milk → miʊk)"},
+      {"expected_phone": "t", "actual_phone": "ʔ", "frequency": 0.80, "notes": "T-glottalization: /t/ → [ʔ] intervocalically and finally"},
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.90, "notes": "Non-rhoticity"},
+      {"expected_phone": "eɪ", "actual_phone": "aɪ", "frequency": 0.75, "notes": "FACE lowering: /eɪ/ → [aɪ]"},
+      {"expected_phone": "aɪ", "actual_phone": "ɒɪ", "frequency": 0.70, "notes": "PRICE backing: /aɪ/ → [ɒɪ]"}
+    ]
+  },
+  {
+    "name": "Geordie (Newcastle)",
+    "description": "Tyneside English accent from Newcastle upon Tyne area, one of the most distinctive UK accents with preserved older English features.",
+    "region_path": "gb/england/tyne_and_wear",
+    "patterns": [
+      {"expected_phone": "eɪ", "actual_phone": "iə", "frequency": 0.80, "notes": "FACE centering diphthong: /eɪ/ → [iə]"},
+      {"expected_phone": "oʊ", "actual_phone": "uə", "frequency": 0.75, "notes": "GOAT centering: /oʊ/ → [uə]"},
+      {"expected_phone": "aʊ", "actual_phone": "əʊ", "frequency": 0.70, "notes": "MOUTH raising: /aʊ/ → [əʊ]"},
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.85, "notes": "Non-rhoticity"},
+      {"expected_phone": "t", "actual_phone": "ʔ", "frequency": 0.70, "notes": "Glottal replacement of /t/"},
+      {"expected_phone": "h", "actual_phone": "h", "frequency": 0.80, "notes": "H-retention (unlike many English dialects)"},
+      {"expected_phone": "ʌ", "actual_phone": "ʊ", "frequency": 0.65, "notes": "No FOOT-STRUT split: /ʌ/ → [ʊ]"}
+    ]
+  },
+  {
+    "name": "Scouse (Liverpool)",
+    "description": "Liverpool English accent with distinctive intonation, lenition of stops, and unique vowel system influenced by Irish and Welsh English.",
+    "region_path": "gb/england/merseyside",
+    "patterns": [
+      {"expected_phone": "k", "actual_phone": "x", "frequency": 0.75, "notes": "Velar fricative lenition: /k/ → [x] (book → [bʊx])"},
+      {"expected_phone": "t", "actual_phone": "ts", "frequency": 0.70, "notes": "T-affrication: /t/ → [ts] in certain positions"},
+      {"expected_phone": "θ", "actual_phone": "t", "frequency": 0.65, "notes": "TH-stopping: /θ/ → [t] (Irish substrate influence)"},
+      {"expected_phone": "ð", "actual_phone": "d", "frequency": 0.65, "notes": "TH-stopping: /ð/ → [d]"},
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.85, "notes": "Non-rhoticity"},
+      {"expected_phone": "ʌ", "actual_phone": "ʊ", "frequency": 0.70, "notes": "No FOOT-STRUT split"},
+      {"expected_phone": "eɪ", "actual_phone": "eː", "frequency": 0.60, "notes": "FACE monophthongization"}
+    ]
+  },
+  {
+    "name": "Scottish English",
+    "description": "Scottish Standard English accent, rhotic with FOOT-GOOSE merger, distinctive vowel length system, and strong rhoticity.",
+    "region_path": "gb/scotland",
+    "patterns": [
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.95, "notes": "Full rhoticity: /r/ in all positions"},
+      {"expected_phone": "uː", "actual_phone": "ʉ", "frequency": 0.85, "notes": "FOOT-GOOSE merger: both realized as [ʉ]"},
+      {"expected_phone": "ʊ", "actual_phone": "ʉ", "frequency": 0.80, "notes": "FOOT-GOOSE merger: FOOT raised"},
+      {"expected_phone": "ɔː", "actual_phone": "ɔ", "frequency": 0.85, "notes": "No COT-CAUGHT distinction (both short)"},
+      {"expected_phone": "aɪ", "actual_phone": "ae", "frequency": 0.60, "notes": "PRICE with open front onset"},
+      {"expected_phone": "x", "actual_phone": "x", "frequency": 0.50, "notes": "Retention of voiceless velar fricative /x/ (loch)"},
+      {"expected_phone": "ʌ", "actual_phone": "ʌ", "frequency": 0.80, "notes": "STRUT-FOOT distinction maintained in SSE"}
+    ]
+  },
+  {
+    "name": "Irish English",
+    "description": "Hiberno-English accent, characterized by dental stops for TH, distinctive rhoticity, and preserved vowel distinctions from Irish substrate.",
+    "region_path": "ie",
+    "patterns": [
+      {"expected_phone": "θ", "actual_phone": "t̪", "frequency": 0.85, "notes": "TH-stopping: /θ/ → dental [t̪]"},
+      {"expected_phone": "ð", "actual_phone": "d̪", "frequency": 0.85, "notes": "TH-stopping: /ð/ → dental [d̪]"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.90, "notes": "Rhoticity: /r/ preserved in all positions"},
+      {"expected_phone": "ʌ", "actual_phone": "ʊ", "frequency": 0.60, "notes": "STRUT realized as [ʊ] (no FOOT-STRUT split in some dialects)"},
+      {"expected_phone": "aɪ", "actual_phone": "ɔɪ", "frequency": 0.55, "notes": "PRICE backing: rounded onset in Dublin English"},
+      {"expected_phone": "t", "actual_phone": "tʰ", "frequency": 0.50, "notes": "Strong aspiration of voiceless stops"}
+    ]
+  },
+  {
+    "name": "Australian English",
+    "description": "General Australian accent with characteristic vowel shifts, non-rhoticity, and distinctive diphthong realizations.",
+    "region_path": "au",
+    "patterns": [
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.90, "notes": "Non-rhoticity: no coda /r/"},
+      {"expected_phone": "eɪ", "actual_phone": "æɪ", "frequency": 0.80, "notes": "FACE lowering: /eɪ/ → [æɪ]"},
+      {"expected_phone": "aɪ", "actual_phone": "ɒɪ", "frequency": 0.75, "notes": "PRICE backing: /aɪ/ → [ɒɪ]"},
+      {"expected_phone": "iː", "actual_phone": "əɪ", "frequency": 0.60, "notes": "FLEECE centralized in broad Australian"},
+      {"expected_phone": "æ", "actual_phone": "ɛ", "frequency": 0.55, "notes": "TRAP raising: /æ/ → [ɛ]"},
+      {"expected_phone": "ɛ", "actual_phone": "e", "frequency": 0.50, "notes": "DRESS raising: /ɛ/ → [e]"},
+      {"expected_phone": "t", "actual_phone": "ɾ", "frequency": 0.55, "notes": "Intervocalic /t/ flapping (similar to GenAm)"}
+    ]
+  },
+  {
+    "name": "South African English",
+    "description": "General South African English with distinctive KIT-split, PRICE monophthongization, and raised TRAP vowel.",
+    "region_path": "za",
+    "patterns": [
+      {"expected_phone": "ɪ", "actual_phone": "ə", "frequency": 0.85, "notes": "KIT centralization: /ɪ/ → [ə] (KIT-split)"},
+      {"expected_phone": "ɹ", "actual_phone": "Ø", "frequency": 0.80, "notes": "Non-rhoticity (in most varieties)"},
+      {"expected_phone": "aɪ", "actual_phone": "ɑː", "frequency": 0.60, "notes": "PRICE monophthongization in broad SAE"},
+      {"expected_phone": "eɪ", "actual_phone": "ɛɪ", "frequency": 0.55, "notes": "FACE lowered onset"},
+      {"expected_phone": "æ", "actual_phone": "ɛ", "frequency": 0.65, "notes": "TRAP raising: /æ/ → [ɛ]"},
+      {"expected_phone": "ʌ", "actual_phone": "a", "frequency": 0.50, "notes": "STRUT lowering and fronting"}
+    ]
+  },
+  {
+    "name": "Indian English",
+    "description": "General Indian English accent influenced by Hindi/Dravidian phonology, with retroflex consonants, variable aspiration, and monophthongal vowels.",
+    "region_path": "in",
+    "patterns": [
+      {"expected_phone": "t", "actual_phone": "ʈ", "frequency": 0.80, "notes": "Retroflex /t/: alveolar → retroflex [ʈ]"},
+      {"expected_phone": "d", "actual_phone": "ɖ", "frequency": 0.80, "notes": "Retroflex /d/: alveolar → retroflex [ɖ]"},
+      {"expected_phone": "θ", "actual_phone": "tʰ", "frequency": 0.75, "notes": "TH realization as aspirated dental stop"},
+      {"expected_phone": "ð", "actual_phone": "dʰ", "frequency": 0.75, "notes": "Voiced TH realization as aspirated dental stop"},
+      {"expected_phone": "v", "actual_phone": "ʋ", "frequency": 0.70, "notes": "V-W merger: /v/ realized as labiodental approximant [ʋ]"},
+      {"expected_phone": "eɪ", "actual_phone": "eː", "frequency": 0.85, "notes": "FACE monophthongization: /eɪ/ → [eː]"},
+      {"expected_phone": "oʊ", "actual_phone": "oː", "frequency": 0.85, "notes": "GOAT monophthongization: /oʊ/ → [oː]"},
+      {"expected_phone": "ɹ", "actual_phone": "ɹ", "frequency": 0.90, "notes": "Full rhoticity (rhotic in all positions)"}
+    ]
+  }
+]
