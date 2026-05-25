@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { SpeakerSample } from "../types";
+import SourceBadge from "./SourceBadge";
 
 interface SampleCardProps {
   sample: SpeakerSample;
@@ -33,11 +34,14 @@ export default function SampleCard({ sample }: SampleCardProps) {
     >
       <div className="flex items-start justify-between gap-2">
         <div className="font-medium text-white truncate">{sample.speaker_name || `Speaker #${sample.speaker_id}`}</div>
-        {sample.is_curated && (
-          <span className="shrink-0 text-xs bg-green-600/20 text-green-400 px-1.5 py-0.5 rounded">
-            Curated
-          </span>
-        )}
+        <div className="flex gap-1 shrink-0">
+          {(sample as any).source && <SourceBadge source={(sample as any).source} />}
+          {sample.is_curated && (
+            <span className="text-xs bg-green-600/20 text-green-400 px-1.5 py-0.5 rounded">
+              Curated
+            </span>
+          )}
+        </div>
       </div>
 
       {sample.accent_profile_name && (

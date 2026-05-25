@@ -187,6 +187,26 @@ export const api = {
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },
+  corpus: {
+    commonVoice: {
+      import: (data: { directory: string; locale: string; limit: number }) =>
+        request<any>("/corpus/common-voice/import", { method: "POST", body: JSON.stringify(data) }),
+      status: () => request<any>("/corpus/common-voice/status"),
+    },
+    speechAccentArchive: {
+      sync: () => request<any>("/corpus/speech-accent-archive/sync", { method: "POST" }),
+      status: () => request<any>("/corpus/speech-accent-archive/status"),
+    },
+    forvo: {
+      lookup: (data: { word: string; language: string }) =>
+        request<any>("/corpus/forvo/lookup", { method: "POST", body: JSON.stringify(data) }),
+      status: () => request<any>("/corpus/forvo/status"),
+    },
+  },
+  phonemes: {
+    sync: () => request<any>("/phonemes/sync", { method: "POST" }),
+    inventories: () => request<any>("/phonemes/inventories"),
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),

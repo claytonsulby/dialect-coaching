@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import type { Speaker } from "../types";
+import SourceBadge from "../components/SourceBadge";
 
 const AGE_RANGES = ["18-25", "26-35", "36-50", "51-65", "65+"];
 const SOURCE_OPTIONS = [
@@ -66,28 +67,6 @@ export default function SpeakerList() {
     setForm({ ...EMPTY_FORM });
     setShowNew(false);
     load();
-  };
-
-  const sourceBadge = (source: string) => {
-    const colors: Record<string, string> = {
-      local: "bg-green-900 text-green-300",
-      idea: "bg-purple-900 text-purple-300",
-      speech_accent_archive: "bg-yellow-900 text-yellow-300",
-      csv: "bg-blue-900 text-blue-300",
-    };
-    const labels: Record<string, string> = {
-      local: "Local",
-      idea: "IDEA",
-      speech_accent_archive: "SAA",
-      csv: "CSV",
-    };
-    return (
-      <span
-        className={`px-2 py-0.5 rounded text-xs font-medium ${colors[source] || "bg-gray-700 text-gray-300"}`}
-      >
-        {labels[source] || source}
-      </span>
-    );
   };
 
   const selectClass =
@@ -250,7 +229,7 @@ export default function SpeakerList() {
             >
               <div className="flex items-center justify-between">
                 <span className="font-medium text-white">{s.name}</span>
-                {sourceBadge(s.source)}
+                <SourceBadge source={s.source} />
               </div>
               <div className="flex gap-4 mt-2 text-xs text-gray-500">
                 {s.gender && <span>{s.gender}</span>}
