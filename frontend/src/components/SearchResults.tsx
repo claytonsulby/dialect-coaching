@@ -100,11 +100,6 @@ function ProfileCard({ profile }: { profile: AccentProfileSummary }) {
           </div>
         </div>
         <div className="flex gap-1">
-          {profile.is_seed && (
-            <span className="text-xs px-2 py-0.5 rounded bg-amber-600/20 text-amber-400">
-              Seed
-            </span>
-          )}
           <SourceBadge source={profile.source} />
         </div>
       </div>

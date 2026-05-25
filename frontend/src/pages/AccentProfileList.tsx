@@ -118,9 +118,9 @@ export default function AccentProfileList() {
                     <h3 className="font-semibold text-white truncate">
                       {profile.name}
                     </h3>
-                    {profile.is_seed && (
+                    {profile.source !== "manual" && (
                       <span className="px-1.5 py-0.5 bg-emerald-900/50 text-emerald-300 border border-emerald-700 rounded text-xs font-medium">
-                        Seed
+                        {profile.source}
                       </span>
                     )}
                     <SourceBadge source={profile.source} />

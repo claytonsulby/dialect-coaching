@@ -25,7 +25,7 @@ def _escape_like(value: str) -> str:
 
 def _build_response(region: Region) -> RegionResponse:
     children = [
-        RegionBrief(id=c.id, name=c.name, region_type=c.region_type, path=c.path, is_seed=bool(c.is_seed))
+        RegionBrief(id=c.id, name=c.name, region_type=c.region_type, path=c.path, source=c.source or "manual")
         for c in sorted(region.children, key=lambda c: c.name)
     ]
     return RegionResponse(
@@ -35,7 +35,7 @@ def _build_response(region: Region) -> RegionResponse:
         path=region.path,
         iso_code=region.iso_code,
         parent_id=region.parent_id,
-        is_seed=bool(region.is_seed),
+        source=region.source or "manual",
         children=children,
         created_at=region.created_at,
     )
@@ -108,7 +108,7 @@ def create_region(data: RegionCreate, db: Session = Depends(get_db)):
         region_type=data.region_type,
         parent_id=data.parent_id,
         path=path,
-        is_seed=0,
+        source="manual",
     )
     db.add(region)
     db.commit()

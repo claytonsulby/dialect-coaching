@@ -51,7 +51,6 @@ def _profile_to_dict(p: AccentProfile) -> dict:
         "description": p.description,
         "region_id": p.region_id,
         "region_name": p.region.name if p.region else None,
-        "is_seed": bool(p.is_seed),
         "source": p.source,
         "sample_count": p.sample_count,
         "pattern_count": len(p.patterns) if p.patterns else 0,

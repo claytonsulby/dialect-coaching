@@ -115,7 +115,7 @@ function TreeNode({ brief, onRefreshParent }: TreeNodeProps) {
           >
             + Sub
           </button>
-          {!brief.is_seed && (
+          {brief.source !== "bundled" && (
             <>
               <button
                 onClick={(e) => {
@@ -334,7 +334,7 @@ export default function RegionBrowser() {
             roots.map((root) => (
               <TreeNode
                 key={root.id}
-                brief={{ id: root.id, name: root.name, region_type: root.region_type, path: root.path, is_seed: root.is_seed }}
+                brief={{ id: root.id, name: root.name, region_type: root.region_type, path: root.path, source: root.source }}
                 onRefreshParent={loadRoots}
               />
             ))
