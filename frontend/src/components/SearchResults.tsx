@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import type { DiscoveryResult, Speaker, SpeakerSample, AccentProfileSummary } from "../types";
+import SourceBadge from "./SourceBadge";
 
 interface Props {
   results: DiscoveryResult;
@@ -23,9 +24,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             {speaker.age_range && <span>{speaker.age_range}</span>}
           </div>
         </div>
-        <span className="text-xs px-2 py-0.5 rounded bg-blue-600/20 text-blue-400">
-          {speaker.source}
-        </span>
+        <SourceBadge source={speaker.source} />
       </div>
     </Link>
   );
@@ -106,9 +105,7 @@ function ProfileCard({ profile }: { profile: AccentProfileSummary }) {
               Seed
             </span>
           )}
-          <span className="text-xs px-2 py-0.5 rounded bg-blue-600/20 text-blue-400">
-            {profile.source}
-          </span>
+          <SourceBadge source={profile.source} />
         </div>
       </div>
     </Link>

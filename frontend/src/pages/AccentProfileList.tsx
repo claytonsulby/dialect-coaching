@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import type { AccentProfile } from "../types";
+import SourceBadge from "../components/SourceBadge";
 
 export default function AccentProfileList() {
   const [profiles, setProfiles] = useState<AccentProfile[]>([]);
@@ -122,6 +123,7 @@ export default function AccentProfileList() {
                         Seed
                       </span>
                     )}
+                    <SourceBadge source={profile.source} />
                   </div>
                   {profile.description && (
                     <p className="text-sm text-gray-400 mt-1 line-clamp-2">
