@@ -345,7 +345,7 @@ class DiscoveryResult(BaseModel):
     total_count: int = 0
 
 
-# --- Common Voice schemas (Unit 7) ---
+# --- Common Voice schemas ---
 
 class CommonVoiceImportRequest(BaseModel):
     directory: str
@@ -356,6 +356,20 @@ class CommonVoiceImportRequest(BaseModel):
 class CommonVoiceStatusResponse(BaseModel):
     active: bool
     job: "ImportJobResponse | None" = None
+
+
+# --- Speech Accent Archive schemas ---
+
+class SpeechAccentArchiveSyncResponse(BaseModel):
+    id: int
+    source: str
+    status: str
+    total_entries: int
+    processed_entries: int
+    error_message: str | None
+    created_at: datetime
+
+    model_config = {"from_attributes": True}
 
 
 class DiscoveryStats(BaseModel):

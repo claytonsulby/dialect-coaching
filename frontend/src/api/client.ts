@@ -203,6 +203,12 @@ export const api = {
         }),
       status: () => request<any>("/corpus/common-voice/status"),
     },
+    speechAccentArchive: {
+      sync: () =>
+        request<any>("/corpus/speech-accent-archive/sync", { method: "POST" }),
+      status: () =>
+        request<any>("/corpus/speech-accent-archive/status"),
+    },
   },
   discovery: {
     search: (params: Record<string, string>) =>

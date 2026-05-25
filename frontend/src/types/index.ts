@@ -222,6 +222,18 @@ export interface CommonVoiceStatusResponse {
   job: ImportJob | null;
 }
 
+// --- Speech Accent Archive types ---
+
+export interface SpeechAccentArchiveSyncResponse {
+  id: number;
+  source: string;
+  status: string;
+  total_entries: number;
+  processed_entries: number;
+  error_message: string | null;
+  created_at: string;
+}
+
 // --- Discovery types (Unit 6) ---
 
 export interface AccentProfileSummary {
