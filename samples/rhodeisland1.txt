@@ -1,260 +1,1047 @@
-This recording, Road Island 1, is Copyright the International Directive English Archive.
-/ðɪs ɹᵻkɔːɹdɪŋ ɹoʊd aɪlənd wʌn ɪz kɑːpiɹaɪt ðɪ ɪntɚnæʃənəl daɪlɛktsʌv ɪŋɡlɪʃ ɑːɹkaɪv/
+This recording, Rode Island One, is copyright the International Dialects of English Archive.
+  Standard: /ðɪs ɹᵻkɔːɹdɪŋ ɹoʊd aɪlənd wʌn ɪz kɑːpɪɹaɪt ðə ɪntɚnæʃənəl daɪəlɛkts ʌv ɪŋɡlɪʃ ɑːɹkaɪv/
+  Heard:    /ðɪs ɹᵻkɔːɹdɪŋ ɹoʊd aɪlənd wʌn ɪz kɑːpiɹaɪt ðɪ ɪntɚnæʃənəl daɪlɛkts ʌv ɪŋɡlɪʃ ɑːɹkaɪv/
+    copyright: /kɑːpɪɹaɪt/ → /kɑːpiɹaɪt/  [ɪ→i]
+    the: /ðə/ → /ðɪ/  [ə→ɪ]
+    Dialects: /daɪəlɛkts/ → /daɪlɛkts/  [ə→∅]
 
-Coma gets a cure, is Copyright Douglas and Anorov, Jim McCullough and Barbara Somerville.
-/ɑːmə ɡɛts sə kjuː ɪz kɑːpiɹaɪt dʌɡlɪs æn ɑːnɚɹɑːf dʒiːl məkɛlə ænd bɑːɹbɚ sʌmɚvɪ/
+Comma gets a cure, is copyright Douglas N. Honoroff, Jill McCullough, and Barbara Somerville.
+  Standard: /kɑːmə ɡɛts eɪ kjʊɹ ɪz kɑːpɪɹaɪt dʌɡləz ɛn ɑːnɔːɹɔf dʒɪl mə kʌlʌf ænd bɑːɹbɚɹə sʌmɚvɪl/
+  Heard:    /kɑːmə ɡɛts ə kjuː ɪz kɑːpiɹaɪt dʌɡlɪs æn ɑːnɚɹɑːf dʒiːl məkɛlə ænd bɑːɹbɚ sʌmɚvɪ/
+    a: /eɪ/ → /ə/  [e→∅, ɪ→ə]
+    cure,: /kjʊɹ/ → /kjuː/  [ʊ→u, ɹ→ː]
+    copyright: /kɑːpɪɹaɪt/ → /kɑːpiɹaɪt/  [ɪ→i]
+    Douglas: /dʌɡləz/ → /dʌɡlɪs/  [ə→ɪ, z→s]
+    N.: /ɛn/ → /æn/  [ɛ→æ]
+    Honoroff,: /ɑːnɔːɹɔf/ → /ɑːnɚɹɑːf/  [ɔ→∅, ː→ɚ, ∅→ɑ, ɔ→ː]
+    Jill: /dʒɪl/ → /dʒiːl/  [∅→i, ɪ→ː]
+    McCullough,: /mə kʌlʌf/ → /məkɛlə/  [ →∅, ʌ→ɛ, ʌ→∅, f→ə]
+    Barbara: /bɑːɹbɚɹə/ → /bɑːɹbɚ/  [ɹ→∅, ə→∅]
+    Somerville.: /sʌmɚvɪl/ → /sʌmɚvɪ/  [l→∅]
 
 Well, here's a story for you.
-/wɛ hɪɹɪz ðə stɔːɹi fɔːɹ juː/
+  Standard: /wɛl hɪɹz eɪ stɔːɹi fɔːɹ juː/
+  Heard:    /wɛl hɪɹɪz ðə stɔːɹi fɔːɹ juː/
+    here's: /hɪɹz/ → /hɪɹɪz/  [∅→ɪ]
+    a: /eɪ/ → /ðə/  [e→ð, ɪ→ə]
 
 Sarah Perry was a veterinary nurse who had been working daily at an old zoo
-/æɹə pɛɹi wʌz ɐ vɛtɹənɛɹi nɚs huː hæd bɪn wɜːkɪŋ deɪli æt ən oʊl zɚ/
+  Standard: /sɛɹə pɛɹi wʌz eɪ vɛɾɚɹɪnɛɹi nɜːs huː hæd bɪn wɜːkɪŋ deɪli æt æn oʊld zuː/
+  Heard:    /sæɹə pɛɹi wʌz ɐ vɛtɹənɛɹi nɚs uː hæd bɪn wɜːkɪŋ deɪli æɾ ən oʊd zuː/
+    Sarah: /sɛɹə/ → /sæɹə/  [ɛ→æ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    veterinary: /vɛɾɚɹɪnɛɹi/ → /vɛtɹənɛɹi/  [ɾ→∅, ɚ→t, ɪ→ə]
+    nurse: /nɜːs/ → /nɚs/  [ɜ→∅, ː→ɚ]
+    who: /huː/ → /uː/  [h→∅]
+    at: /æt/ → /æɾ/  [t→ɾ]
+    an: /æn/ → /ən/  [æ→ə]
+    old: /oʊld/ → /oʊd/  [l→∅]
 
 in a deserted district of the territory, so she was very happy to start a new job
-/ɪn nɐ dɪzɜːɾᵻd dɪstɹɪk ʌv ðə tɛɹɪtɔːɹi suː siː wʌz vɛɹi hæpi tə stɑːɹɾɐ ɐ nuː dʒɑː/
+  Standard: /ɪn eɪ dᵻzɜːɾᵻd dɪstɹɪkt ʌv ðə tɛɹɪtɔːɹi soʊ ʃiː wʌz vɛɹi hæpi tuː stɑːɹt eɪ nuː dʒɑːb/
+  Heard:    /fɪn ɐ dɪzɜːɾᵻd dɪstɹɪk ʌv ðə tɛɹɪtɔːɹi suː siː wʌz vɛɹi hæpi tə stɑːɹ ɾɐ nuː dʒɑː/
+    in: /ɪn/ → /fɪn/  [∅→f]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    deserted: /dᵻzɜːɾᵻd/ → /dɪzɜːɾᵻd/  [ᵻ→ɪ]
+    district: /dɪstɹɪkt/ → /dɪstɹɪk/  [t→∅]
+    so: /soʊ/ → /suː/  [o→u, ʊ→ː]
+    she: /ʃiː/ → /siː/  [ʃ→s]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    start: /stɑːɹt/ → /stɑːɹ/  [t→∅]
+    a: /eɪ/ → /ɾɐ/  [e→ɾ, ɪ→ɐ]
+    job: /dʒɑːb/ → /dʒɑː/  [b→∅]
 
-at a superb private practice and not square near the Duke Tower.
-/æɾ ɾɐ sʊpɜːb pɹaɪvɪt pɹæktɪs ɪn nɔːɹt skweɪ nɪ ðə duːk taʊ/
+at a superb private practice in North Square near the Duke Tower.
+  Standard: /æt eɪ suːpɜːb pɹaɪvət pɹæktɪs ɪn nɔːɹθ skwɛɹ nɪɹ ðə duːk taʊɚ/
+  Heard:    /æ ɾɐ sʊpɜːb pɹaɪvɪt pɹæktɪs ɪn nɔːɹt skweɪ nɪ ðə duːk taʊ/
+    at: /æt/ → /æ/  [t→∅]
+    a: /eɪ/ → /ɾɐ/  [e→ɾ, ɪ→ɐ]
+    superb: /suːpɜːb/ → /sʊpɜːb/  [u→∅, ː→ʊ]
+    private: /pɹaɪvət/ → /pɹaɪvɪt/  [ə→ɪ]
+    North: /nɔːɹθ/ → /nɔːɹt/  [θ→t]
+    Square: /skwɛɹ/ → /skweɪ/  [ɛ→e, ɹ→ɪ]
+    near: /nɪɹ/ → /nɪ/  [ɹ→∅]
+    Tower.: /taʊɚ/ → /taʊ/  [ɚ→∅]
 
 That area was much nearer for her and more to her liking.
-/ðæɾ ɛɹ wʌz mʌtʃ neɪɹɚ f hɚ ænd mɔːɹ tə hɚ laɪ/
+  Standard: /ðæt ɛɹiə wʌz mʌtʃ nɪɹɚ fɔːɹ hɜː ænd mɔːɹ tuː hɜː laɪkɪŋ/
+  Heard:    /ðæɾ ɛɹ wʌz mʌtʃ neɪɹɚ f hɚ ænd mɔːɹ tə hɚ laɪ/
+    That: /ðæt/ → /ðæɾ/  [t→ɾ]
+    area: /ɛɹiə/ → /ɛɹ/  [i→∅, ə→∅]
+    nearer: /nɪɹɚ/ → /neɪɹɚ/  [∅→e]
+    for: /fɔːɹ/ → /f/  [ɔ→∅, ː→∅, ɹ→∅]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    liking.: /laɪkɪŋ/ → /laɪ/  [ɪ→∅, k→∅, ŋ→∅]
 
-Even so, on her first morning, she felt stressed.
-/iːvən soʊ ɑːn hɚ fɜːst mɔːɹnɪŋ ʃiː fɛlt stɹɛ/
+Even so, on her first morning she felt stressed.
+  Standard: /iːvən soʊ ɔn hɜː fɜːst mɔːɹnɪŋ ʃiː fɛlt stɹɛst/
+  Heard:    /iːvən soʊɑ ːn hɚ fɜːst mɔːɹnɪŋ ʃiː fɛlt stɹɛs/
+    so,: /soʊ/ → /soʊɑ/  [∅→ɑ]
+    on: /ɔn/ → /ːn/  [ɔ→ː]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    stressed.: /stɹɛst/ → /stɹɛs/  [t→∅]
 
-She ate a bowl of porridge, checked herself in the mirror and washed her face in a hurry.
-/ʃiː eɪɾɐ ɐ boʊl ʌv pɔːɹɪdʒ tʃɛkt ɚsɛlf ɪnð ðə mɪɹɚ ænd wɑːʃth hɚ feɪs ɪn ɐh hʌɹ/
+She ate a bowl of porridge, checked herself in the mirror, and washed her face in a hurry.
+  Standard: /ʃiː eɪt eɪ boʊl ʌv pɔɹɪdʒ tʃɛkt hɜːsɛlf ɪn ðə mɪɹɚ ænd wɑːʃt hɜː feɪs ɪn eɪ hɜːɹi/
+  Heard:    /ʃiː eɪ ɾɐ boʊl ʌv pɔːɹɪdʒ tʃɛkt ɚsɛlf ɪn ðə mɪɹɚ ænd wɑːʃt hɚ feɪs ɪn ɐ hʌɹi/
+    ate: /eɪt/ → /eɪ/  [t→∅]
+    a: /eɪ/ → /ɾɐ/  [e→ɾ, ɪ→ɐ]
+    porridge,: /pɔɹɪdʒ/ → /pɔːɹɪdʒ/  [∅→ː]
+    herself: /hɜːsɛlf/ → /ɚsɛlf/  [h→∅, ɜ→∅, ː→ɚ]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    hurry.: /hɜːɹi/ → /hʌɹi/  [ɜ→∅, ː→ʌ]
 
-Then she put on a plain yellow dress and a fleece jacket, picked up her kit and headed for work.
-/ðɛn ʃiː pʊɾ ɔn nɐ pleɪn jɛloʊ dɹɛs ændɐ ɐ fliːs dʒækɪt pɪkt ʌp hɚ kɪt ænd hɛdᵻd fɚ wɜːk/
+Then she put on a plain yellow dress and a fleece jacket.
+  Standard: /ðɛn ʃiː pʊt ɔn eɪ pleɪn jɛloʊ dɹɛs ænd eɪ fliːs dʒækɪt/
+  Heard:    /ðɛn ʃi pʊɾ ɔn ɐ pleɪn jɛloʊ dɹɛs ænd ɐ fliːs dʒækɪ/
+    she: /ʃiː/ → /ʃi/  [ː→∅]
+    put: /pʊt/ → /pʊɾ/  [t→ɾ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    jacket.: /dʒækɪt/ → /dʒækɪ/  [t→∅]
+
+Picked up her kit and headed for work.
+  Standard: /pɪkt ʌp hɜː kɪt ænd hɛdᵻd fɔːɹ wɜːk/
+  Heard:    /pɪkt ʌp ɜːɹɐ kɪt ænd hɛdᵻd fɚ wɜː/
+    her: /hɜː/ → /ɜːɹɐ/  [h→∅, ∅→ɹ, ∅→ɐ]
+    for: /fɔːɹ/ → /fɚ/  [ɔ→∅, ː→∅, ɹ→ɚ]
+    work.: /wɜːk/ → /wɜː/  [k→∅]
 
 When she got there, there was a woman with a goose waiting for her.
-/wɛn ʃiː ɡʌt ðɛ ðɛ wʌz ɐ wʌmən wɪð ɐ ɡuːs weɪɾɪŋ fɔːɹ hɚ/
+  Standard: /wɛn ʃiː ɡɑːt ðɛɹ ðɛɹ wʌz eɪ wʊmən wɪð eɪ ɡuːs weɪɾɪŋ fɔːɹ hɜː/
+  Heard:    /wɛn ʃiː ɡʌt ðɛ ðɛ wʌz ɐ wʌmən wɪð ɐ ɡuːs weɪɾɪŋ fɔːɹ hɚ/
+    got: /ɡɑːt/ → /ɡʌt/  [ɑ→∅, ː→ʌ]
+    there,: /ðɛɹ/ → /ðɛ/  [ɹ→∅]
+    there: /ðɛɹ/ → /ðɛ/  [ɹ→∅]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    woman: /wʊmən/ → /wʌmən/  [ʊ→ʌ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    her.: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
 
 The woman gave Sarah an official letter from the vet.
-/ðə wʊmən ɡeɪv sæɹɐ æn ɐfɪʃəl lɛɾɚ fɹʌm ðə vɛ/
+  Standard: /ðə wʊmən ɡeɪv sɛɹə æn əfɪʃəl lɛɾɚ fɹʌm ðə vɛt/
+  Heard:    /ðə wʊmən ɡeɪv sæɹɐ æn ɐfɪʃəl lɛɾɚ fɹʌm ðə vɛ/
+    Sarah: /sɛɹə/ → /sæɹɐ/  [ɛ→æ, ə→ɐ]
+    official: /əfɪʃəl/ → /ɐfɪʃəl/  [ə→ɐ]
+    vet.: /vɛt/ → /vɛ/  [t→∅]
 
 The letter implied that the animal could be suffering from a rare form of foot and mouth disease,
-/ðə lɛɾɚ ɪmplaɪdð ðætð ðɪ ænɪməl kʊd bi sʌfɚɹɪŋ fɹʌm ɐɹ ɹeɪ fɔːɹm ʌv fʊt ænd moʊkt dᵻziː/
+  Standard: /ðə lɛɾɚ ɪmplaɪd ðæt ðə ænɪməl kʊd biː sʌfɚɹɪŋ fɹʌm eɪ ɹɛɹ fɔːɹm ʌv fʊt ænd maʊθ dɪziːz/
+  Heard:    /ðə lɛɾɚɹ ɪmplaɪd ðæt ðɪ ænɪməl kʊd bi sʌfɚɹɪŋ fɹʌmɐɹ eɪ fɔːɹm ʌv fʊt ænd moʊkt dᵻziː/
+    letter: /lɛɾɚ/ → /lɛɾɚɹ/  [∅→ɹ]
+    the: /ðə/ → /ðɪ/  [ə→ɪ]
+    be: /biː/ → /bi/  [ː→∅]
+    from: /fɹʌm/ → /fɹʌmɐɹ/  [∅→ɐ, ∅→ɹ]
+    rare: /ɹɛɹ/ → //  [ɹ→∅, ɛ→∅, ɹ→∅]
+    mouth: /maʊθ/ → /moʊkt/  [a→o, ∅→k, θ→t]
+    disease,: /dɪziːz/ → /dᵻziː/  [ɪ→ᵻ, z→∅]
 
-which was surprising because normally, you would only expect to see in a dog or a goat.
-/wɪtʃ wʌzs sɚpɹaɪzɪŋ ɪɪz nɔːɹmi juː wʊd oʊli ɛkspɛkt tə siː ɪn ɐ dɔːɡ ɔːɹ ɐ ɡoʊ/
+which was surprising because normally you would only expect to see it in a dog or a goat.
+  Standard: /wɪtʃ wʌz sɚpɹaɪzɪŋ bɪkʌz nɔːɹməli juː wʊd oʊnli ɛkspɛkt tuː siː ɪt ɪn eɪ dɑːɡ ɔːɹ eɪ ɡoʊt/
+  Heard:    /wɪtʃ wʌz sɚpɹaɪzɪŋ ɪɪz nɔːɹmi juː wʊd oʊli ɛkspɛk tə siː ɪn ɐ dɔːɡ ɔːɹ ɐ ɡoʊ/
+    because: /bɪkʌz/ → /ɪɪz/  [b→∅, k→∅, ʌ→ɪ]
+    normally: /nɔːɹməli/ → /nɔːɹmi/  [ə→∅, l→∅]
+    only: /oʊnli/ → /oʊli/  [n→∅]
+    expect: /ɛkspɛkt/ → /ɛkspɛk/  [t→∅]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    it: /ɪt/ → //  [ɪ→∅, t→∅]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    dog: /dɑːɡ/ → /dɔːɡ/  [ɑ→ɔ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    goat.: /ɡoʊt/ → /ɡoʊ/  [t→∅]
 
 Sarah was sentimental, so this made her feel sorry for the beautiful bird.
-/sɛɹəl wʌz sɛntɪmɛntəl soʊ ðɪs meɪd ɐ fiːl sɑːɹɹi fɚ ðə bjuːɾᵻfəl bɜː/
+  Standard: /sɛɹə wʌz sɛntɪmɛntəl soʊ ðɪs meɪd hɜː fiːl sɑːɹi fɔːɹ ðə bjuːɾifəl bɜːd/
+  Heard:    /sɛɹəl wʌz sɛntɪmɛntəl soʊ ðɪs meɪd ɐs fiːl sɑːɹɹi fɚ ðə bjuːɾᵻfəl bɜː/
+    Sarah: /sɛɹə/ → /sɛɹəl/  [∅→l]
+    her: /hɜː/ → /ɐs/  [h→∅, ɜ→ɐ, ː→s]
+    sorry: /sɑːɹi/ → /sɑːɹɹi/  [∅→ɹ]
+    for: /fɔːɹ/ → /fɚ/  [ɔ→∅, ː→∅, ɹ→ɚ]
+    beautiful: /bjuːɾifəl/ → /bjuːɾᵻfəl/  [i→ᵻ]
+    bird.: /bɜːd/ → /bɜː/  [d→∅]
 
-Before long, that itchy goose began to strut around the office like a lunatech,
-/bᵻfɔːɹ lɔŋ ðə ɪtʃi ɡuːs bɪɡæn tə stɹʌt ɐɹaʊndð ðɪ ɑːfɪs laɪk ɐ luːnətɪk/
+Before long, that itchy goose began to strut around the office like a lunatic,
+  Standard: /bᵻfɔːɹ lɔŋ ðæt ɪtʃi ɡuːs bɪɡæn tuː stɹʌt ɚɹaʊnd ðə ɑːfɪs laɪk eɪ luːnətɪk/
+  Heard:    /bᵻfoːɹ lɔŋ ðə ɪtʃi ɡuːs bɪɡæn tə stɹʌt ɐɹaʊnd ð ɪɔfɪs laɪk ɐ luːnət/
+    Before: /bᵻfɔːɹ/ → /bᵻfoːɹ/  [ɔ→o]
+    that: /ðæt/ → /ðə/  [æ→∅, t→ə]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    around: /ɚɹaʊnd/ → /ɐɹaʊnd/  [ɚ→ɐ]
+    the: /ðə/ → /ð/  [ə→∅]
+    office: /ɑːfɪs/ → /ɪɔfɪs/  [ɑ→ɪ, ː→ɔ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    lunatic,: /luːnətɪk/ → /luːnət/  [ɪ→∅, k→∅]
 
 which made an unsanitary mess.
-/wɪtʃ meɪd ɐn ʌnsænɪtɛɹi mɛs/
+  Standard: /wɪtʃ meɪd æn ʌnsænətɛɹi mɛs/
+  Heard:    /wɪtʃ meɪd ɐn ʌnsænɪtɛɹi mɛ/
+    an: /æn/ → /ɐn/  [æ→ɐ]
+    unsanitary: /ʌnsænətɛɹi/ → /ʌnsænɪtɛɹi/  [ə→ɪ]
+    mess.: /mɛs/ → /mɛ/  [s→∅]
 
 The goose's owner, Mary Harrison, kept calling,
-/ɐ ɡuːsᵻz oʊnɚ mæɹi hæɹɪsən kɛpt kɔːlɪ/
+  Standard: /ðə ɡuːsᵻz oʊnɚ mɛɹi hæɹɪsən kɛpt kɔːlɪŋ/
+  Heard:    /ɐ ɡuːsᵻz oʊnɚ mæɹi hæɹɪsən kɛpt kɔːlɪ/
+    The: /ðə/ → /ɐ/  [ð→∅, ə→ɐ]
+    Mary: /mɛɹi/ → /mæɹi/  [ɛ→æ]
+    calling,: /kɔːlɪŋ/ → /kɔːlɪ/  [ŋ→∅]
 
 comma, comma, what Sarah thought was an odd choice for her name.
-/kɑːlmɐ kɑːmə wɪð sɛɹɚ dɔɡw wʌz ən æd tʃoːɹs fɚɹ ə neɪ/
+  Standard: /kɑːmə kɑːmə wʌt sɛɹə θɔːt wʌz æn ɑːd tʃɔɪs fɔːɹ hɜː neɪm/
+  Heard:    /ɑːmɐ kɑːmə wɪð sɛɹɚ dɔɡ wʌz ən æd tʃoːɹs fɚɹ neɪ/
+    comma,: /kɑːmə/ → /ɑːmɐ/  [k→∅, ə→ɐ]
+    what: /wʌt/ → /wɪð/  [ʌ→ɪ, t→ð]
+    Sarah: /sɛɹə/ → /sɛɹɚ/  [ə→ɚ]
+    thought: /θɔːt/ → /dɔɡ/  [θ→d, ː→∅, t→ɡ]
+    an: /æn/ → /ən/  [æ→ə]
+    odd: /ɑːd/ → /æd/  [ɑ→∅, ː→æ]
+    choice: /tʃɔɪs/ → /tʃoːɹs/  [∅→o, ɔ→ː, ɪ→ɹ]
+    for: /fɔːɹ/ → /fɚɹ/  [ɔ→∅, ː→ɚ]
+    her: /hɜː/ → //  [h→∅, ɜ→∅, ː→∅]
+    name.: /neɪm/ → /neɪ/  [m→∅]
 
 Comma was strong and huge, so it would take some force to trap her,
-/æm wʌz tɹɔŋ ænd juːdʒ soʊ ɪtw wʊd teɪk sʌm fɔːɹs tə tɹæp ɚ/
+  Standard: /kɑːmə wʌz stɹɔŋ ænd hjuːdʒ soʊ ɪt wʊd teɪk sʌm fɔːɹs tuː tɹæp hɜː/
+  Heard:    /kɑːm wʌz tɹɔŋ ænd juːdʒ soʊ ɪt wʊd teɪk sʌm fɔːɹs t tɹæp ɚ/
+    Comma: /kɑːmə/ → /kɑːm/  [ə→∅]
+    strong: /stɹɔŋ/ → /tɹɔŋ/  [s→∅]
+    huge,: /hjuːdʒ/ → /juːdʒ/  [h→∅]
+    to: /tuː/ → /t/  [u→∅, ː→∅]
+    her,: /hɜː/ → /ɚ/  [h→∅, ɜ→∅, ː→ɚ]
 
 but Sarah had a different idea.
-/bət sæɹɚ hædɐ ɐ dɪfɹənt aɪdɪ/
+  Standard: /bʌt sɛɹə hæd eɪ dɪfɹənt aɪdiə/
+  Heard:    /pət sæɹɚ hæd ɐ dɪfɹənt aɪdɪ/
+    but: /bʌt/ → /pət/  [b→p, ʌ→ə]
+    Sarah: /sɛɹə/ → /sæɹɚ/  [ɛ→æ, ə→ɚ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    idea.: /aɪdiə/ → /aɪdɪ/  [i→∅, ə→ɪ]
 
-First, she tried gently stroking the goose's lower back with her palm,
-/fɜːst i tɹaɪd dʒɛntli stɹoʊkɪŋ ðə ɡuːsᵻz loʊɚ bæk wɪðh hɚ pɑː/
+First she tried gently stroking the goose's lower back with her palm,
+  Standard: /fɜːst ʃiː tɹaɪd dʒɛntli stɹoʊkɪŋ ðə ɡuːsᵻz loʊɚ bæk wɪð hɜː pɑːm/
+  Heard:    /fɜːst iː tɹaɪd dʒɛntli stɹoʊkɪŋ ðə ɡuːsᵻz loʊɚ bæk wɪð hɚ pɑː/
+    she: /ʃiː/ → /iː/  [ʃ→∅]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    palm,: /pɑːm/ → /pɑː/  [m→∅]
 
-then singing attuned to her.
-/ðɛn sɪŋɪŋ ɐtʃuː dʒə xɚ/
+then singing a tune to her.
+  Standard: /ðɛn sɪŋɪŋ eɪ tuːn tuː hɜː/
+  Heard:    /ðɛn sɪŋɪŋ ɐ ts.uː ŋdʒ əxɚ/
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    tune: /tuːn/ → /ts.uː/  [∅→s, ∅→., n→∅]
+    to: /tuː/ → /ŋdʒ/  [t→ŋ, u→d, ː→ʒ]
+    her.: /hɜː/ → /əxɚ/  [h→ə, ɜ→x, ː→ɚ]
 
-Finally, she had missed an ether.
-/faɪnəli ʃiː ɐd mɪnʃt ᵻd iːs/
+Finally she had missed an ether.
+  Standard: /faɪnəli ʃiː hæd mɪst æn iːθɚ/
+  Heard:    /faɪnəli ʃiː ɐd mɪʃt ɪd iːs/
+    had: /hæd/ → /ɐd/  [h→∅, æ→ɐ]
+    missed: /mɪst/ → /mɪʃt/  [s→ʃ]
+    an: /æn/ → /ɪd/  [æ→ɪ, n→d]
+    ether.: /iːθɚ/ → /iːs/  [θ→∅, ɚ→s]
 
-Her efforts were not futile, and no time the goose began to tire,
-/hɜː ɛfɚts wɜː nɑːt fjuːɾəl ɪn noʊ taɪm ðə ɡuːs bᵻɡæn tə taɪ/
+Her efforts were not futile.
+  Standard: /hɜː ɛfɚts wɜː nɑːt fjuːɾəl/
+  Heard:    /hɚ ɛfɚts wɜː nɑːt fjuːɾəl/
+    Her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
 
-so Sarah was able to hold onto Comma and give her a relaxing bath.
-/soʊ sæɹə wʌz eɪbəl tə hoʊld ɑːntə kɑːmə ænd ɡɪv hɚ ɐ ɹᵻlæksɪŋ bæ/
+In no time the goose began to tire,
+  Standard: /ɪn noʊ taɪm ðə ɡuːs bɪɡæn tuː taɪɚ/
+  Heard:    /noʊ taɪm ð ɡuːs bɪɡæn tə tʃaɪ/
+    In: /ɪn/ → //  [ɪ→∅, n→∅]
+    the: /ðə/ → /ð/  [ə→∅]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    tire,: /taɪɚ/ → /tʃaɪ/  [∅→ʃ, ɚ→∅]
 
-One Sarah had managed to bathe the goose.
-/wʌn saʊɚ hæd mænɪdʒ tə beɪ ðə ɡuː/
+so Sarah was able to hold onto comma and give her a relaxing bath.
+  Standard: /soʊ sɛɹə wʌz eɪbəl tuː hoʊld ɑːntʊ kɑːmə ænd ɡɪv hɜː eɪ ɹᵻlæksɪŋ bæθ/
+  Heard:    /ə sæɹə wʌz eɪbəl tə hoʊld ɑːntə kɑːmə ænd ɡɪv h ɚɐ ɹᵻlæksɪŋ bæ/
+    so: /soʊ/ → /ə/  [s→∅, o→∅, ʊ→ə]
+    Sarah: /sɛɹə/ → /sæɹə/  [ɛ→æ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    onto: /ɑːntʊ/ → /ɑːntə/  [ʊ→ə]
+    her: /hɜː/ → /h/  [ɜ→∅, ː→∅]
+    a: /eɪ/ → /ɚɐ/  [e→ɚ, ɪ→ɐ]
+    bath.: /bæθ/ → /bæ/  [θ→∅]
 
-She wiped her off with a cloth and laid her on her right side.
-/ʃiː waɪpth hɚ ɑːf wɪð ðə klɔ ænd leɪd hɚ ɔn hɚ ɹaɪt saɪ/
+Once Sarah had managed to bathe the goose,
+  Standard: /wʌns sɛɹə hæd mænɪdʒd tuː beɪð ðə ɡuːs/
+  Heard:    /wʌn saʊɚ hæd mænɪdʒ tə beɪð ðə ɡuː/
+    Once: /wʌns/ → /wʌn/  [s→∅]
+    Sarah: /sɛɹə/ → /saʊɚ/  [ɛ→a, ɹ→ʊ, ə→ɚ]
+    managed: /mænɪdʒd/ → /mænɪdʒ/  [d→∅]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    goose,: /ɡuːs/ → /ɡuː/  [s→∅]
+
+she wiped her off with a cloth and laid her on her right side.
+  Standard: /ʃiː waɪpt hɜː ɔf wɪð eɪ klɔθ ænd leɪd hɜː ɔn hɜː ɹaɪt saɪd/
+  Heard:    /ʃiː waɪpt hɚɹɑː f wɪð ə klɑː ænd leɪd hɚ ɔn hɚ ɹaɪt saɪ/
+    her: /hɜː/ → /hɚɹɑː/  [∅→ɚ, ∅→ɹ, ɜ→ɑ]
+    off: /ɔf/ → /f/  [ɔ→∅]
+    a: /eɪ/ → /ə/  [e→∅, ɪ→ə]
+    cloth: /klɔθ/ → /klɑː/  [ɔ→ɑ, θ→ː]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    side.: /saɪd/ → /saɪ/  [d→∅]
 
 Then Sarah confirmed the vet's diagnosis.
-/ðɛn sɛvɹɚ kənfɜːmd ðə bɛdz daɪknoʊ/
+  Standard: /ðɛn sɛɹə kənfɜːmd ðə vɛts daɪəɡnoʊsɪs/
+  Heard:    /ðɛn sɛvɹɚ kənfɜːmd ðə bɛdz daɪknoʊ/
+    Sarah: /sɛɹə/ → /sɛvɹɚ/  [∅→v, ə→ɚ]
+    vet's: /vɛts/ → /bɛdz/  [v→b, t→d, s→z]
+    diagnosis.: /daɪəɡnoʊsɪs/ → /daɪknoʊ/  [ə→∅, ɡ→k, s→∅, ɪ→∅, s→∅]
 
-Almost immediately, she remembered an effective treatment
-/ɔːmoʊst ɪmiːdɪətli ʃiː ɹɪmɛmbɚd ænɐ ɐfɛktɪd tɹiːtmə/
+Almost immediately she remembered an effective treatment
+  Standard: /ɔːlmoʊst ɪmiːdɪətli ʃiː ɹᵻmɛmbɚd æn ɪfɛktɪv tɹiːtmənt/
+  Heard:    /ɔːmoʊst ɪmiːdɪətli ʃiː ɹɪmɛmbɚ æn ɐfɛktɪd tɹiːtm/
+    Almost: /ɔːlmoʊst/ → /ɔːmoʊst/  [l→∅]
+    remembered: /ɹᵻmɛmbɚd/ → /ɹɪmɛmbɚ/  [ᵻ→ɪ, d→∅]
+    effective: /ɪfɛktɪv/ → /ɐfɛktɪd/  [ɪ→ɐ, v→d]
+    treatment: /tɹiːtmənt/ → /tɹiːtm/  [ə→∅, n→∅, t→∅]
 
 that required her to measure out a lot of medicine.
-/ðeɪ ɹᵻkwaɪd hɚ tə mɛʒɚ ɹaʊt ɐ lɑːɾ ʌv mɛdɪsə/
+  Standard: /ðæt ɹᵻkwaɪɚd hɜː tuː mɛʒɚ aʊt eɪ lɑːt ʌv mɛdəsən/
+  Heard:    /ðeɪ ɹᵻkwaɪd hɚ tə mɛʒɚɹ aʊt ɐ lɑːɾ ʌv mɛdɪsə/
+    that: /ðæt/ → /ðeɪ/  [æ→e, t→ɪ]
+    required: /ɹᵻkwaɪɚd/ → /ɹᵻkwaɪd/  [ɚ→∅]
+    her: /hɜː/ → /hɚ/  [ɜ→∅, ː→ɚ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    measure: /mɛʒɚ/ → /mɛʒɚɹ/  [∅→ɹ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    lot: /lɑːt/ → /lɑːɾ/  [t→ɾ]
+    medicine.: /mɛdəsən/ → /mɛdɪsə/  [ə→ɪ, n→∅]
 
-Sarah warned that this course of treatment might be expensive.
-/sæɹəl wɔːɹndð ðæt ðɪs kɔːs ʌv tɹiːtmənt maɪt biː ɛkspɛns/
+Sarah warned that this course of treatment might be expensive,
+  Standard: /sɛɹə wɔːɹnd ðæt ðɪs kɔːɹs ʌv tɹiːtmənt maɪt biː ɛkspɛnsɪv/
+  Heard:    /sæɹəl wɔːɹnd ðæt ðɪs kɔːs ʌv tɹiːtmənt maɪt biː ɛkspɛnsɪ/
+    Sarah: /sɛɹə/ → /sæɹəl/  [ɛ→æ, ∅→l]
+    course: /kɔːɹs/ → /kɔːs/  [ɹ→∅]
+    expensive,: /ɛkspɛnsɪv/ → /ɛkspɛnsɪ/  [v→∅]
 
-Either five or six times a course of penicillin,
-/aɪðɚ faɪvɚ ɚ sɪks taɪmz ə kɔːs ɐ pɛnəsɪmə/
+either five or six times the cost of penicillin.
+  Standard: /iːðɚ faɪv ɔːɹ sɪks taɪmz ðə kɔst ʌv pɛnɪsɪlᵻn/
+  Heard:    /æðɚ faɪv ɚ sɪks taɪmz ə kɔːst ɐ pɛnəsɪmən/
+    either: /iːðɚ/ → /æðɚ/  [i→∅, ː→æ]
+    or: /ɔːɹ/ → /ɚ/  [ɔ→∅, ː→∅, ɹ→ɚ]
+    the: /ðə/ → /ə/  [ð→∅]
+    cost: /kɔst/ → /kɔːst/  [∅→ː]
+    of: /ʌv/ → /ɐ/  [ʌ→∅, v→ɐ]
+    penicillin.: /pɛnɪsɪlᵻn/ → /pɛnəsɪmən/  [ɪ→ə, l→m, ᵻ→ə]
 
 I can't imagine paying so much,
-/aɪ kænt ɪmædʒən peɪŋ soʊ mʌtʃ/
+  Standard: /aɪ kænt ɪmædʒɪn peɪɪŋ soʊ mʌtʃ/
+  Heard:    /aɪ kænt mædʒən peɪɪŋ soʊ mʌtʃ/
+    imagine: /ɪmædʒɪn/ → /mædʒən/  [ɪ→∅, ɪ→ə]
 
 but Mrs. Harrison, a millionaire lawyer,
-/ʌt mɪsɪz hæɹᵻsən ɐ mɪlɪneɪ lɔːɹ/
+  Standard: /bʌt mɪsɪz hæɹɪsən eɪ mɪliənɛɹ lɔɪɚ/
+  Heard:    /bʌt mɪsɪz hæɹᵻsən ɐ mɪlɪneɪ lɔːɹ/
+    Harrison,: /hæɹɪsən/ → /hæɹᵻsən/  [ɪ→ᵻ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    millionaire: /mɪliənɛɹ/ → /mɪlɪneɪ/  [i→∅, ə→ɪ, ɛ→e, ɹ→ɪ]
+    lawyer,: /lɔɪɚ/ → /lɔːɹ/  [ɪ→ː, ɚ→ɹ]
 
 thought it was a fair price for a cure.
-/θɔːɾ ɪt wʌz ɐ feɪ pɹaɪs fɔːɹɹ ɐ kuː/
+  Standard: /θɔːt ɪt wʌz eɪ fɛɹ pɹaɪs fɔːɹ eɪ kjʊɹ/
+  Heard:    /ɔːɾ ɪt wʌzɐf eɪ pɹaɪs fɔːɹ ɹɐ kuː/
+    thought: /θɔːt/ → /ɔːɾ/  [θ→∅, t→ɾ]
+    was: /wʌz/ → /wʌzɐf/  [∅→ɐ, ∅→f]
+    fair: /fɛɹ/ → //  [f→∅, ɛ→∅, ɹ→∅]
+    a: /eɪ/ → /ɹɐ/  [e→ɹ, ɪ→ɐ]
+    cure.: /kjʊɹ/ → /kuː/  [j→∅, ʊ→u, ɹ→ː]
 
 I went to Catholic school for a couple of years.
-/ɐ wɛnt tɪ kætlɪk skuːl fɚɹ ɐ kʌpl ʌv jeɪ/
+  Standard: /aɪ wɛnt tuː kæθlɪk skuːl fɔːɹ eɪ kʌpəl ʌv jɪɹz/
+  Heard:    /ɐ wt tɪ kæθlɪk skuːl fɚɹ ɐ kʌpl ʌv jeɪ/
+    I: /aɪ/ → /ɐ/  [a→∅, ɪ→ɐ]
+    went: /wɛnt/ → /wt/  [ɛ→∅, n→∅]
+    to: /tuː/ → /tɪ/  [u→∅, ː→ɪ]
+    for: /fɔːɹ/ → /fɚɹ/  [ɔ→∅, ː→ɚ]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    couple: /kʌpəl/ → /kʌpl/  [ə→∅]
+    years.: /jɪɹz/ → /jeɪ/  [∅→e, ɹ→∅, z→∅]
 
-I was sent to Thalmu, if I can pronounce that right,
-/ɐn ɐ seɪŋ pɐ taʊm ʊ aɪk kɪŋ pɹənaʊns tɐɡ ɹaɪ/
+St. Pythomu, if I can pronounce that right,
+  Standard: /sənt paɪθəmuː ɪf aɪ kæn pɹənaʊns ðæt ɹaɪt/
+  Heard:    /ənɐseɪŋ pɐtaʊm oʊ aɪ kɪn pɹənaʊns ðɐɡ ɹaɪ/
+    St.: /sənt/ → /ənɐseɪŋ/  [s→∅, ∅→ɐ, ∅→s, ∅→e, ∅→ɪ, t→ŋ]
+    Pythomu,: /paɪθəmuː/ → /pɐtaʊm/  [∅→ɐ, ∅→t, ɪ→∅, θ→∅, ə→ʊ, u→∅, ː→∅]
+    if: /ɪf/ → /oʊ/  [ɪ→o, f→ʊ]
+    can: /kæn/ → /kɪn/  [æ→ɪ]
+    that: /ðæt/ → /ðɐɡ/  [æ→ɐ, t→ɡ]
+    right,: /ɹaɪt/ → /ɹaɪ/  [t→∅]
 
-and none might get mad if I didn't pronounce it right,
-/d an maɪ kɛ mɛɾɐ ɐf ɐ denʊ pənaʊns ə raɪ/
+the nuns might get mad if I didn't pronounce it right,
+  Standard: /ðə nʌnz maɪt ɡɛt mæd ɪf aɪ dɪdnt pɹənaʊns ɪt ɹaɪt/
+  Heard:    /dans maɪ kɛ mɛɾ ɐf ɐ denʊ pənɑns ə raɪ/
+    the: /ðə/ → //  [ð→∅, ə→∅]
+    nuns: /nʌnz/ → /dans/  [n→d, ʌ→a, z→s]
+    might: /maɪt/ → /maɪ/  [t→∅]
+    get: /ɡɛt/ → /kɛ/  [ɡ→k, t→∅]
+    mad: /mæd/ → /mɛɾ/  [æ→ɛ, d→ɾ]
+    if: /ɪf/ → /ɐf/  [ɪ→ɐ]
+    I: /aɪ/ → /ɐ/  [a→∅, ɪ→ɐ]
+    didn't: /dɪdnt/ → /denʊ/  [ɪ→∅, d→e, t→ʊ]
+    pronounce: /pɹənaʊns/ → /pənɑns/  [ɹ→∅, a→∅, ʊ→ɑ]
+    it: /ɪt/ → /ə/  [ɪ→∅, t→ə]
+    right,: /ɹaɪt/ → /raɪ/  [ɹ→r, t→∅]
 
-but they also called the same bots,
-/ʌt ðeɪɔː ɔːlsoʊ kɔːldð ðə seɪm bɑːɹ/
+but they also call the same bots,
+  Standard: /bʌt ðeɪ ɔːlsoʊ kɔːl ðə seɪm bɑːts/
+  Heard:    /bʌt ðeɪ ɔːlsoʊ kɔːld ðə seɪm bɑːɹ/
+    call: /kɔːl/ → /kɔːld/  [∅→d]
+    bots,: /bɑːts/ → /bɑːɹ/  [t→∅, s→ɹ]
 
-but I was on the same Thalmu at the time.
-/ɹ ɪz oʊŋl li seɪŋ taʊ t ɐ tæ/
+but it was on the St. Pythomu at the time.
+  Standard: /bʌt ɪt wʌz ɔn ðə sənt paɪθəmuː æt ðə taɪm/
+  Heard:    /ɪ z oʊ ŋl seɪŋtɐ ta ʊt ɐ taɪ/
+    but: /bʌt/ → //  [b→∅, ʌ→∅, t→∅]
+    it: /ɪt/ → /ɪ/  [t→∅]
+    was: /wʌz/ → /z/  [w→∅, ʌ→∅]
+    on: /ɔn/ → /oʊ/  [ɔ→o, n→ʊ]
+    the: /ðə/ → /ŋl/  [ð→ŋ, ə→l]
+    St.: /sənt/ → /seɪŋtɐ/  [∅→e, ə→ɪ, n→ŋ, ∅→ɐ]
+    Pythomu: /paɪθəmuː/ → /ta/  [p→t, ɪ→∅, θ→∅, ə→∅, m→∅, u→∅, ː→∅]
+    at: /æt/ → /ʊt/  [æ→ʊ]
+    the: /ðə/ → /ɐ/  [ð→∅, ə→ɐ]
+    time.: /taɪm/ → /taɪ/  [m→∅]
 
 And then when I was about eight or nine,
-/æn ðɛn wʌn ɐ wʌzs ʌbaʊt iːɹ ə nʌ/
+  Standard: /ænd ðɛn wɛn aɪ wʌz ɐbaʊt eɪt ɔːɹ naɪn/
+  Heard:    /ænd ɛnɑː wʌn ɐ wʌzs ʌbaʊ t iːɹə nʌ/
+    then: /ðɛn/ → /ɛnɑː/  [ð→∅, ∅→ɑ, ∅→ː]
+    when: /wɛn/ → /wʌn/  [ɛ→ʌ]
+    I: /aɪ/ → /ɐ/  [a→∅, ɪ→ɐ]
+    was: /wʌz/ → /wʌzs/  [∅→s]
+    about: /ɐbaʊt/ → /ʌbaʊ/  [ɐ→ʌ, t→∅]
+    eight: /eɪt/ → /t/  [e→∅, ɪ→∅]
+    or: /ɔːɹ/ → /iːɹə/  [ɔ→i, ∅→ə]
+    nine,: /naɪn/ → /nʌ/  [a→∅, ɪ→∅, n→ʌ]
 
 we moved to North Providence.
-/m miː tuː nɔːɹθ pɹɑːvɪnə/
+  Standard: /wiː muːvd tuː nɔːɹθ pɹɑːvɪdəns/
+  Heard:    /juː muː tuː nɔːɹθ pɹɑːvənə/
+    we: /wiː/ → /juː/  [w→j, i→u]
+    moved: /muːvd/ → /muː/  [v→∅, d→∅]
+    Providence.: /pɹɑːvɪdəns/ → /pɹɑːvənə/  [ɪ→∅, d→∅, s→ə]
 
-Right now, I still live in North Providence,
-/ɹaɪd naʊ aɪʃ ʃtʊ lɪt ən nɔ pɹɑːvɪdən/
+Right now I still live in North Providence,
+  Standard: /ɹaɪt naʊ aɪ stɪl laɪv ɪn nɔːɹθ pɹɑːvɪdəns/
+  Heard:    /ɹaɪd naʊ aɪ ʃtʊ lɪt ən nɔs pɹɑːvəɾən/
+    Right: /ɹaɪt/ → /ɹaɪd/  [t→d]
+    still: /stɪl/ → /ʃtʊ/  [s→ʃ, ɪ→∅, l→ʊ]
+    live: /laɪv/ → /lɪt/  [a→∅, v→t]
+    in: /ɪn/ → /ən/  [ɪ→ə]
+    North: /nɔːɹθ/ → /nɔs/  [ː→∅, ɹ→∅, θ→s]
+    Providence,: /pɹɑːvɪdəns/ → /pɹɑːvəɾən/  [ɪ→ə, d→ɾ, s→∅]
 
 which I found out that a lot of people
-/wɪtʃ aɪ faʊnd aʊt tʌɾ ɐ lɑːɾ ʌv piːpəl/
+  Standard: /wɪtʃ aɪ faʊnd aʊt ðæt eɪ lɑːt ʌv piːpəl/
+  Heard:    /wɪtʃ aɪ faʊnd aʊt tʌ ɾɐ lɑːɾ ʌv piːp/
+    that: /ðæt/ → /tʌ/  [ð→∅, æ→∅, ∅→ʌ]
+    a: /eɪ/ → /ɾɐ/  [e→ɾ, ɪ→ɐ]
+    lot: /lɑːt/ → /lɑːɾ/  [t→ɾ]
+    people: /piːpəl/ → /piːp/  [ə→∅, l→∅]
 
-from the North Providence,
-/sɹʌm ðə nɔːɹt tɹævɪn/
-
-Christen, church in the area,
-/nstən ntʃɑːɹ ðə ɛɹ/
+from the North Providence-Cranston area
+  Standard: /fɹʌm ðə nɔːɹθ pɹɑːvɪdəns kɹænstən ɛɹiə/
+  Heard:    /oʊlfɹʌm ðə nɔːɹɾ pɹɑːvɪns kɹeɪntstəntʃɑ ːɹtzðəneɪɹ/
+    from: /fɹʌm/ → /oʊlfɹʌm/  [∅→o, ∅→ʊ, ∅→l]
+    North: /nɔːɹθ/ → /nɔːɹɾ/  [θ→ɾ]
+    Providence: /pɹɑːvɪdəns/ → /pɹɑːvɪns/  [d→∅, ə→∅]
+    -Cranston: /kɹænstən/ → /kɹeɪntstəntʃɑ/  [∅→e, æ→ɪ, ∅→t, ∅→t, ∅→ʃ, ∅→ɑ]
+    area: /ɛɹiə/ → /ːɹtzðəneɪɹ/  [ɛ→ː, ∅→t, ∅→z, i→ð, ∅→n, ∅→e, ∅→ɪ, ∅→ɹ]
 
 tend to talk very similar to what I do.
-/tɛnt toː ak bɛrɪ çɛmlɛ tsuː oːoːr aɪ ɟoː/
+  Standard: /tɛnd tuː tɔːk vɛɹi sɪmɪlɚ tuː wʌt aɪ duː/
+  Heard:    /tɛn t toːak bɛ rɪçɛmlɛ tsuːzoː oːr aɪ ɟoː/
+    tend: /tɛnd/ → /tɛn/  [d→∅]
+    to: /tuː/ → /t/  [u→∅, ː→∅]
+    talk: /tɔːk/ → /toːak/  [ɔ→o, ∅→a]
+    very: /vɛɹi/ → /bɛ/  [v→b, ɹ→∅, i→∅]
+    similar: /sɪmɪlɚ/ → /rɪçɛmlɛ/  [s→r, ∅→ç, ∅→ɛ, ɪ→∅, ɚ→ɛ]
+    to: /tuː/ → /tsuːzoː/  [∅→s, ∅→ː, ∅→z, ∅→o]
+    what: /wʌt/ → /oːr/  [w→o, ʌ→ː, t→r]
+    do.: /duː/ → /ɟoː/  [d→ɟ, u→o]
 
-And it's actually interesting because actually,
-/ænd ɪz æktʃuː ɪntɚɹɛstɪŋ bɪkʌz ækʃuː/
+And it's actually interesting
+  Standard: /ænd ɪts æktʃuːəli ɪntɹɛstɪŋ/
+  Heard:    /ænd ɪs æktʃɪv ɪntɚɹ/
+    it's: /ɪts/ → /ɪs/  [t→∅]
+    actually: /æktʃuːəli/ → /æktʃɪv/  [u→∅, ː→∅, ə→∅, l→ɪ, i→v]
+    interesting: /ɪntɹɛstɪŋ/ → /ɪntɚɹ/  [∅→ɚ, ɛ→∅, s→∅, t→∅, ɪ→∅, ŋ→∅]
 
-the southern part of the state
-/ðə sʌðɚn pɑːɹɾ ʌð ðə steɪ/
+because actually the southern part of the state
+  Standard: /bɪkʌz æktʃuːəli ðə sʌðɚn pɑːɹt ʌv ðə steɪt/
+  Heard:    /ɹɛstɪŋbɪkʌzɪɾ æktʃuːəli ðə sʌðɚn pɑːɹɾ ʌv ðə steɪ/
+    because: /bɪkʌz/ → /ɹɛstɪŋbɪkʌzɪɾ/  [∅→ɹ, ∅→ɛ, ∅→s, ∅→t, ∅→ɪ, ∅→ŋ, ∅→ɪ, ∅→ɾ]
+    part: /pɑːɹt/ → /pɑːɹɾ/  [t→ɾ]
+    state: /steɪt/ → /steɪ/  [t→∅]
 
-doesn't seem to have nowhere near as much the accent
-/dʌzənt siːm tə hæv noʊweɪ nɜːv ɪz mʌtʃ tə æksɛ/
+doesn't seem to have nowhere in there
+  Standard: /dʌzənt siːm tuː hæv noʊwɛɹ ɪn ðɛɹ/
+  Heard:    /dʌzən siːm tə hæv noʊwe ɪn eɪ/
+    doesn't: /dʌzənt/ → /dʌzən/  [t→∅]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    nowhere: /noʊwɛɹ/ → /noʊwe/  [ɛ→∅, ɹ→e]
+    there: /ðɛɹ/ → /eɪ/  [ð→∅, ɛ→e, ɹ→ɪ]
 
-that like Johnston, Rhode Island,
-/dɛ laɪ tʃæstən ɹoʊɾ aɪ/
+as much the accent that like Johnston,
+  Standard: /æz mʌtʃ ðə æksənt ðæt laɪk dʒɑːnstən/
+  Heard:    /ɹɪz mʌtʃ ðəði æksɛnt ðᵻ laɪ dʒænstə/
+    as: /æz/ → /ɹɪz/  [∅→ɹ, æ→ɪ]
+    the: /ðə/ → /ðəði/  [∅→ð, ∅→i]
+    accent: /æksənt/ → /æksɛnt/  [ə→ɛ]
+    that: /ðæt/ → /ðᵻ/  [æ→∅, t→ᵻ]
+    like: /laɪk/ → /laɪ/  [k→∅]
+    Johnston,: /dʒɑːnstən/ → /dʒænstə/  [ɑ→∅, ː→æ, n→∅]
 
-North Providence, Providence has,
-/ɔːɹ pɹɑːvɪns pɹɑːvɪns æ/
+Rhode Island, North Providence, Providence has,
+  Standard: /ɹoʊd aɪlənd nɔːɹθ pɹɑːvɪdəns pɹɑːvɪdəns hæz/
+  Heard:    /ɹoʊd aɪlənd nɔːɹt pɹɑːvɪns pɹɑːvɪns hæ/
+    North: /nɔːɹθ/ → /nɔːɹt/  [θ→t]
+    Providence,: /pɹɑːvɪdəns/ → /pɹɑːvɪns/  [d→∅, ə→∅]
+    Providence: /pɹɑːvɪdəns/ → /pɹɑːvɪns/  [d→∅, ə→∅]
+    has,: /hæz/ → /hæ/  [z→∅]
 
-because my brother lives down in Charlestown
-/kɪz maɪ bɹʌðɚ lɪz daʊnɪ ɪn tʃæstɑː/
+because my brother lives down in Charleston
+  Standard: /bɪkʌz maɪ bɹʌðɚ laɪvz daʊn ɪn tʃɑːɹlstən/
+  Heard:    /kɪs maɪ bɹʌðɚ lɪz daʊn ɪn tʃɑːlst/
+    because: /bɪkʌz/ → /kɪs/  [b→∅, ɪ→∅, ʌ→ɪ, z→s]
+    lives: /laɪvz/ → /lɪz/  [a→∅, v→∅]
+    Charleston: /tʃɑːɹlstən/ → /tʃɑːlst/  [ɹ→∅, ə→∅, n→∅]
 
 and you don't really hear that type of,
-/ɑ̃ iː daʊt ɹiːli heɪ ðæ taɪp ʌ/
+  Standard: /ænd juː doʊnt ɹiəli hɪɹ ðæt taɪp ʌv/
+  Heard:    /a ʊiː daʊt ɹɪli heɪ ðæ taɪp ʌ/
+    and: /ænd/ → /a/  [æ→∅, n→∅, d→a]
+    you: /juː/ → /ʊiː/  [j→ʊ, u→i]
+    don't: /doʊnt/ → /daʊt/  [o→a, n→∅]
+    really: /ɹiəli/ → /ɹɪli/  [i→∅, ə→ɪ]
+    hear: /hɪɹ/ → /heɪ/  [∅→e, ɹ→∅]
+    that: /ðæt/ → /ðæ/  [t→∅]
+    of,: /ʌv/ → /ʌ/  [v→∅]
 
-maybe because it's Hopington and it's Charoho
-/meɪb bɪkʌzɐ ɐt ɑːpɪŋtɪn æd ɪt tʃæɹɚhɔː/
+maybe because it's Hopkinson
+  Standard: /meɪbiː bɪkʌz ɪts hɑːpkɪnsən/
+  Heard:    /ɚæmeɪ bɪkʌz ɐt ɑːpɪŋteɪ/
+    maybe: /meɪbiː/ → /ɚæmeɪ/  [∅→ɚ, ∅→æ, b→∅, i→∅, ː→∅]
+    it's: /ɪts/ → /ɐt/  [ɪ→ɐ, s→∅]
+    Hopkinson: /hɑːpkɪnsən/ → /ɑːpɪŋteɪ/  [h→∅, k→∅, n→ŋ, s→t, ə→e, n→ɪ]
 
-and it's Richmond and it's like more suburbs,
-/ʌnɪ ɪts ɹɪtʃmɪnɪ ɪt ɪdz laɪk mɔːɹɹ sʌbɚ/
+and it's Charahoe and it's Richmond
+  Standard: /ænd ɪts tʃæɹɐhoʊ ænd ɪts ɹɪtʃmənd/
+  Heard:    /n ɪs tʃærəhɑo n ɪs uetʃ/
+    and: /ænd/ → /n/  [æ→∅, d→∅]
+    it's: /ɪts/ → /ɪs/  [t→∅]
+    Charahoe: /tʃæɹɐhoʊ/ → /tʃærəhɑo/  [ɹ→r, ɐ→ə, ∅→ɑ, ʊ→∅]
+    and: /ænd/ → /n/  [æ→∅, d→∅]
+    it's: /ɪts/ → /ɪs/  [t→∅]
+    Richmond: /ɹɪtʃmənd/ → /uetʃ/  [ɹ→u, ɪ→e, m→∅, ə→∅, n→∅, d→∅]
+
+and it's like more suburbs,
+  Standard: /ænd ɪts laɪk mɔːɹ sʌbɜːbz/
+  Heard:    /mɪn ɪtɪdz laɪk mɔːɹɹəs sʌpɚ/
+    and: /ænd/ → /mɪn/  [∅→m, æ→ɪ, d→∅]
+    it's: /ɪts/ → /ɪtɪdz/  [∅→ɪ, ∅→d, s→z]
+    more: /mɔːɹ/ → /mɔːɹɹəs/  [∅→ɹ, ∅→ə, ∅→s]
+    suburbs,: /sʌbɜːbz/ → /sʌpɚ/  [b→∅, ɜ→∅, ː→∅, b→p, z→ɚ]
 
 but you definitely don't hear this.
-/pə uː dɛfəni daʊt hɪ ðə/
+  Standard: /bʌt juː dɛfɪnətli doʊnt hɪɹ ðɪs/
+  Heard:    /pʌ uː dɛfʊŋi daʊt hɪ ðə/
+    but: /bʌt/ → /pʌ/  [b→p, t→∅]
+    you: /juː/ → /uː/  [j→∅]
+    definitely: /dɛfɪnətli/ → /dɛfʊŋi/  [ɪ→∅, n→∅, ə→∅, t→ʊ, l→ŋ]
+    don't: /doʊnt/ → /daʊt/  [o→a, n→∅]
+    hear: /hɪɹ/ → /hɪ/  [ɹ→∅]
+    this.: /ðɪs/ → /ðə/  [ɪ→∅, s→ə]
 
 I'm not saying nobody,
-/æm nɑ5 tseɪi5n ntaʊpɑ5/
+  Standard: /aɪm nɑːt seɪɪŋ noʊbɑːdi/
+  Heard:    /æm natt saɪjiː ntaʊpa/
+    I'm: /aɪm/ → /æm/  [a→∅, ɪ→æ]
+    not: /nɑːt/ → /natt/  [ɑ→a, ː→t]
+    saying: /seɪɪŋ/ → /saɪjiː/  [e→a, ∅→j, ɪ→i, ŋ→ː]
+    nobody,: /noʊbɑːdi/ → /ntaʊpa/  [∅→t, o→a, b→∅, ɑ→∅, ː→∅, d→p, i→a]
 
 but even being on the bus today
-/at iːvɪn veːn an na bas tdeː/
+  Standard: /bʌt iːvən biːɪŋ ɔn ðə bʌs tədeɪ/
+  Heard:    /riʌtnoʊ iːvən biːn an də bɑːs tədɛ/
+    but: /bʌt/ → /riʌtnoʊ/  [∅→r, b→i, ∅→n, ∅→o, ∅→ʊ]
+    being: /biːɪŋ/ → /biːn/  [ɪ→∅, ŋ→n]
+    on: /ɔn/ → /an/  [ɔ→a]
+    the: /ðə/ → /də/  [ð→d]
+    bus: /bʌs/ → /bɑːs/  [∅→ɑ, ʌ→ː]
+    today: /tədeɪ/ → /tədɛ/  [e→∅, ɪ→ɛ]
 
-and for whatever reason it doesn't carry down that
-/ænd fɔːɹ ɹʌvɚ ɹiːzən ɪdə dʌzən kæɹi daʊnð ðæ/
+and for whatever reason it doesn't carry down that.
+  Standard: /ænd fɔːɹ wʌtɛvɚ ɹiːzən ɪt dʌzənt kæɹi daʊn ðæt/
+  Heard:    /æn fɔːɹ ɹʌpɚ ɹiːzənɪd ɪdənkætɐ dʌzən kæɹi daʊn ðæ/
+    and: /ænd/ → /æn/  [d→∅]
+    whatever: /wʌtɛvɚ/ → /ɹʌpɚ/  [w→ɹ, t→∅, ɛ→∅, v→p]
+    reason: /ɹiːzən/ → /ɹiːzənɪd/  [∅→ɪ, ∅→d]
+    it: /ɪt/ → /ɪdənkætɐ/  [∅→d, ∅→ə, ∅→n, ∅→k, ∅→æ, ∅→ɐ]
+    doesn't: /dʌzənt/ → /dʌzən/  [t→∅]
+    that.: /ðæt/ → /ðæ/  [t→∅]
 
-and now it could be a different accent
-/ən naʊ kʊd biː ɐ dɪfɹənt æks/
+And now it could be a different accent
+  Standard: /ænd naʊ ɪt kʊd biː eɪ dɪfɹənt æksənt/
+  Heard:    /naʊ kʊd biː ɐ dɪfɹənɾ æks/
+    And: /ænd/ → //  [æ→∅, n→∅, d→∅]
+    it: /ɪt/ → //  [ɪ→∅, t→∅]
+    a: /eɪ/ → /ɐ/  [e→∅, ɪ→ɐ]
+    different: /dɪfɹənt/ → /dɪfɹənɾ/  [t→ɾ]
+    accent: /æksənt/ → /æks/  [ə→∅, n→∅, t→∅]
 
-because that's closer to Connecticut, you know what I mean?
-/ækz ɛs poːsɪ t kənɛɾɪkɪ i nɑ lə ə mi/
+because that's closer to Connecticut,
+  Standard: /bɪkʌz ðæts kloʊsɚ tuː kənɛɾɪkət/
+  Heard:    /æŋkz as poːsy tɪ kɛnɛlɛk/
+    because: /bɪkʌz/ → /æŋkz/  [b→æ, ɪ→ŋ, ʌ→∅]
+    that's: /ðæts/ → /as/  [ð→∅, æ→∅, t→a]
+    closer: /kloʊsɚ/ → /poːsy/  [k→∅, l→p, ʊ→ː, ɚ→y]
+    to: /tuː/ → /tɪ/  [u→∅, ː→ɪ]
+    Connecticut,: /kənɛɾɪkət/ → /kɛnɛlɛk/  [ə→ɛ, ɾ→l, ɪ→ɛ, ə→∅, t→∅]
 
-But it's definitely not the one that I think,
-/bʌtɪ ɪts tæfli5ŋnɑ5tiː t ə wa5n dən aɪ θɪŋ/
+you know what I mean,
+  Standard: /juː noʊ wʌt aɪ miːn/
+  Heard:    /i n aːle bi/
+    you: /juː/ → /i/  [j→∅, u→∅, ː→i]
+    know: /noʊ/ → /n/  [o→∅, ʊ→∅]
+    what: /wʌt/ → //  [w→∅, ʌ→∅, t→∅]
+    I: /aɪ/ → /aːle/  [∅→ː, ∅→l, ɪ→e]
+    mean,: /miːn/ → /bi/  [m→b, ː→∅, n→∅]
+
+but it's definitely not the one that I think,
+  Standard: /bʌt ɪts dɛfɪnətli nɑːt ðə wʌn ðæt aɪ θɪŋk/
+  Heard:    /bʌt ɪts tæfliŋ nɑ5tiːt ə wa5n dən aɪ θɪŋ/
+    definitely: /dɛfɪnətli/ → /tæfliŋ/  [d→t, ɛ→æ, ɪ→∅, n→∅, ə→∅, t→∅, ∅→ŋ]
+    not: /nɑːt/ → /nɑ5tiːt/  [∅→5, ∅→t, ∅→i]
+    the: /ðə/ → /ə/  [ð→∅]
+    one: /wʌn/ → /wa5n/  [∅→a, ʌ→5]
+    that: /ðæt/ → /dən/  [ð→d, æ→ə, t→n]
+    think,: /θɪŋk/ → /θɪŋ/  [k→∅]
 
 that I hear most people that speak similar to me.
-/ðæɾ aɪ hɪ moʊst piːpəl ðɛn spiːk sɪmɪlɚ tə mɪ/
+  Standard: /ðæt aɪ hɪɹ moʊst piːpəl ðæt spiːk sɪmɪlɚ tuː miː/
+  Heard:    /ðæɾ aɪ hɪ moʊst piːpəl ðænhiːnaʊ spiːk sɪmɪlɚ tə mɪ/
+    that: /ðæt/ → /ðæɾ/  [t→ɾ]
+    hear: /hɪɹ/ → /hɪ/  [ɹ→∅]
+    that: /ðæt/ → /ðænhiːnaʊ/  [∅→n, ∅→h, ∅→i, ∅→ː, ∅→n, ∅→a, t→ʊ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    me.: /miː/ → /mɪ/  [i→∅, ː→ɪ]
 
-And now it seems like I can't seem to like act
-/æn aʊ si5ŋz zaɪ aɪ keɪ ɕi5m tsə dlei5 æ/
+And now it seems I can't seem to like
+  Standard: /ænd naʊ ɪt siːmz aɪ kænt siːm tuː laɪk/
+  Heard:    /ænɑu 5i5 ŋt s.i.5 aɪ kiɛ5 si5 ts.ə tei5/
+    And: /ænd/ → /ænɑu/  [∅→ɑ, d→u]
+    now: /naʊ/ → /5i5/  [n→5, a→i, ʊ→5]
+    it: /ɪt/ → /ŋt/  [ɪ→ŋ]
+    seems: /siːmz/ → /s.i.5/  [∅→., ː→∅, m→., z→5]
+    can't: /kænt/ → /kiɛ5/  [æ→i, n→ɛ, t→5]
+    seem: /siːm/ → /si5/  [ː→∅, m→5]
+    to: /tuː/ → /ts.ə/  [∅→s, u→., ː→ə]
+    like: /laɪk/ → /tei5/  [l→t, a→e, ɪ→i, k→5]
 
-and also talk at the same time
-/ænd ɔːlsoʊ tɔːk ð ðə seɪm taɪ/
+act and also talk at the same time
+  Standard: /ækt ænd ɔːlsoʊ tɔːk æt ðə seɪm taɪm/
+  Heard:    /ækt ænd ɔːlsoʊ tɔːk ðə seɪm taɪ/
+    at: /æt/ → //  [æ→∅, t→∅]
+    time: /taɪm/ → /taɪ/  [m→∅]
 
 because my mind's going a million miles an hour.
-/s aɪ maɪns toʊn ɐ mɪlən maɪlz ən aʊ/
+  Standard: /bɪkʌz maɪ maɪndz ɡoʊɪŋ eɪ mɪliən maɪlz æn aʊɚ/
+  Heard:    /saɪ maɪns toʊ nɐ mɪlən maɪlz ən aʊ/
+    because: /bɪkʌz/ → //  [b→∅, ɪ→∅, k→∅, ʌ→∅, z→∅]
+    my: /maɪ/ → /saɪ/  [m→s]
+    mind's: /maɪndz/ → /maɪns/  [d→∅, z→s]
+    going: /ɡoʊɪŋ/ → /toʊ/  [ɡ→t, ɪ→∅, ŋ→∅]
+    a: /eɪ/ → /nɐ/  [e→n, ɪ→ɐ]
+    million: /mɪliən/ → /mɪlən/  [i→∅]
+    an: /æn/ → /ən/  [æ→ə]
+    hour.: /aʊɚ/ → /aʊ/  [ɚ→∅]
 
-So that's where I really wanted to address it
-/sɜːl ðæs wɜː aɪ ɹɪli wʌnɾᵻdt tə ʌdʒʌs ɪ/
+So that's what I really wanted to address it
+  Standard: /soʊ ðæts wʌt aɪ ɹiəli wɔntᵻd tuː ɐdɹɛs ɪt/
+  Heard:    /sɔl ðæs wɜː aɪ ɹɪli wʌntᵻd tə ʌdʒʌs ɪ/
+    So: /soʊ/ → /sɔl/  [o→ɔ, ʊ→l]
+    that's: /ðæts/ → /ðæs/  [t→∅]
+    what: /wʌt/ → /wɜː/  [ʌ→ɜ, t→ː]
+    really: /ɹiəli/ → /ɹɪli/  [i→∅, ə→ɪ]
+    wanted: /wɔntᵻd/ → /wʌntᵻd/  [ɔ→ʌ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    address: /ɐdɹɛs/ → /ʌdʒʌs/  [ɐ→ʌ, ɹ→ʒ, ɛ→ʌ]
+    it: /ɪt/ → /ɪ/  [t→∅]
 
-because I really love Shakespeare, specifically.
-/kʌz aɪ ɹɪli lʌv ʃeɪkspᵻ sfɚsɛmə/
+because I really love Shakespeare specifically.
+  Standard: /bɪkʌz aɪ ɹiəli lʌv ʃeɪkspɪɹ spəsɪfɪkli/
+  Heard:    /kʌz aɪ ɹɪli lʌvɐ ʃeɪkspᵻ sfɚsɛmɪkəl/
+    because: /bɪkʌz/ → /kʌz/  [b→∅, ɪ→∅]
+    really: /ɹiəli/ → /ɹɪli/  [i→∅, ə→ɪ]
+    love: /lʌv/ → /lʌvɐ/  [∅→ɐ]
+    Shakespeare: /ʃeɪkspɪɹ/ → /ʃeɪkspᵻ/  [ɪ→∅, ɹ→ᵻ]
+    specifically.: /spəsɪfɪkli/ → /sfɚsɛmɪkəl/  [p→f, ə→ɚ, ɪ→ɛ, f→m, ∅→ə, i→∅]
 
-So I want to be able to do that
-/sɔːwʌ beɪ mɪnoʊ wʌ b eɪpəl tuː ðʌ/
+So I want to be able to do that without sounding like,
+  Standard: /soʊ aɪ wɔnt tuː biː eɪbəl tuː duː ðæt wɪðaʊt saʊndɪŋ laɪk/
+  Heard:    /s ɔː wʌntə beɪ bəllmiːnoʊwʌnᵻp eɪpəl t uː ðæætoʊm iːnoʊ sʌmtɪŋ laɪ/
+    So: /soʊ/ → /s/  [o→∅, ʊ→∅]
+    I: /aɪ/ → /ɔː/  [a→ɔ, ɪ→ː]
+    want: /wɔnt/ → /wʌntə/  [ɔ→ʌ, ∅→ə]
+    to: /tuː/ → /beɪ/  [t→b, u→e, ː→ɪ]
+    be: /biː/ → /bəllmiːnoʊwʌnᵻp/  [∅→ə, ∅→l, ∅→l, ∅→m, ∅→n, ∅→o, ∅→ʊ, ∅→w, ∅→ʌ, ∅→n, ∅→ᵻ, ∅→p]
+    able: /eɪbəl/ → /eɪpəl/  [b→p]
+    to: /tuː/ → /t/  [u→∅, ː→∅]
+    do: /duː/ → /uː/  [d→∅]
+    that: /ðæt/ → /ðæætoʊm/  [∅→æ, ∅→o, ∅→ʊ, ∅→m]
+    without: /wɪðaʊt/ → /iːnoʊ/  [w→i, ɪ→ː, ð→n, a→o, t→∅]
+    sounding: /saʊndɪŋ/ → /sʌmtɪŋ/  [a→∅, ʊ→ʌ, n→m, d→t]
+    like,: /laɪk/ → /laɪ/  [k→∅]
 
-without sounding like, and also for other roles too.
-/arutaʊmin sandɪŋ laɪkɲiaora enoː oːso pr oda rols to/
+and also for other roles too,
+  Standard: /ænd ɔːlsoʊ fɔːɹ ʌðɚ ɹoʊlz tuː/
+  Heard:    /ænd ɔːlsoʊ fɹ ʌðə boʊs tə/
+    for: /fɔːɹ/ → /fɹ/  [ɔ→∅, ː→∅]
+    other: /ʌðɚ/ → /ʌðə/  [ɚ→ə]
+    roles: /ɹoʊlz/ → /boʊs/  [ɹ→b, l→∅, z→s]
+    too,: /tuː/ → /tə/  [u→∅, ː→ə]
 
-Not only for Shakespeare, but I truly really love Shakespeare.
-/næɾ oʊni fɚ ʃeɪkspɪ bʌɾ aɪ tɹuːli ɹɪli lʌvd ʃeɪks/
+not only for Shakespeare,
+  Standard: /nɑːt oʊnli fɔːɹ ʃeɪkspɪɹ/
+  Heard:    /an umi fi ʃek/
+    not: /nɑːt/ → /an/  [∅→a, ɑ→∅, ː→∅, t→∅]
+    only: /oʊnli/ → /umi/  [o→∅, ʊ→∅, n→u, l→m]
+    for: /fɔːɹ/ → /fi/  [ɔ→∅, ː→∅, ɹ→i]
+    Shakespeare,: /ʃeɪkspɪɹ/ → /ʃek/  [ɪ→∅, s→∅, p→∅, ɪ→∅, ɹ→∅]
 
-I think I could just to Shakespeare
-/ti ɑk kʌ dis tu ɕe/
+but I truly really love Shakespeare.
+  Standard: /bʌt aɪ tɹuːli ɹiəli lʌv ʃeɪkspɪɹ/
+  Heard:    /b aɪ tɹuːli ɹɪli lʌvd ʃeɪks/
+    but: /bʌt/ → /b/  [ʌ→∅, t→∅]
+    really: /ɹiəli/ → /ɹɪli/  [i→∅, ə→ɪ]
+    love: /lʌv/ → /lʌvd/  [∅→d]
+    Shakespeare.: /ʃeɪkspɪɹ/ → /ʃeɪks/  [p→∅, ɪ→∅, ɹ→∅]
 
-the rest of my life would be happy.
-/də rast əm mam lat ʊ bi a/
+I think I could just do Shakespeare the rest of my life
+  Standard: /aɪ θɪŋk aɪ kʊd dʒʌst duː ʃeɪkspɪɹ ðə ɹɛst ʌv maɪ laɪf/
+  Heard:    /t iɑ kʌ dɪst uf ʃeɪkspɪ ðə rɛst ʌ mʌn laɪk/
+    I: /aɪ/ → //  [a→∅, ɪ→∅]
+    think: /θɪŋk/ → /t/  [θ→∅, ɪ→∅, ŋ→∅, k→t]
+    I: /aɪ/ → /iɑ/  [a→i, ɪ→ɑ]
+    could: /kʊd/ → /kʌ/  [ʊ→∅, d→ʌ]
+    just: /dʒʌst/ → /dɪst/  [ʒ→∅, ʌ→ɪ]
+    do: /duː/ → /uf/  [d→∅, ː→f]
+    Shakespeare: /ʃeɪkspɪɹ/ → /ʃeɪkspɪ/  [ɹ→∅]
+    rest: /ɹɛst/ → /rɛst/  [ɹ→r]
+    of: /ʌv/ → /ʌ/  [v→∅]
+    my: /maɪ/ → /mʌn/  [a→ʌ, ɪ→n]
+    life: /laɪf/ → /laɪk/  [f→k]
 
-There's just something about it when I pick up Shakespeare,
-/ez iss samtɪŋɐ ɐbaːɾʊmul k wonaɪ aɪ fek ap ʃet/
+and be happy.
+  Standard: /ænd biː hæpi/
+  Heard:    /p ji ɑ5/
+    and: /ænd/ → /p/  [æ→∅, n→∅, d→p]
+    be: /biː/ → /ji/  [b→j, ː→∅]
+    happy.: /hæpi/ → /ɑ5/  [h→∅, æ→∅, p→ɑ, i→5]
+
+There's just something about it.
+  Standard: /ðɛɹz dʒʌst sʌmθɪŋ ɐbaʊt ɪt/
+  Heard:    /ɛz uː sʌmtɪŋ ɐbɑː ɾɐ/
+    There's: /ðɛɹz/ → /ɛz/  [ð→∅, ɹ→∅]
+    just: /dʒʌst/ → /uː/  [d→∅, ʒ→∅, ʌ→∅, s→u, t→ː]
+    something: /sʌmθɪŋ/ → /sʌmtɪŋ/  [θ→t]
+    about: /ɐbaʊt/ → /ɐbɑː/  [a→∅, ʊ→ɑ, t→ː]
+    it.: /ɪt/ → /ɾɐ/  [ɪ→ɾ, t→ɐ]
+
+When I pick up Shakespeare,
+  Standard: /wɛn aɪ pɪk ʌp ʃeɪkspɪɹ/
+  Heard:    /l a ɪk wa tekapʃit/
+    When: /wɛn/ → /l/  [w→∅, ɛ→∅, n→l]
+    I: /aɪ/ → /a/  [ɪ→∅]
+    pick: /pɪk/ → /ɪk/  [p→∅]
+    up: /ʌp/ → /wa/  [ʌ→w, p→a]
+    Shakespeare,: /ʃeɪkspɪɹ/ → /tekapʃit/  [ʃ→t, ɪ→∅, s→a, ∅→ʃ, ɪ→i, ɹ→t]
 
 I know sometimes it's a little bit,
-/noʊ sʌmtaɪmz ə luː bɛ/
+  Standard: /aɪ noʊ sʌmtaɪmz ɪts eɪ lɪɾəl bɪt/
+  Heard:    /noʊ sʌmtaɪmz loʊ bɛ/
+    I: /aɪ/ → //  [a→∅, ɪ→∅]
+    it's: /ɪts/ → //  [ɪ→∅, t→∅, s→∅]
+    a: /eɪ/ → //  [e→∅, ɪ→∅]
+    little: /lɪɾəl/ → /loʊ/  [ɪ→∅, ɾ→∅, ə→o, l→ʊ]
+    bit,: /bɪt/ → /bɛ/  [ɪ→∅, t→ɛ]
 
 maybe a little bit confusing sometimes,
-/meɪkɐ ɐ lɪɾəl bɪt kənfjuːzɪŋ sʌmtaɪ/
+  Standard: /meɪbiː eɪ lɪɾəl bɪt kənfjuːzɪŋ sʌmtaɪmz/
+  Heard:    /meɪ kɐ lɪɾəl bɪt kənfjuːzɪŋ sʌmt/
+    maybe: /meɪbiː/ → /meɪ/  [b→∅, i→∅, ː→∅]
+    a: /eɪ/ → /kɐ/  [e→k, ɪ→ɐ]
+    sometimes,: /sʌmtaɪmz/ → /sʌmt/  [a→∅, ɪ→∅, m→∅, z→∅]
 
 but it's like gold.
-/bʌ ɪts laɪ ɡoʊl/
+  Standard: /bʌt ɪts laɪk ɡoʊld/
+  Heard:    /ɚ ɪts laɪ ɡoʊl/
+    but: /bʌt/ → /ɚ/  [b→∅, ʌ→∅, t→ɚ]
+    like: /laɪk/ → /laɪ/  [k→∅]
+    gold.: /ɡoʊld/ → /ɡoʊl/  [d→∅]
 
-When you finally like get it and click it,
-/m iː faɪn vaɪd ɡɛɹ ɪ n kwɛt ɪ/
+When you finally get it and click it,
+  Standard: /wɛn juː faɪnəli ɡɛt ɪt ænd klɪk ɪt/
+  Heard:    /miː faɪnvaɪdə ɡɛ r ɛn kwɛk ɪ/
+    When: /wɛn/ → //  [w→∅, ɛ→∅, n→∅]
+    you: /juː/ → /miː/  [j→m, u→i]
+    finally: /faɪnəli/ → /faɪnvaɪdə/  [∅→v, ∅→a, ∅→ɪ, ∅→d, l→∅, i→∅]
+    get: /ɡɛt/ → /ɡɛ/  [t→∅]
+    it: /ɪt/ → /r/  [ɪ→∅, t→r]
+    and: /ænd/ → /ɛn/  [æ→ɛ, d→∅]
+    click: /klɪk/ → /kwɛk/  [l→w, ɪ→ɛ]
+    it,: /ɪt/ → /ɪ/  [t→∅]
 
-it's like, oh my god, like how the hell did he say that
-/ts op ɔ maɪ ɡad laɪk aʊ ðə hɛl pə i ɕeɪ ðɛ/
+it's like, oh my god,
+  Standard: /ɪts laɪk oʊ maɪ ɡɑːd/
+  Heard:    /es ot o ma ka/
+    it's: /ɪts/ → /es/  [ɪ→∅, t→e]
+    like,: /laɪk/ → /ot/  [l→∅, a→∅, ɪ→o, k→t]
+    oh: /oʊ/ → /o/  [ʊ→∅]
+    my: /maɪ/ → /ma/  [ɪ→∅]
+    god,: /ɡɑːd/ → /ka/  [ɡ→∅, ɑ→∅, ː→k, d→a]
 
-and put that so beautifully?
-/æn pʌt æ tsonɡ5ŋ by5kə/
+like how the hell did he say that?
+  Standard: /laɪk haʊ ðə hɛl dɪd hiː seɪ ðæt/
+  Heard:    /aɪk a tə hɛl pi ɕeɪ lə/
+    like: /laɪk/ → /aɪk/  [l→∅]
+    how: /haʊ/ → /a/  [h→∅, ʊ→∅]
+    the: /ðə/ → /tə/  [ð→t]
+    did: /dɪd/ → //  [d→∅, ɪ→∅, d→∅]
+    he: /hiː/ → /pi/  [h→p, ː→∅]
+    say: /seɪ/ → /ɕeɪ/  [s→ɕ]
+    that?: /ðæt/ → /lə/  [ð→∅, æ→l, t→ə]
 
-I mean, if it's just like talking about
-/mʲ mʲinʲ i ɡʌ tʃʲis ɭʌ tsvɑkʌ bʌ/
+And put that so beautifully.
+  Standard: /ænd pʊt ðæt soʊ bjuːɾɪfəli/
+  Heard:    /pət æ sɐ̃ʊ̃ biɾə/
+    And: /ænd/ → //  [æ→∅, n→∅, d→∅]
+    put: /pʊt/ → /pət/  [ʊ→ə]
+    that: /ðæt/ → /æ/  [ð→∅, t→∅]
+    so: /soʊ/ → /sɐ̃ʊ̃/  [∅→ɐ, o→̃, ∅→̃]
+    beautifully.: /bjuːɾɪfəli/ → /biɾə/  [j→∅, u→∅, ː→i, ɪ→∅, f→∅, l→∅, i→∅]
 
-what I just said, Juliette is how she says,
-/raʊk o iʃ sek dʒuːlæɾ es haʊ siː sæ/
+I mean, if it's just like talking about how gorgeous
+  Standard: /aɪ miːn ɪf ɪts dʒʌst laɪk tɔːkɪŋ ɐbaʊt haʊ ɡɔːɹdʒəs/
+  Heard:    /mʲin iɡ ʌt ʃʲis ɭa tsvɑk ʌb ʌ dɑbɑdʲi/
+    I: /aɪ/ → //  [a→∅, ɪ→∅]
+    mean,: /miːn/ → /mʲin/  [∅→ʲ, ː→∅]
+    if: /ɪf/ → /iɡ/  [ɪ→i, f→ɡ]
+    it's: /ɪts/ → /ʌt/  [ɪ→ʌ, s→∅]
+    just: /dʒʌst/ → /ʃʲis/  [d→ʃ, ʒ→ʲ, ʌ→i, t→∅]
+    like: /laɪk/ → /ɭa/  [l→ɭ, ɪ→∅, k→∅]
+    talking: /tɔːkɪŋ/ → /tsvɑk/  [∅→s, ɔ→v, ː→ɑ, ɪ→∅, ŋ→∅]
+    about: /ɐbaʊt/ → /ʌb/  [ɐ→ʌ, a→∅, ʊ→∅, t→∅]
+    how: /haʊ/ → /ʌ/  [h→∅, a→∅, ʊ→ʌ]
+    gorgeous: /ɡɔːɹdʒəs/ → /dɑbɑdʲi/  [ɡ→d, ɔ→ɑ, ː→b, ɹ→ɑ, ʒ→∅, ə→ʲ, s→i]
 
-how boundless her love is for Romeo, you know what I mean?
-/baʊndɪs hɚ lʌv ɪns fɚ ɹoʊmioʊ juː naɪ ɛɾ ɪ/
+St. Juliet is,
+  Standard: /sənt dʒuːlɪɛt ɪz/
+  Heard:    /sekt ʃuːuja ɾe/
+    St.: /sənt/ → /sekt/  [ə→e, n→k]
+    Juliet: /dʒuːlɪɛt/ → /ʃuːuja/  [d→∅, ʒ→ʃ, l→∅, ɪ→u, ɛ→j, t→a]
+    is,: /ɪz/ → /ɾe/  [ɪ→ɾ, z→e]
 
-And I know there's other great writers too,
-/ælsæn aɪn nɔð ðɪʒ ʌðə ɡɹeɪt ɹaɪɾɚs tʊ/
+how she says how boundless her love is for Romeo.
+  Standard: /haʊ ʃiː sɛz haʊ baʊndləs hɜː lʌv ɪz fɔːɹ ɹoʊmɪoʊ/
+  Heard:    /ɕi5 sɛz aʊ baʊdləs ɜː lʌv ɪnsɚ fɜː ɹoʊm/
+    how: /haʊ/ → //  [h→∅, a→∅, ʊ→∅]
+    she: /ʃiː/ → /ɕi5/  [ʃ→ɕ, ː→5]
+    how: /haʊ/ → /aʊ/  [h→∅]
+    boundless: /baʊndləs/ → /baʊdləs/  [n→∅]
+    her: /hɜː/ → /ɜː/  [h→∅]
+    is: /ɪz/ → /ɪnsɚ/  [∅→n, ∅→s, z→ɚ]
+    for: /fɔːɹ/ → /fɜː/  [ɔ→ɜ, ɹ→∅]
+    Romeo.: /ɹoʊmɪoʊ/ → /ɹoʊm/  [ɪ→∅, o→∅, ʊ→∅]
+
+You know, anything else,
+  Standard: /juː noʊ ɛnɪθɪŋ ɛls/
+  Heard:    /inaːa n ent raː/
+    You: /juː/ → /inaːa/  [∅→i, j→n, u→a, ∅→a]
+    know,: /noʊ/ → /n/  [o→∅, ʊ→∅]
+    anything: /ɛnɪθɪŋ/ → /ent/  [ɛ→e, ɪ→∅, θ→∅, ɪ→∅, ŋ→t]
+    else,: /ɛls/ → /raː/  [ɛ→r, l→a, s→ː]
+
+and I know there's other great writers too,
+  Standard: /ænd aɪ noʊ ðɛɹz ʌðɚ ɡɹeɪt ɹaɪɾɚz tuː/
+  Heard:    /æn aɪ nɔ ðəs ʌðə ɡɹeɪ ɹaɪlɚs tʊ/
+    and: /ænd/ → /æn/  [d→∅]
+    know: /noʊ/ → /nɔ/  [o→∅, ʊ→ɔ]
+    there's: /ðɛɹz/ → /ðəs/  [ɛ→∅, ɹ→ə, z→s]
+    other: /ʌðɚ/ → /ʌðə/  [ɚ→ə]
+    great: /ɡɹeɪt/ → /ɡɹeɪ/  [t→∅]
+    writers: /ɹaɪɾɚz/ → /ɹaɪlɚs/  [ɾ→l, z→s]
+    too,: /tuː/ → /tʊ/  [u→∅, ː→ʊ]
 
 but anything else just seems to pale in comparison.
-/ɛnɪθɪŋ æls dʒɪs siːmzs tə peɪ ʊn kəmpæɹɪ/
+  Standard: /bʌt ɛnɪθɪŋ ɛls dʒʌst siːmz tuː peɪl ɪn kəmpæɹɪsən/
+  Heard:    /wɚ ɛniθɪŋ æls dʒɪ siːmz tə peɪ ʊn kəmpæɹ/
+    but: /bʌt/ → /wɚ/  [b→∅, ʌ→w, t→ɚ]
+    anything: /ɛnɪθɪŋ/ → /ɛniθɪŋ/  [ɪ→i]
+    else: /ɛls/ → /æls/  [ɛ→æ]
+    just: /dʒʌst/ → /dʒɪ/  [ʌ→∅, s→∅, t→ɪ]
+    to: /tuː/ → /tə/  [u→∅, ː→ə]
+    pale: /peɪl/ → /peɪ/  [l→∅]
+    in: /ɪn/ → /ʊn/  [ɪ→ʊ]
+    comparison.: /kəmpæɹɪsən/ → /kəmpæɹ/  [ɪ→∅, s→∅, ə→∅, n→∅]
+
+========================================
+ACCENT SUMMARY
+========================================
+  /ɪ/ → /∅/  (51×)
+  /t/ → /∅/  (48×)
+  /ɪ/ → /ɐ/  (30×)
+  /ː/ → /∅/  (29×)
+  /d/ → /∅/  (27×)
+  /u/ → /∅/  (25×)
+  /ə/ → /∅/  (24×)
+  /ɹ/ → /∅/  (22×)
+  /n/ → /∅/  (22×)
+  /e/ → /∅/  (21×)
+  /a/ → /∅/  (18×)
+  /ː/ → /ɚ/  (17×)
+  /ɜ/ → /∅/  (17×)
+  /i/ → /∅/  (16×)
+  /s/ → /∅/  (16×)
+  /h/ → /∅/  (15×)
+  /ː/ → /ə/  (14×)
+  /ə/ → /ɪ/  (13×)
+  /k/ → /∅/  (13×)
+  /l/ → /∅/  (12×)
+  /b/ → /∅/  (12×)
+  /æ/ → /∅/  (12×)
+  /ð/ → /∅/  (12×)
+  /ʌ/ → /∅/  (11×)
+  /ʊ/ → /∅/  (11×)
+  /ɔ/ → /∅/  (10×)
+  /∅/ → /ɹ/  (10×)
+  /ɛ/ → /æ/  (9×)
+  /t/ → /ɾ/  (9×)
+  /∅/ → /ɐ/  (9×)
+  /ɛ/ → /∅/  (9×)
+  /∅/ → /s/  (9×)
+  /ɪ/ → /ə/  (8×)
+  /∅/ → /ɪ/  (8×)
+  /∅/ → /n/  (8×)
+  /ɪ/ → /i/  (7×)
+  /z/ → /s/  (7×)
+  /∅/ → /ɑ/  (7×)
+  /∅/ → /e/  (7×)
+  /m/ → /∅/  (7×)
+  /θ/ → /∅/  (7×)
+  /o/ → /∅/  (7×)
+  /∅/ → /t/  (7×)
+  /ŋ/ → /∅/  (6×)
+  /∅/ → /ː/  (6×)
+  /ɑ/ → /∅/  (6×)
+  /∅/ → /l/  (6×)
+  /∅/ → /o/  (6×)
+  /∅/ → /d/  (6×)
+  /∅/ → /ə/  (6×)
+  /∅/ → /a/  (6×)
+  /∅/ → /i/  (5×)
+  /ə/ → /ɐ/  (5×)
+  /z/ → /∅/  (5×)
+  /ə/ → /ɚ/  (5×)
+  /æ/ → /ɪ/  (5×)
+  /v/ → /∅/  (5×)
+  /ɪ/ → /ː/  (4×)
+  /æ/ → /ə/  (4×)
+  /e/ → /ɾ/  (4×)
+  /θ/ → /t/  (4×)
+  /ɛ/ → /e/  (4×)
+  /ɚ/ → /∅/  (4×)
+  /ʌ/ → /ɪ/  (4×)
+  /b/ → /p/  (4×)
+  /j/ → /∅/  (4×)
+  /ː/ → /ɪ/  (4×)
+  /w/ → /∅/  (4×)
+  /∅/ → /ʊ/  (4×)
+  /ɪ/ → /ɛ/  (4×)
+  /ɔ/ → /ː/  (3×)
+  /ɹ/ → /ɪ/  (3×)
+  /ɹ/ → /ɚ/  (3×)
+  /ʊ/ → /ʌ/  (3×)
+  /ɔ/ → /o/  (3×)
+  /t/ → /ə/  (3×)
+  /æ/ → /ɐ/  (3×)
+  /ː/ → /æ/  (3×)
+  /∅/ → /ʃ/  (3×)
+  /ʊ/ → /ə/  (3×)
+  /∅/ → /ɚ/  (3×)
+  /t/ → /ʊ/  (3×)
+  /ɹ/ → /r/  (3×)
+  /ɐ/ → /ʌ/  (3×)
+  /o/ → /a/  (3×)
+  /∅/ → /æ/  (3×)
+  /∅/ → /m/  (3×)
+  /t/ → /ː/  (3×)
+  /p/ → /∅/  (3×)
+  /ʒ/ → /∅/  (3×)
+  /ʊ/ → /u/  (2×)
+  /ɹ/ → /ː/  (2×)
+  /ɾ/ → /∅/  (2×)
+  /∅/ → /f/  (2×)
+  /ᵻ/ → /ɪ/  (2×)
+  /ʊ/ → /ː/  (2×)
+  /ː/ → /ʊ/  (2×)
+  /ː/ → /ʌ/  (2×)
+  /a/ → /o/  (2×)
+  /∅/ → /k/  (2×)
+  /ɪ/ → /ᵻ/  (2×)
+  /t/ → /ɡ/  (2×)
+  /∅/ → /./  (2×)
+  /t/ → /ŋ/  (2×)
+  /s/ → /ʃ/  (2×)
+  /n/ → /d/  (2×)
+  /ɔ/ → /ɑ/  (2×)
+  /∅/ → /v/  (2×)
+  /v/ → /b/  (2×)
+  /t/ → /d/  (2×)
+  /s/ → /z/  (2×)
+  /ɡ/ → /k/  (2×)
+  /t/ → /ɪ/  (2×)
+  /l/ → /m/  (2×)
+  /f/ → /∅/  (2×)
+  /ɪ/ → /o/  (2×)
+  /æ/ → /ɛ/  (2×)
+  /d/ → /ɾ/  (2×)
+  /ʊ/ → /ɑ/  (2×)
+  /n/ → /ŋ/  (2×)
+  /ɛ/ → /ʌ/  (2×)
+  /s/ → /ə/  (2×)
+  /l/ → /ʊ/  (2×)
+  /∅/ → /ʌ/  (2×)
+  /∅/ → /z/  (2×)
+  /∅/ → /ɛ/  (2×)
+  /ʌ/ → /ː/  (2×)
+  /t/ → /r/  (2×)
+  /∅/ → /ŋ/  (2×)
+  /ə/ → /ɛ/  (2×)
+  /d/ → /a/  (2×)
+  /u/ → /i/  (2×)
+  /ə/ → /e/  (2×)
+  /ɪ/ → /e/  (2×)
+  /z/ → /ɚ/  (2×)
+  /d/ → /p/  (2×)
+  /ð/ → /d/  (2×)
+  /ɪ/ → /ŋ/  (2×)
+  /t/ → /a/  (2×)
+  /ɾ/ → /l/  (2×)
+  /ː/ → /i/  (2×)
+  /d/ → /t/  (2×)
+  /a/ → /i/  (2×)
+  /ɔ/ → /ʌ/  (2×)
+  /ɚ/ → /ə/  (2×)
+  /k/ → /t/  (2×)
+  /ɪ/ → /ɾ/  (2×)
+  /ʌ/ → /w/  (2×)
+  /t/ → /ɚ/  (2×)

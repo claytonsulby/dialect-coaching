@@ -8,14 +8,31 @@ from pathlib import Path
 @dataclass
 class WordPhoneme:
     word: str
-    phonemes: str
+    expected: str
+    actual: str
+
+
+@dataclass
+class PhoneChange:
+    expected: str
+    actual: str
+
+
+@dataclass
+class WordAccentMap:
+    word: str
+    expected: str
+    actual: str
+    changes: list[PhoneChange] = field(default_factory=list)
 
 
 @dataclass
 class AlignedSegment:
     text: str
-    phonemes: str
+    expected_phonemes: str
+    actual_phonemes: str
     words: list[WordPhoneme] = field(default_factory=list)
+    accent_map: list[WordAccentMap] = field(default_factory=list)
     start: float = 0.0
     end: float = 0.0
 
@@ -45,8 +62,8 @@ print(json.dumps(result))
 
 
 def _run_phonemes(audio_path: Path, segments: list[dict]) -> list[str]:
-    """Run phoneme recognition: full-segment CTC decode with gap-based word breaks.
-    Pure audio — no dictionary, no forced alignment."""
+    """Full-segment CTC decode from audio. Returns one phoneme string per segment.
+    Pure audio signal — no dictionary, no forced alignment."""
     segments_json = json.dumps(segments)
     script = f"""
 import json
@@ -70,19 +87,19 @@ if sr != 16000:
 
 segments = json.loads({segments_json!r})
 
-def ctc_decode_positioned(logits_slice):
+def ctc_decode(logits_slice):
     pred_ids = torch.argmax(logits_slice, dim=-1).tolist()
     prev = -1
     phones = []
-    for fi, pid in enumerate(pred_ids):
+    for pid in pred_ids:
         if pid == 0 or pid == prev:
             prev = pid
             continue
         token = proc.tokenizer.decode([pid]).strip()
         if token:
-            phones.append((fi, token))
+            phones.append(token)
         prev = pid
-    return phones
+    return "".join(phones)
 
 all_results = []
 
@@ -101,53 +118,7 @@ for seg in segments:
     with torch.no_grad():
         logits = model(**inputs).logits[0]
 
-    n_frames = logits.shape[0]
-    seg_dur = seg_end - seg_start
-    phones = ctc_decode_positioned(logits)
-
-    if not phones or seg_dur <= 0:
-        all_results.append("".join(t for _, t in phones))
-        continue
-
-    # Find the longest blank run near each word boundary timestamp
-    words = seg.get("words", [])
-    break_phone_indices = set()
-    search_radius = 4
-    for i in range(1, len(words)):
-        boundary_time = (words[i-1]["end"] + words[i]["start"]) / 2 - seg_start
-        target_frame = int(boundary_time / seg_dur * n_frames)
-
-        # Find the phone index whose frame is nearest this target
-        best_pi = None
-        best_dist = float("inf")
-        for pi, (fi, _) in enumerate(phones):
-            if abs(fi - target_frame) < best_dist:
-                best_dist = abs(fi - target_frame)
-                best_pi = pi
-
-        if best_pi is not None:
-            # Look for the best gap (longest blank run) among nearby phone boundaries
-            best_gap_pi = best_pi
-            best_gap_len = 0
-            lo = max(0, best_pi - search_radius)
-            hi = min(len(phones) - 1, best_pi + search_radius)
-            for pi in range(lo, hi + 1):
-                if pi == 0:
-                    continue
-                gap = phones[pi][0] - phones[pi-1][0]
-                if gap > best_gap_len:
-                    best_gap_len = gap
-                    best_gap_pi = pi
-            break_phone_indices.add(best_gap_pi)
-
-    # Build phoneme string with spaces at break points
-    parts = []
-    for pi, (fi, token) in enumerate(phones):
-        if pi in break_phone_indices:
-            parts.append(" ")
-        parts.append(token)
-
-    all_results.append("".join(parts))
+    all_results.append(ctc_decode(logits))
 
 print(json.dumps(all_results))
 """
@@ -164,6 +135,121 @@ print(json.dumps(all_results))
     raise RuntimeError(f"No JSON output:\n{result.stderr}\n{result.stdout}")
 
 
+def _get_expected_phonemes(words: list[str]) -> dict[str, str]:
+    """Get standard IPA pronunciation for words using espeak-ng."""
+    if not words:
+        return {}
+    words_json = json.dumps(words)
+    script = f"""
+import json
+from phonemizer import phonemize
+words = json.loads({words_json!r})
+phs = phonemize(words, language="en-us", backend="espeak", strip=True,
+                language_switch="remove-flags")
+print(json.dumps(dict(zip(words, phs))))
+"""
+    result = subprocess.run(
+        [sys.executable, "-c", script],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        return {w: "" for w in words}
+    try:
+        return json.loads(result.stdout.strip())
+    except (json.JSONDecodeError, ValueError):
+        return {w: "" for w in words}
+
+
+def _nw_align(seq_a: str, seq_b: str) -> list[tuple[str, str]]:
+    """Needleman-Wunsch alignment of two strings.
+    Returns list of (char_a, char_b) pairs. '∅' marks gaps."""
+    m, n = len(seq_a), len(seq_b)
+    MATCH, MISMATCH, GAP = 2, -1, -1
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(m + 1):
+        dp[i][0] = GAP * i
+    for j in range(n + 1):
+        dp[0][j] = GAP * j
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            score = MATCH if seq_a[i - 1] == seq_b[j - 1] else MISMATCH
+            dp[i][j] = max(dp[i - 1][j - 1] + score, dp[i - 1][j] + GAP, dp[i][j - 1] + GAP)
+
+    pairs: list[tuple[str, str]] = []
+    i, j = m, n
+    while i > 0 or j > 0:
+        if i > 0 and j > 0:
+            score = MATCH if seq_a[i - 1] == seq_b[j - 1] else MISMATCH
+            if dp[i][j] == dp[i - 1][j - 1] + score:
+                pairs.append((seq_a[i - 1], seq_b[j - 1]))
+                i -= 1
+                j -= 1
+                continue
+        if i > 0 and dp[i][j] == dp[i - 1][j] + GAP:
+            pairs.append((seq_a[i - 1], "∅"))
+            i -= 1
+        else:
+            pairs.append(("∅", seq_b[j - 1]))
+            j -= 1
+    pairs.reverse()
+    return pairs
+
+
+def _align_segment_words(
+    word_expected: list[tuple[str, str]],
+    actual_raw: str,
+) -> tuple[list[WordPhoneme], list[WordAccentMap]]:
+    """Align concatenated expected phonemes against actual CTC phonemes.
+    Uses alignment to assign actual phones to words (not timestamps)."""
+    if not word_expected or not actual_raw:
+        return [WordPhoneme(w, e, "") for w, e in word_expected], []
+
+    expected_concat = "".join(e for _, e in word_expected)
+    if not expected_concat:
+        return [WordPhoneme(w, e, actual_raw if i == 0 else "") for i, (w, e) in enumerate(word_expected)], []
+
+    # Map each character position in expected_concat to its word index
+    char_to_wi: list[int] = []
+    for wi, (_, exp) in enumerate(word_expected):
+        char_to_wi.extend([wi] * len(exp))
+
+    alignment = _nw_align(expected_concat, actual_raw)
+
+    n_words = len(word_expected)
+    word_actual_chars: list[list[str]] = [[] for _ in range(n_words)]
+    word_changes: list[list[tuple[str, str]]] = [[] for _ in range(n_words)]
+
+    ei = 0
+    current_wi = 0
+    for exp_ch, act_ch in alignment:
+        if exp_ch != "∅":
+            current_wi = char_to_wi[ei]
+            ei += 1
+
+        if exp_ch != "∅" and act_ch != "∅":
+            word_actual_chars[current_wi].append(act_ch)
+            if exp_ch != act_ch:
+                word_changes[current_wi].append((exp_ch, act_ch))
+        elif exp_ch != "∅":
+            word_changes[current_wi].append((exp_ch, "∅"))
+        else:
+            word_actual_chars[current_wi].append(act_ch)
+            word_changes[current_wi].append(("∅", act_ch))
+
+    words_result = []
+    accent_map = []
+    for wi, (word, expected) in enumerate(word_expected):
+        actual = "".join(word_actual_chars[wi])
+        words_result.append(WordPhoneme(word=word, expected=expected, actual=actual))
+        if expected != actual and word_changes[wi]:
+            accent_map.append(WordAccentMap(
+                word=word, expected=expected, actual=actual,
+                changes=[PhoneChange(e, a) for e, a in word_changes[wi]],
+            ))
+
+    return words_result, accent_map
+
+
 def transcribe_aligned(
     audio_path: Path, whisper_size: str = "medium",
     on_status=None,
@@ -176,13 +262,30 @@ def transcribe_aligned(
         on_status("Running phoneme recognition...")
     seg_phonemes = _run_phonemes(audio_path, segments)
 
+    all_words = sorted({
+        w["word"] for seg in segments for w in seg.get("words", [])
+    })
+    if on_status:
+        on_status(f"Getting standard pronunciations ({len(all_words)} words)...")
+    expected_map = _get_expected_phonemes(all_words)
+
     results = []
-    for seg, phonemes in zip(segments, seg_phonemes):
-        words = [WordPhoneme(word=w["word"], phonemes="") for w in seg.get("words", [])]
+    for seg, actual_raw in zip(segments, seg_phonemes):
+        seg_words = [w["word"] for w in seg.get("words", [])]
+        word_expected = [(w, expected_map.get(w, "")) for w in seg_words]
+
+        words, accent_map = _align_segment_words(word_expected, actual_raw)
+
+        expected_str = " ".join(expected_map.get(w, "") for w in seg_words)
+
+        actual_str = " ".join(w.actual for w in words if w.actual)
+
         results.append(AlignedSegment(
             text=seg["text"],
-            phonemes=phonemes,
+            expected_phonemes=expected_str,
+            actual_phonemes=actual_str,
             words=words,
+            accent_map=accent_map,
             start=seg["start"],
             end=seg["end"],
         ))
@@ -194,6 +297,31 @@ def format_aligned(segments: list[AlignedSegment]) -> str:
     lines = []
     for seg in segments:
         lines.append(seg.text)
-        lines.append(f"/{seg.phonemes}/")
+        lines.append(f"  Standard: /{seg.expected_phonemes}/")
+        lines.append(f"  Heard:    /{seg.actual_phonemes}/")
+        if seg.accent_map:
+            for m in seg.accent_map:
+                changes_str = ", ".join(
+                    f"{c.expected}→{c.actual}" for c in m.changes
+                )
+                lines.append(f"    {m.word}: /{m.expected}/ → /{m.actual}/  [{changes_str}]")
         lines.append("")
+
+    # Aggregate accent summary
+    phone_changes: dict[tuple[str, str], int] = {}
+    for seg in segments:
+        for m in seg.accent_map:
+            for c in m.changes:
+                key = (c.expected, c.actual)
+                phone_changes[key] = phone_changes.get(key, 0) + 1
+
+    if phone_changes:
+        lines.append("=" * 40)
+        lines.append("ACCENT SUMMARY")
+        lines.append("=" * 40)
+        for (exp, act), count in sorted(phone_changes.items(), key=lambda x: -x[1]):
+            if count >= 2:
+                lines.append(f"  /{exp}/ → /{act}/  ({count}×)")
+        lines.append("")
+
     return "\n".join(lines)
