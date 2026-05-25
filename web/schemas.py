@@ -34,6 +34,7 @@ class ProjectResponse(BaseModel):
 class ActorCreate(BaseModel):
     name: str
     notes: str = ""
+    speaker_id: int | None = None
 
 
 class ActorUpdate(BaseModel):
@@ -52,6 +53,8 @@ class ActorResponse(BaseModel):
     id: int
     name: str
     notes: str
+    speaker_id: int | None = None
+    speaker_name: str | None = None
     created_at: datetime
     projects: list[ProjectBrief] = []
 
@@ -276,6 +279,7 @@ class SampleCreate(BaseModel):
     audio_resource_id: int
     accent_profile_id: int | None = None
     quality_rating: int | None = None
+    project_id: int | None = None
     tags: list[str] = []
     notes: str = ""
 
@@ -295,6 +299,7 @@ class SampleResponse(BaseModel):
     accent_profile_id: int | None
     accent_profile_name: str | None = None
     audio_resource_id: int
+    project_id: int | None = None
     quality_rating: int | None
     accent_strength: float | None
     is_curated: bool

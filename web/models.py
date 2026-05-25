@@ -31,9 +31,11 @@ class Actor(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     notes = Column(Text, default="")
+    speaker_id = Column(Integer, ForeignKey("speakers.id", ondelete="SET NULL"), nullable=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     projects = relationship("Project", secondary=project_actor, back_populates="actors")
+    speaker = relationship("Speaker", foreign_keys=[speaker_id])
 
 
 class AudioResource(Base):
@@ -196,6 +198,7 @@ class SpeakerSample(Base):
     speaker_id = Column(Integer, ForeignKey("speakers.id", ondelete="CASCADE"), nullable=False)
     accent_profile_id = Column(Integer, ForeignKey("accent_profiles.id", ondelete="SET NULL"), nullable=True)
     audio_resource_id = Column(Integer, ForeignKey("audio_resources.id", ondelete="CASCADE"), nullable=False)
+    project_id = Column(Integer, ForeignKey("projects.id", ondelete="SET NULL"), nullable=True)
     quality_rating = Column(Integer, nullable=True)
     accent_strength = Column(Float, nullable=True)
     is_curated = Column(Integer, default=0)
@@ -205,6 +208,7 @@ class SpeakerSample(Base):
     speaker = relationship("Speaker")
     accent_profile = relationship("AccentProfile")
     audio_resource = relationship("AudioResource")
+    project = relationship("Project")
     tags = relationship("Tag", secondary=sample_tag, back_populates="samples")
 
 
