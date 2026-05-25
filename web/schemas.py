@@ -34,6 +34,7 @@ class ProjectResponse(BaseModel):
 class ActorCreate(BaseModel):
     name: str
     notes: str = ""
+    speaker_id: int | None = None
 
 
 class ActorUpdate(BaseModel):
@@ -52,6 +53,7 @@ class ActorResponse(BaseModel):
     id: int
     name: str
     notes: str
+    speaker_id: int | None = None
     created_at: datetime
     projects: list[ProjectBrief] = []
 

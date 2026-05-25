@@ -16,6 +16,7 @@ export interface Actor {
   id: number;
   name: string;
   notes: string;
+  speaker_id: number | null;
   created_at: string;
   projects: ProjectBrief[];
 }

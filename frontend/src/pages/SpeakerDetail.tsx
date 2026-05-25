@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { api } from "../api/client";
-import type { Speaker } from "../types";
+import type { Speaker, Actor } from "../types";
 
 const AGE_RANGES = ["18-25", "26-35", "36-50", "51-65", "65+"];
 
@@ -9,6 +9,7 @@ export default function SpeakerDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [speaker, setSpeaker] = useState<Speaker | null>(null);
+  const [linkedActor, setLinkedActor] = useState<Actor | null>(null);
   const [editing, setEditing] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -24,6 +25,14 @@ export default function SpeakerDetail() {
     if (!id) return;
     const data = await api.speakers.get(Number(id));
     setSpeaker(data);
+    // Find linked actor
+    try {
+      const actors: Actor[] = await api.actors.list();
+      const linked = actors.find((a) => a.speaker_id === Number(id));
+      setLinkedActor(linked || null);
+    } catch {
+      setLinkedActor(null);
+    }
     setForm({
       name: data.name,
       origin_region_id: data.origin_region_id?.toString() || "",
@@ -274,6 +283,19 @@ export default function SpeakerDetail() {
                   {speaker.notes}
                 </p>
               </div>
+            )}
+            {linkedActor ? (
+              <div className="bg-gray-800 border border-gray-700 rounded p-3">
+                <span className="text-sm text-gray-400">Linked as Actor: </span>
+                <Link
+                  to={`/actors/${linkedActor.id}`}
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
+                >
+                  {linkedActor.name}
+                </Link>
+              </div>
+            ) : (
+              <p className="text-sm text-gray-500 italic">Not linked to any actor</p>
             )}
             <div className="flex gap-2">
               <button
