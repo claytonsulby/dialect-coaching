@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from web.database import get_db
-from web.models import ImportJob
+from web.models import ImportJob, Speaker, PhonemeInventory
 from web.schemas import ImportJobResponse, ImportRequest
 from web.services.corpus_import import start_import
 
@@ -40,6 +40,41 @@ def import_csv(data: ImportRequest, db: Session = Depends(get_db)):
     entries_dicts = [e.model_dump() for e in data.entries]
     start_import(job.id, entries_dicts, "csv")
     return {"job_id": job.id, "status": "pending"}
+
+
+@router.get("/auto-sync-status")
+def auto_sync_status(db: Session = Depends(get_db)):
+    """Return the status of auto-synced corpora (SAA and PHOIBLE)."""
+    saa_job = (
+        db.query(ImportJob)
+        .filter(ImportJob.source == "speech_accent_archive")
+        .order_by(ImportJob.created_at.desc())
+        .first()
+    )
+    phoible_job = (
+        db.query(ImportJob)
+        .filter(ImportJob.source == "phoible")
+        .order_by(ImportJob.created_at.desc())
+        .first()
+    )
+    speaker_count = db.query(Speaker).filter(Speaker.source == "speech_accent_archive").count()
+    inventory_count = db.query(PhonemeInventory).count()
+
+    def _job_info(job, count, count_label):
+        if not job:
+            return {"status": "not_started", count_label: 0}
+        return {
+            "status": job.status,
+            "total_entries": job.total_entries,
+            "processed_entries": job.processed_entries,
+            "error_message": job.error_message,
+            count_label: count,
+        }
+
+    return {
+        "saa": _job_info(saa_job, speaker_count, "speakers"),
+        "phoible": _job_info(phoible_job, inventory_count, "inventories"),
+    }
 
 
 @router.get("/jobs", response_model=list[ImportJobResponse])

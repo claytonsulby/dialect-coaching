@@ -46,5 +46,35 @@ def startup():
     try:
         seed_regions(db)
         seed_accent_profiles(db)
+        _auto_sync_corpora(db)
     finally:
         db.close()
+
+
+def _auto_sync_corpora(db):
+    """Trigger SAA and PHOIBLE syncs on first run (background, non-blocking)."""
+    from web.models import AppSetting, ImportJob
+
+    # Speech Accent Archive
+    if not db.query(AppSetting).filter(AppSetting.key == "saa_auto_synced").first():
+        from web.services.speech_accent_archive import start_sync
+
+        job = ImportJob(source="speech_accent_archive", status="pending", total_entries=0)
+        db.add(job)
+        db.commit()
+        db.refresh(job)
+        start_sync(job.id)
+        db.add(AppSetting(key="saa_auto_synced", value="true"))
+        db.commit()
+
+    # PHOIBLE
+    if not db.query(AppSetting).filter(AppSetting.key == "phoible_auto_synced").first():
+        from web.services.phoible import start_phoible_sync
+
+        job = ImportJob(source="phoible", status="pending", total_entries=0)
+        db.add(job)
+        db.commit()
+        db.refresh(job)
+        start_phoible_sync(job.id)
+        db.add(AppSetting(key="phoible_auto_synced", value="true"))
+        db.commit()
