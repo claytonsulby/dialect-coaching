@@ -295,6 +295,7 @@ class SampleResponse(BaseModel):
     accent_profile_id: int | None
     accent_profile_name: str | None = None
     audio_resource_id: int
+    project_id: int | None = None
     quality_rating: int | None
     accent_strength: float | None
     is_curated: bool

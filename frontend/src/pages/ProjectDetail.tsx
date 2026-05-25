@@ -2,7 +2,8 @@ import { useEffect, useState, useCallback } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
 import AudioUpload from "../components/AudioUpload";
-import type { Project, AudioResource, Actor } from "../types";
+import SampleCard from "../components/SampleCard";
+import type { Project, AudioResource, Actor, SpeakerSample } from "../types";
 
 export default function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
@@ -11,6 +12,7 @@ export default function ProjectDetail() {
 
   const [project, setProject] = useState<Project | null>(null);
   const [audioFiles, setAudioFiles] = useState<AudioResource[]>([]);
+  const [samples, setSamples] = useState<SpeakerSample[]>([]);
   const [allActors, setAllActors] = useState<Actor[]>([]);
   const [editing, setEditing] = useState(false);
   const [editName, setEditName] = useState("");
@@ -18,14 +20,16 @@ export default function ProjectDetail() {
   const [showActorPicker, setShowActorPicker] = useState(false);
 
   const load = useCallback(async () => {
-    const [p, audio, actors] = await Promise.all([
+    const [p, audio, actors, sampleList] = await Promise.all([
       api.projects.get(projectId),
       api.audio.list(projectId),
       api.actors.list(),
+      api.samples.list({ project_id: String(projectId) }),
     ]);
     setProject(p);
     setAudioFiles(audio);
     setAllActors(actors);
+    setSamples(sampleList);
   }, [projectId]);
 
   useEffect(() => { load(); }, [load]);
@@ -217,6 +221,28 @@ export default function ProjectDetail() {
                   </button>
                 </div>
               </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-lg font-semibold">Samples</h2>
+          <button
+            onClick={() => navigate(`/discovery?project_id=${projectId}`)}
+            className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded text-sm transition"
+          >
+            Discover Samples
+          </button>
+        </div>
+
+        {samples.length === 0 ? (
+          <p className="text-gray-500 italic">No samples linked to this project yet.</p>
+        ) : (
+          <div className="grid gap-3">
+            {samples.map((s) => (
+              <SampleCard key={s.id} sample={s} />
             ))}
           </div>
         )}
