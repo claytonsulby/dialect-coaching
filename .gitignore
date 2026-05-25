@@ -14,3 +14,7 @@ build/
 *.ogg
 *.m4a
 !tests/fixtures/*
+data/
+node_modules/
+frontend/dist/
+frontend/.vite/
