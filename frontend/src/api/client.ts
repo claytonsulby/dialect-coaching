@@ -187,6 +187,16 @@ export const api = {
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },
+  corpus: {
+    commonVoice: {
+      import: (data: { directory: string; locale?: string; limit?: number }) =>
+        request<any>("/corpus/common-voice/import", {
+          method: "POST",
+          body: JSON.stringify(data),
+        }),
+      status: () => request<any>("/corpus/common-voice/status"),
+    },
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),
