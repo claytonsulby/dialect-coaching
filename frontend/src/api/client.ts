@@ -187,6 +187,14 @@ export const api = {
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },
+  corpus: {
+    speechAccentArchive: {
+      sync: () =>
+        request<any>("/corpus/speech-accent-archive/sync", { method: "POST" }),
+      status: () =>
+        request<any>("/corpus/speech-accent-archive/status"),
+    },
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),

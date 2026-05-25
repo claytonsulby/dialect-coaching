@@ -345,6 +345,20 @@ class DiscoveryResult(BaseModel):
     total_count: int = 0
 
 
+# --- Speech Accent Archive schemas (Unit 3 corpus) ---
+
+class SpeechAccentArchiveSyncResponse(BaseModel):
+    id: int
+    source: str
+    status: str
+    total_entries: int
+    processed_entries: int
+    error_message: str | None
+    created_at: datetime
+
+    model_config = {"from_attributes": True}
+
+
 class DiscoveryStats(BaseModel):
     total_speakers: int = 0
     total_samples: int = 0
