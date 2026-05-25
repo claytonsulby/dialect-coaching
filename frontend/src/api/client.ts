@@ -55,6 +55,10 @@ export const api = {
     update: (id: number, data: any) =>
       request<any>(`/actors/${id}`, { method: "PUT", body: JSON.stringify(data) }),
     delete: (id: number) => request<void>(`/actors/${id}`, { method: "DELETE" }),
+    linkSpeaker: (actorId: number, speakerId: number) =>
+      request<any>(`/actors/${actorId}/link-speaker/${speakerId}`, { method: "POST" }),
+    unlinkSpeaker: (actorId: number) =>
+      request<any>(`/actors/${actorId}/link-speaker`, { method: "DELETE" }),
   },
   audio: {
     list: (projectId: number) => request<any[]>(`/projects/${projectId}/audio`),
@@ -170,6 +174,11 @@ export const api = {
     update: (id: number, data: any) =>
       request<any>(`/samples/${id}`, { method: "PUT", body: JSON.stringify(data) }),
     delete: (id: number) => request<void>(`/samples/${id}`, { method: "DELETE" }),
+    setProject: (sampleId: number, projectId: number | null) =>
+      request<any>(`/samples/${sampleId}/project`, {
+        method: "PUT",
+        body: JSON.stringify({ project_id: projectId }),
+      }),
   },
   tags: {
     list: () => request<any[]>("/tags"),

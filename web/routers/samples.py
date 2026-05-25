@@ -1,9 +1,15 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
+from pydantic import BaseModel
+
 from web.database import get_db
-from web.models import SpeakerSample, Tag, sample_tag
+from web.models import AudioResource, SpeakerSample, Tag, sample_tag
 from web.schemas import SampleCreate, SampleResponse, SampleUpdate
+
+
+class SetProjectBody(BaseModel):
+    project_id: int | None = None
 
 router = APIRouter(prefix="/api/samples", tags=["samples"])
 
@@ -31,6 +37,7 @@ def _sample_to_response(sample: SpeakerSample) -> dict:
         "accent_profile_id": sample.accent_profile_id,
         "accent_profile_name": sample.accent_profile.name if sample.accent_profile else None,
         "audio_resource_id": sample.audio_resource_id,
+        "project_id": sample.project_id,
         "quality_rating": sample.quality_rating,
         "accent_strength": sample.accent_strength,
         "is_curated": bool(sample.is_curated),
@@ -44,6 +51,7 @@ def _sample_to_response(sample: SpeakerSample) -> dict:
 def list_samples(
     speaker_id: int | None = None,
     accent_profile_id: int | None = None,
+    project_id: int | None = None,
     min_strength: float | None = None,
     max_strength: float | None = None,
     is_curated: bool | None = None,
@@ -56,6 +64,8 @@ def list_samples(
         q = q.filter(SpeakerSample.speaker_id == speaker_id)
     if accent_profile_id is not None:
         q = q.filter(SpeakerSample.accent_profile_id == accent_profile_id)
+    if project_id is not None:
+        q = q.filter(SpeakerSample.project_id == project_id)
     if min_strength is not None:
         q = q.filter(SpeakerSample.accent_strength >= min_strength)
     if max_strength is not None:
@@ -72,11 +82,17 @@ def list_samples(
 
 @router.post("", response_model=SampleResponse, status_code=201)
 def create_sample(data: SampleCreate, db: Session = Depends(get_db)):
+    project_id = data.project_id
+    if project_id is None:
+        audio = db.get(AudioResource, data.audio_resource_id)
+        if audio and audio.project_id:
+            project_id = audio.project_id
     sample = SpeakerSample(
         speaker_id=data.speaker_id,
         audio_resource_id=data.audio_resource_id,
         accent_profile_id=data.accent_profile_id,
         quality_rating=data.quality_rating,
+        project_id=project_id,
         notes=data.notes,
     )
     if data.tags:
@@ -110,6 +126,17 @@ def update_sample(sample_id: int, data: SampleUpdate, db: Session = Depends(get_
         sample.tags = _resolve_tags(db, data.tags)
     if data.notes is not None:
         sample.notes = data.notes
+    db.commit()
+    db.refresh(sample)
+    return _sample_to_response(sample)
+
+
+@router.put("/{sample_id}/project", response_model=SampleResponse)
+def set_sample_project(sample_id: int, body: SetProjectBody, db: Session = Depends(get_db)):
+    sample = db.get(SpeakerSample, sample_id)
+    if not sample:
+        raise HTTPException(404, "Sample not found")
+    sample.project_id = body.project_id
     db.commit()
     db.refresh(sample)
     return _sample_to_response(sample)
