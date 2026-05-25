@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
-import type { AccentProfile, AccentComparison } from "../types";
+import type { AccentProfile, AccentComparison, SpeakerSample } from "../types";
 import PatternTable from "../components/PatternTable";
+import AudioLink from "../components/AudioLink";
 
 export default function AccentProfileDetail() {
   const { id } = useParams<{ id: string }>();
@@ -14,6 +15,7 @@ export default function AccentProfileDetail() {
   const [editDesc, setEditDesc] = useState("");
   const [comparison, setComparison] = useState<AccentComparison | null>(null);
   const [compareToId, setCompareToId] = useState<string>("");
+  const [samples, setSamples] = useState<SpeakerSample[]>([]);
   const [loading, setLoading] = useState(true);
 
   const load = async () => {
@@ -32,6 +34,9 @@ export default function AccentProfileDetail() {
   useEffect(() => {
     load();
     api.accentProfiles.list().then(setAllProfiles);
+    if (id) {
+      api.samples.list({ accent_profile_id: String(id) }).then(setSamples);
+    }
   }, [id]);
 
   const handleSave = async () => {
@@ -215,6 +220,31 @@ export default function AccentProfileDetail() {
           onUpdate={handleUpdatePattern}
           onDelete={handleDeletePattern}
         />
+      </div>
+
+      {/* Samples */}
+      <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg mb-6">
+        <h2 className="text-lg font-semibold mb-3">Samples</h2>
+        {samples.length === 0 ? (
+          <p className="text-sm text-gray-500">No samples with this accent profile yet</p>
+        ) : (
+          <div className="space-y-2">
+            {samples.map((s) => (
+              <div
+                key={s.id}
+                className="bg-gray-800 rounded p-2 flex justify-between items-center"
+              >
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="text-gray-300">{s.speaker_name || `Speaker #${s.speaker_id}`}</span>
+                  {s.quality_rating != null && (
+                    <span className="text-gray-500">({s.quality_rating}/5)</span>
+                  )}
+                </div>
+                <AudioLink audioResourceId={s.audio_resource_id} />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Comparison */}

@@ -1,7 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { api } from "../api/client";
-import type { Speaker } from "../types";
+import type { Speaker, SpeakerSample } from "../types";
+import AudioLink from "../components/AudioLink";
 
 const AGE_RANGES = ["18-25", "26-35", "36-50", "51-65", "65+"];
 
@@ -10,6 +11,7 @@ export default function SpeakerDetail() {
   const navigate = useNavigate();
   const [speaker, setSpeaker] = useState<Speaker | null>(null);
   const [editing, setEditing] = useState(false);
+  const [samples, setSamples] = useState<SpeakerSample[]>([]);
   const [form, setForm] = useState({
     name: "",
     origin_region_id: "",
@@ -37,7 +39,10 @@ export default function SpeakerDetail() {
 
   useEffect(() => {
     load();
-  }, [load]);
+    if (id) {
+      api.samples.list({ speaker_id: String(id) }).then(setSamples);
+    }
+  }, [load, id]);
 
   const save = async () => {
     if (!id || !form.name.trim()) return;
@@ -289,6 +294,31 @@ export default function SpeakerDetail() {
                 Delete
               </button>
             </div>
+          </div>
+        )}
+      </div>
+
+      {/* Samples */}
+      <div className="p-6 bg-gray-900 border border-gray-800 rounded-lg">
+        <h3 className="text-lg font-semibold mb-3">Samples</h3>
+        {samples.length === 0 ? (
+          <p className="text-sm text-gray-500">No samples for this speaker yet</p>
+        ) : (
+          <div className="space-y-2">
+            {samples.map((s) => (
+              <div
+                key={s.id}
+                className="bg-gray-800 rounded p-2 flex justify-between items-center"
+              >
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="text-gray-300">{s.accent_profile_name || "No accent profile"}</span>
+                  {s.quality_rating != null && (
+                    <span className="text-gray-500">({s.quality_rating}/5)</span>
+                  )}
+                </div>
+                <AudioLink audioResourceId={s.audio_resource_id} />
+              </div>
+            ))}
           </div>
         )}
       </div>

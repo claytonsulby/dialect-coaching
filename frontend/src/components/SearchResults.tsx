@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { DiscoveryResult, Speaker, SpeakerSample, AccentProfileSummary } from "../types";
 import SourceBadge from "./SourceBadge";
+import AudioLink from "./AudioLink";
 
 interface Props {
   results: DiscoveryResult;
@@ -69,11 +70,14 @@ function SampleCard({ sample }: { sample: SpeakerSample }) {
             </div>
           )}
         </div>
-        {sample.is_curated && (
-          <span className="text-xs px-2 py-0.5 rounded bg-emerald-600/20 text-emerald-400">
-            Curated
-          </span>
-        )}
+        <div className="flex flex-col items-end gap-1 shrink-0">
+          {sample.is_curated && (
+            <span className="text-xs px-2 py-0.5 rounded bg-emerald-600/20 text-emerald-400">
+              Curated
+            </span>
+          )}
+          <AudioLink audioResourceId={sample.audio_resource_id} />
+        </div>
       </div>
     </Link>
   );
