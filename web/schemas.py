@@ -428,3 +428,13 @@ class AppSettingResponse(BaseModel):
 class AppSettingUpdate(BaseModel):
     value: str
     is_secret: bool = False
+
+
+class SourceStatus(BaseModel):
+    name: str
+    source_key: str
+    description: str
+    speaker_count: int = 0
+    sample_count: int = 0
+    last_sync_at: datetime | None = None
+    last_status: str | None = None
