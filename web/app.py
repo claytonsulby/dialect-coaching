@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
 from web.database import SessionLocal, init_db
-from web.routers import accent_profiles, actors, audio, common_voice, discovery, forvo, imports, phonemes, projects, regions, samples, settings, speakers, speech_accent_archive, tags
+from web.routers import accent_profiles, actors, audio, common_voice, discovery, forvo, idea, imports, phonemes, projects, regions, samples, settings, speakers, speech_accent_archive, tags
 
 app = FastAPI(title="Dialect Coaching")
 
@@ -30,6 +30,7 @@ app.include_router(phonemes.router)
 app.include_router(common_voice.router)
 app.include_router(speech_accent_archive.router)
 app.include_router(forvo.router)
+app.include_router(idea.router)
 app.include_router(settings.router)
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
