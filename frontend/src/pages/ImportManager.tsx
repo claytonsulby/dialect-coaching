@@ -1,25 +1,25 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { api } from "../api/client";
 import type { ImportEntry, ImportJob } from "../types";
 
-type Tab = "common_voice" | "speech_accent_archive" | "phoible" | "forvo" | "custom";
+// --- Shared UI ---
 
-const TABS: { key: Tab; label: string }[] = [
-  { key: "common_voice", label: "Common Voice" },
-  { key: "speech_accent_archive", label: "Speech Accent Archive" },
-  { key: "phoible", label: "PHOIBLE" },
-  { key: "forvo", label: "Forvo" },
-  { key: "custom", label: "Custom" },
-];
+const INPUT_CLASS = "w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm focus:border-blue-500 focus:outline-none";
+const CARD_CLASS = "p-5 bg-gray-900 border border-gray-800 rounded-lg space-y-4";
+const BTN_PRIMARY = "px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white";
 
 const LOCALES = ["en", "es", "fr", "de", "zh", "ja", "ko", "ar", "pt", "ru", "it", "nl", "pl", "tr", "sv"];
 
-function StatusBadge({ status }: { status: ImportJob["status"] }) {
+function StatusBadge({ status }: { status: ImportJob["status"] | string }) {
   const colors: Record<string, string> = {
     pending: "bg-gray-600 text-gray-200",
     processing: "bg-yellow-600 text-yellow-100",
     completed: "bg-green-700 text-green-100",
+    synced: "bg-green-700 text-green-100",
     error: "bg-red-700 text-red-100",
+    "not synced": "bg-gray-600 text-gray-200",
+    syncing: "bg-yellow-600 text-yellow-100",
   };
   return (
     <span className={`px-2 py-0.5 rounded text-xs font-medium ${colors[status] ?? "bg-gray-600 text-gray-200"}`}>
@@ -55,11 +55,135 @@ function parseCsvRow(row: string): string[] {
   return result;
 }
 
-const INPUT_CLASS = "w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm focus:border-blue-500 focus:outline-none";
+// --- Source Cards ---
 
-// --- Tab content components ---
+function IDEACard() {
+  const [syncing, setSyncing] = useState(false);
+  const [status, setStatus] = useState<any>(null);
+  const [error, setError] = useState("");
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-function CommonVoiceTab() {
+  useEffect(() => {
+    loadStatus();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  async function loadStatus() {
+    try { setStatus(await api.corpus.idea.status()); } catch { /* not available yet */ }
+  }
+
+  useEffect(() => {
+    if (status?.status === "processing" && !intervalRef.current) {
+      intervalRef.current = setInterval(loadStatus, 3000);
+    } else if (status?.status !== "processing" && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, [status]);
+
+  async function handleSync() {
+    setError("");
+    setSyncing(true);
+    try {
+      await api.corpus.idea.sync();
+      await loadStatus();
+    } catch (err: any) { setError(err.message || "Sync failed"); }
+    finally { setSyncing(false); }
+  }
+
+  const badge = status?.status === "processing" ? "syncing" : status?.sample_count ? "synced" : "not synced";
+
+  return (
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>🌍</span> IDEA
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            International Dialects of English Archive. ~1,800 dialect samples from 135 countries.
+          </p>
+        </div>
+        <StatusBadge status={badge} />
+      </div>
+      {status?.sample_count != null && (
+        <p className="text-sm text-gray-300">{status.sample_count} samples imported.</p>
+      )}
+      {status?.status === "processing" && (
+        <ProgressBar processed={status.processed ?? 0} total={status.total ?? 1800} />
+      )}
+      <button onClick={handleSync} disabled={syncing} className={BTN_PRIMARY}>
+        {syncing ? "Syncing..." : "Sync Samples"}
+      </button>
+      {error && <p className="text-sm text-red-400">{error}</p>}
+    </div>
+  );
+}
+
+function SpeechAccentArchiveCard() {
+  const [syncing, setSyncing] = useState(false);
+  const [status, setStatus] = useState<any>(null);
+  const [error, setError] = useState("");
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    loadStatus();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  async function loadStatus() {
+    try { setStatus(await api.corpus.speechAccentArchive.status()); } catch { /* not available yet */ }
+  }
+
+  useEffect(() => {
+    if (status?.status === "processing" && !intervalRef.current) {
+      intervalRef.current = setInterval(loadStatus, 3000);
+    } else if (status?.status !== "processing" && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, [status]);
+
+  async function handleSync() {
+    setError("");
+    setSyncing(true);
+    try {
+      await api.corpus.speechAccentArchive.sync();
+      await loadStatus();
+    } catch (err: any) { setError(err.message || "Sync failed"); }
+    finally { setSyncing(false); }
+  }
+
+  const badge = status?.status === "processing" ? "syncing" : status?.speaker_count ? "synced" : "not synced";
+
+  return (
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>🎙️</span> Speech Accent Archive
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            George Mason University archive. ~700 speakers across languages.
+          </p>
+        </div>
+        <StatusBadge status={badge} />
+      </div>
+      {status?.speaker_count != null && (
+        <p className="text-sm text-gray-300">{status.speaker_count} speakers imported.</p>
+      )}
+      {status?.status === "processing" && (
+        <ProgressBar processed={status.processed ?? 0} total={status.total ?? 700} />
+      )}
+      <button onClick={handleSync} disabled={syncing} className={BTN_PRIMARY}>
+        {syncing ? "Syncing..." : "Sync Samples"}
+      </button>
+      {error && <p className="text-sm text-red-400">{error}</p>}
+    </div>
+  );
+}
+
+function CommonVoiceCard() {
   const [directory, setDirectory] = useState("");
   const [locale, setLocale] = useState("en");
   const [limit, setLimit] = useState(100);
@@ -97,11 +221,21 @@ function CommonVoiceTab() {
     finally { setImporting(false); }
   }
 
+  const badge = status?.status === "processing" ? "syncing" : status?.sample_count ? "synced" : "not synced";
+
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-gray-400">
-        Import speaker audio clips from a local Mozilla Common Voice dataset directory.
-      </p>
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>🦊</span> Common Voice
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            Mozilla's crowdsourced voice dataset.
+          </p>
+        </div>
+        <StatusBadge status={badge} />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         <div className="md:col-span-3">
           <label className="block text-xs text-gray-400 mb-1">Dataset Directory Path</label>
@@ -118,7 +252,7 @@ function CommonVoiceTab() {
           <input type="number" value={limit} onChange={(e) => setLimit(Number(e.target.value) || 100)} min={1} className={INPUT_CLASS} />
         </div>
         <div className="flex items-end">
-          <button onClick={handleImport} disabled={importing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
+          <button onClick={handleImport} disabled={importing} className={BTN_PRIMARY}>
             {importing ? "Starting..." : "Start Import"}
           </button>
         </div>
@@ -134,47 +268,7 @@ function CommonVoiceTab() {
   );
 }
 
-function SpeechAccentArchiveTab() {
-  const [syncing, setSyncing] = useState(false);
-  const [status, setStatus] = useState<any>(null);
-  const [error, setError] = useState("");
-
-  useEffect(() => { loadStatus(); }, []);
-
-  async function loadStatus() {
-    try { setStatus(await api.corpus.speechAccentArchive.status()); } catch { /* not available yet */ }
-  }
-
-  async function handleSync() {
-    setError("");
-    setSyncing(true);
-    try {
-      await api.corpus.speechAccentArchive.sync();
-      await loadStatus();
-    } catch (err: any) { setError(err.message || "Sync failed"); }
-    finally { setSyncing(false); }
-  }
-
-  return (
-    <div className="space-y-4">
-      <p className="text-sm text-gray-400">
-        Synchronize all speakers from the George Mason University Speech Accent Archive. This imports approximately 700 speakers with demographic data and audio recordings.
-      </p>
-      <button onClick={handleSync} disabled={syncing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
-        {syncing ? "Syncing..." : "Sync All Speakers"}
-      </button>
-      {error && <p className="text-sm text-red-400">{error}</p>}
-      {status && (
-        <div className="text-sm text-gray-400">
-          {status.status === "processing" && <ProgressBar processed={status.processed ?? 0} total={status.total ?? 700} />}
-          {status.speaker_count != null && <p>{status.speaker_count} speakers currently imported.</p>}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function PhoibleTab() {
+function PhoibleCard() {
   const [syncing, setSyncing] = useState(false);
   const [inventoryCount, setInventoryCount] = useState<number | null>(null);
   const [error, setError] = useState("");
@@ -198,23 +292,33 @@ function PhoibleTab() {
     finally { setSyncing(false); }
   }
 
+  const badge = inventoryCount != null && inventoryCount > 0 ? "synced" : "not synced";
+
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-gray-400">
-        PHOIBLE is a repository of cross-linguistic phonological inventory data. Syncing imports phoneme inventories for languages and dialects, enabling phonological comparison across accent profiles.
-      </p>
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>🔤</span> PHOIBLE
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            Cross-linguistic phoneme inventories.
+          </p>
+        </div>
+        <StatusBadge status={syncing ? "syncing" : badge} />
+      </div>
       {inventoryCount != null && (
-        <p className="text-sm text-gray-300">{inventoryCount} phoneme inventories currently imported.</p>
+        <p className="text-sm text-gray-300">{inventoryCount} phoneme inventories imported.</p>
       )}
-      <button onClick={handleSync} disabled={syncing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
-        {syncing ? "Syncing..." : "Sync Phoneme Data"}
+      <button onClick={handleSync} disabled={syncing} className={BTN_PRIMARY}>
+        {syncing ? "Syncing..." : "Sync Inventories"}
       </button>
       {error && <p className="text-sm text-red-400">{error}</p>}
     </div>
   );
 }
 
-function ForvoTab() {
+function ForvoCard() {
   const [word, setWord] = useState("");
   const [language, setLanguage] = useState("en");
   const [looking, setLooking] = useState(false);
@@ -244,77 +348,79 @@ function ForvoTab() {
     } finally { setLooking(false); }
   }
 
-  if (!configured) {
-    return (
-      <div className="space-y-4">
-        <p className="text-sm text-gray-400">
-          Forvo provides crowd-sourced pronunciation audio. An API key is required.
-        </p>
-        <p className="text-sm text-yellow-400">
-          Forvo API key is not configured. Please add your API key in <a href="/settings" className="underline hover:text-yellow-300">/settings</a>.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-gray-400">
-        Look up word pronunciations from Forvo&#39;s crowd-sourced audio database.
-      </p>
-      <div className="flex gap-3">
-        <div className="flex-1">
-          <label className="block text-xs text-gray-400 mb-1">Word</label>
-          <input value={word} onChange={(e) => setWord(e.target.value)} placeholder="hello" className={INPUT_CLASS} onKeyDown={(e) => e.key === "Enter" && handleLookup()} />
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>🗣️</span> Forvo
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            Word pronunciation database.
+          </p>
         </div>
-        <div className="w-28">
-          <label className="block text-xs text-gray-400 mb-1">Language</label>
-          <select value={language} onChange={(e) => setLanguage(e.target.value)} className={INPUT_CLASS}>
-            {LOCALES.map((l) => <option key={l} value={l}>{l}</option>)}
-          </select>
-        </div>
-        <div className="flex items-end">
-          <button onClick={handleLookup} disabled={looking || !word.trim()} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
-            {looking ? "Looking up..." : "Look Up"}
-          </button>
-        </div>
+        <StatusBadge status={configured ? "synced" : "not synced"} />
       </div>
-      {error && <p className="text-sm text-red-400">{error}</p>}
-      {results && results.length === 0 && <p className="text-sm text-gray-500">No pronunciations found.</p>}
-      {results && results.length > 0 && (
-        <div className="space-y-2">
-          {results.map((r: any, i: number) => (
-            <div key={i} className="flex items-center gap-3 p-3 bg-gray-800 rounded">
-              {r.audio_url && (
-                <audio controls preload="none" className="h-8">
-                  <source src={r.audio_url} />
-                </audio>
-              )}
-              <div className="text-sm text-gray-300">
-                {r.username && <span className="text-gray-400">{r.username}</span>}
-                {r.country && <span className="text-gray-500 ml-2">({r.country})</span>}
-              </div>
+      {!configured ? (
+        <p className="text-sm text-yellow-400">
+          Forvo API key is not configured. Please add your API key in <a href="/settings" className="underline hover:text-yellow-300">Settings</a>.
+        </p>
+      ) : (
+        <>
+          <div className="flex gap-3">
+            <div className="flex-1">
+              <label className="block text-xs text-gray-400 mb-1">Word</label>
+              <input value={word} onChange={(e) => setWord(e.target.value)} placeholder="hello" className={INPUT_CLASS} onKeyDown={(e) => e.key === "Enter" && handleLookup()} />
             </div>
-          ))}
-        </div>
+            <div className="w-28">
+              <label className="block text-xs text-gray-400 mb-1">Language</label>
+              <select value={language} onChange={(e) => setLanguage(e.target.value)} className={INPUT_CLASS}>
+                {LOCALES.map((l) => <option key={l} value={l}>{l}</option>)}
+              </select>
+            </div>
+            <div className="flex items-end">
+              <button onClick={handleLookup} disabled={looking || !word.trim()} className={BTN_PRIMARY}>
+                {looking ? "Looking up..." : "Look Up"}
+              </button>
+            </div>
+          </div>
+          {error && <p className="text-sm text-red-400">{error}</p>}
+          {results && results.length === 0 && <p className="text-sm text-gray-500">No pronunciations found.</p>}
+          {results && results.length > 0 && (
+            <div className="space-y-2">
+              {results.map((r: any, i: number) => (
+                <div key={i} className="flex items-center gap-3 p-3 bg-gray-800 rounded">
+                  {r.audio_url && (
+                    <audio controls preload="none" className="h-8">
+                      <source src={r.audio_url} />
+                    </audio>
+                  )}
+                  <div className="text-sm text-gray-300">
+                    {r.username && <span className="text-gray-400">{r.username}</span>}
+                    {r.country && <span className="text-gray-500 ml-2">({r.country})</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );
 }
 
-type CustomSource = "idea" | "speech_accent_archive" | "csv";
-const CUSTOM_SOURCE_LABELS: Record<CustomSource, string> = {
-  idea: "IDEA",
-  speech_accent_archive: "Speech Accent Archive",
-  csv: "CSV",
-};
-
-function CustomTab({ onImported }: { onImported: () => void }) {
-  const [source, setSource] = useState<CustomSource>("idea");
+function CustomImportCard({ onImported }: { onImported: () => void }) {
+  const [source, setSource] = useState<"idea" | "speech_accent_archive" | "csv">("csv");
   const [rawText, setRawText] = useState("");
   const [entries, setEntries] = useState<ImportEntry[]>([]);
   const [parseError, setParseError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+
+  const SOURCE_LABELS: Record<string, string> = {
+    idea: "IDEA",
+    speech_accent_archive: "Speech Accent Archive",
+    csv: "CSV",
+  };
 
   function handleParse() {
     setParseError("");
@@ -382,18 +488,28 @@ function CustomTab({ onImported }: { onImported: () => void }) {
   }
 
   return (
-    <div className="space-y-4">
+    <div className={CARD_CLASS}>
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+            <span>📄</span> Custom Import
+          </h3>
+          <p className="text-sm text-gray-400 mt-1">
+            Import from CSV or JSON.
+          </p>
+        </div>
+      </div>
       <div className="flex gap-4">
-        {(Object.keys(CUSTOM_SOURCE_LABELS) as CustomSource[]).map((s) => (
+        {(Object.keys(SOURCE_LABELS) as Array<"idea" | "speech_accent_archive" | "csv">).map((s) => (
           <label key={s} className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer">
             <input type="radio" name="customSource" value={s} checked={source === s} onChange={() => setSource(s)} className="accent-blue-500" />
-            {CUSTOM_SOURCE_LABELS[s]}
+            {SOURCE_LABELS[s]}
           </label>
         ))}
       </div>
       <div>
         <label className="block text-sm text-gray-400 mb-1">Paste JSON entries or upload a JSON/CSV file</label>
-        <textarea value={rawText} onChange={(e) => setRawText(e.target.value)} rows={8}
+        <textarea value={rawText} onChange={(e) => setRawText(e.target.value)} rows={6}
           placeholder={`[\n  {\n    "speaker_name": "John Doe",\n    "audio_url": "https://example.com/audio.mp3",\n    "region_path": "us/pa",\n    "external_id": "speaker-001"\n  }\n]`}
           className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm text-white font-mono focus:border-blue-500 focus:outline-none" />
       </div>
@@ -429,7 +545,7 @@ function CustomTab({ onImported }: { onImported: () => void }) {
             </table>
             {entries.length > 20 && <p className="text-xs text-gray-500 mt-1">Showing first 20 of {entries.length} entries</p>}
           </div>
-          <button onClick={handleStartImport} disabled={submitting} className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
+          <button onClick={handleStartImport} disabled={submitting} className={BTN_PRIMARY}>
             {submitting ? "Starting..." : "Start Import"}
           </button>
         </div>
@@ -441,7 +557,7 @@ function CustomTab({ onImported }: { onImported: () => void }) {
 // --- Main component ---
 
 export default function ImportManager() {
-  const [activeTab, setActiveTab] = useState<Tab>("common_voice");
+  const navigate = useNavigate();
   const [jobs, setJobs] = useState<ImportJob[]>([]);
   const [expandedError, setExpandedError] = useState<number | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -463,53 +579,43 @@ export default function ImportManager() {
     try { setJobs(await api.imports.listJobs()); } catch { /* ignore */ }
   }
 
-  const tabSourceMap: Record<Tab, string[]> = {
-    common_voice: ["common_voice"],
-    speech_accent_archive: ["speech_accent_archive"],
-    phoible: ["phoible"],
-    forvo: ["forvo"],
-    custom: ["idea", "csv"],
-  };
-  const relevantJobs = jobs.filter((j) => tabSourceMap[activeTab]?.includes(j.source));
-
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <h1 className="text-2xl font-bold text-white">Corpus Import Dashboard</h1>
-
-      {/* Tab bar */}
-      <div className="flex gap-1 border-b border-gray-800">
-        {TABS.map((tab) => (
-          <button
-            key={tab.key}
-            onClick={() => setActiveTab(tab.key)}
-            className={`px-4 py-2 text-sm font-medium transition ${
-              activeTab === tab.key
-                ? "border-b-2 border-blue-500 text-white"
-                : "text-gray-400 hover:text-gray-200"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
+    <div className="max-w-5xl mx-auto space-y-8">
+      {/* Hero Section */}
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold text-white">Import</h1>
+        <p className="text-gray-400">
+          Import dialect samples from research archives and corpus databases. Browse imported samples in Discovery.
+        </p>
+        <button
+          onClick={() => navigate("/discovery")}
+          className="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
+        >
+          Browse in Discovery &rarr;
+        </button>
       </div>
 
-      {/* Tab content */}
-      <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg">
-        {activeTab === "common_voice" && <CommonVoiceTab />}
-        {activeTab === "speech_accent_archive" && <SpeechAccentArchiveTab />}
-        {activeTab === "phoible" && <PhoibleTab />}
-        {activeTab === "forvo" && <ForvoTab />}
-        {activeTab === "custom" && <CustomTab onImported={loadJobs} />}
+      {/* Import Sources */}
+      <div className="space-y-4">
+        <h2 className="text-lg font-semibold text-white">Import Sources</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <IDEACard />
+          <SpeechAccentArchiveCard />
+          <CommonVoiceCard />
+          <PhoibleCard />
+          <ForvoCard />
+          <CustomImportCard onImported={loadJobs} />
+        </div>
       </div>
 
-      {/* Import History for this tab */}
+      {/* Import History */}
       <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-white">Import History</h2>
           <button onClick={loadJobs} className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 rounded text-sm font-medium transition text-gray-200">Refresh</button>
         </div>
-        {relevantJobs.length === 0 ? (
-          <p className="text-sm text-gray-500">No import jobs for this source yet.</p>
+        {jobs.length === 0 ? (
+          <p className="text-sm text-gray-500">No import jobs yet.</p>
         ) : (
           <table className="w-full text-sm text-left">
             <thead>
@@ -518,7 +624,7 @@ export default function ImportManager() {
               </tr>
             </thead>
             <tbody>
-              {relevantJobs.map((job) => (
+              {jobs.map((job) => (
                 <tr key={job.id} className="border-b border-gray-800 text-gray-300">
                   <td className="py-2 pr-3 text-gray-500">{job.id}</td>
                   <td className="py-2 pr-3">{job.source}</td>
