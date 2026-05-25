@@ -1,7 +1,7 @@
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from web.models import AccentProfile, Region, Speaker, SpeakerSample, Tag, sample_tag
+from web.models import AccentProfile, Actor, Region, Speaker, SpeakerSample, Tag, sample_tag
 
 
 def search_speakers(db: Session, **filters) -> list[Speaker]:
@@ -19,6 +19,12 @@ def search_speakers(db: Session, **filters) -> list[Speaker]:
         q = q.filter(Speaker.age_range == filters["age_range"])
     if filters.get("source"):
         q = q.filter(Speaker.source == filters["source"])
+    if filters.get("actor_id"):
+        actor = db.get(Actor, int(filters["actor_id"]))
+        if actor and actor.speaker_id:
+            q = q.filter(Speaker.id == actor.speaker_id)
+        else:
+            return []
     limit = filters.get("limit", 50)
     offset = filters.get("offset", 0)
     return q.order_by(Speaker.name).offset(offset).limit(limit).all()
@@ -26,6 +32,8 @@ def search_speakers(db: Session, **filters) -> list[Speaker]:
 
 def search_samples(db: Session, **filters) -> list[SpeakerSample]:
     q = db.query(SpeakerSample)
+    if filters.get("project_id"):
+        q = q.filter(SpeakerSample.project_id == int(filters["project_id"]))
     if filters.get("accent_profile_id"):
         q = q.filter(SpeakerSample.accent_profile_id == filters["accent_profile_id"])
     if "min_strength" in filters and filters["min_strength"] is not None:

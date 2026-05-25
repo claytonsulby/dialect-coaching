@@ -23,6 +23,8 @@ const FILTER_KEYS = [
   "tag",
   "source",
   "is_curated",
+  "project_id",
+  "actor_id",
   "entity_type",
 ];
 

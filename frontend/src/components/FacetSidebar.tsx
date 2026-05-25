@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { api } from "../api/client";
 
 interface Props {
   filters: Record<string, string>;
@@ -34,6 +35,14 @@ const AGE_RANGES = ["18-25", "26-35", "36-50", "51-65", "65+"];
 const SOURCES = ["local", "IDEA", "Speech Accent Archive"];
 
 export default function FacetSidebar({ filters, onChange }: Props) {
+  const [projects, setProjects] = useState<{ id: number; name: string }[]>([]);
+  const [actors, setActors] = useState<{ id: number; name: string }[]>([]);
+
+  useEffect(() => {
+    api.projects.list().then(setProjects).catch(console.error);
+    api.actors.list().then(setActors).catch(console.error);
+  }, []);
+
   const clearAll = () => {
     for (const key of Object.keys(filters)) {
       onChange(key, null);
@@ -55,6 +64,36 @@ export default function FacetSidebar({ filters, onChange }: Props) {
           </button>
         )}
       </div>
+
+      <Section title="Project">
+        <select
+          value={filters.project_id || ""}
+          onChange={(e) => onChange("project_id", e.target.value || null)}
+          className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm focus:border-blue-500 focus:outline-none"
+        >
+          <option value="">All Projects</option>
+          {projects.map((p) => (
+            <option key={p.id} value={String(p.id)}>
+              {p.name}
+            </option>
+          ))}
+        </select>
+      </Section>
+
+      <Section title="Actor">
+        <select
+          value={filters.actor_id || ""}
+          onChange={(e) => onChange("actor_id", e.target.value || null)}
+          className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm focus:border-blue-500 focus:outline-none"
+        >
+          <option value="">All Actors</option>
+          {actors.map((a) => (
+            <option key={a.id} value={String(a.id)}>
+              {a.name}
+            </option>
+          ))}
+        </select>
+      </Section>
 
       <Section title="Region">
         <input
