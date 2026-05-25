@@ -159,9 +159,9 @@ export default function AccentProfileDetail() {
               <div>
                 <div className="flex items-center gap-2">
                   <h1 className="text-xl font-bold">{profile.name}</h1>
-                  {profile.is_seed && (
+                  {profile.source !== "manual" && (
                     <span className="px-1.5 py-0.5 bg-emerald-900/50 text-emerald-300 border border-emerald-700 rounded text-xs font-medium">
-                      Seed
+                      {profile.source}
                     </span>
                   )}
                 </div>

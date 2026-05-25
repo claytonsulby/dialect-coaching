@@ -108,7 +108,7 @@ class Region(Base):
     parent_id = Column(Integer, ForeignKey("regions.id", ondelete="CASCADE"), nullable=True)
     path = Column(String, nullable=False)
     iso_code = Column(String, nullable=True)
-    is_seed = Column(Integer, default=0)
+    source = Column(String, default="manual")
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     parent = relationship("Region", remote_side="Region.id", backref=backref("children", passive_deletes=True))
@@ -147,7 +147,6 @@ class AccentProfile(Base):
     name = Column(String, nullable=False)
     description = Column(Text, default="")
     region_id = Column(Integer, ForeignKey("regions.id", ondelete="SET NULL"), nullable=True)
-    is_seed = Column(Integer, default=0)
     source = Column(String, default="manual")
     sample_count = Column(Integer, default=0)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))

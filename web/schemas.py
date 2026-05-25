@@ -130,7 +130,7 @@ class RegionBrief(BaseModel):
     name: str
     region_type: str
     path: str
-    is_seed: bool
+    source: str
 
     model_config = {"from_attributes": True}
 
@@ -142,7 +142,7 @@ class RegionResponse(BaseModel):
     path: str
     iso_code: str | None
     parent_id: int | None
-    is_seed: bool
+    source: str
     children: list[RegionBrief] = []
     created_at: datetime
 
@@ -245,7 +245,6 @@ class AccentProfileResponse(BaseModel):
     name: str
     description: str
     region_id: int | None
-    is_seed: bool
     source: str
     sample_count: int
     patterns: list[SignaturePatternResponse] = []

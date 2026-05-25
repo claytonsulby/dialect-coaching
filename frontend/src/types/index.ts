@@ -75,7 +75,7 @@ export interface Region {
   path: string;
   iso_code: string | null;
   parent_id: number | null;
-  is_seed: boolean;
+  source: string;
   children: RegionBrief[];
   created_at: string;
 }
@@ -85,7 +85,7 @@ export interface RegionBrief {
   name: string;
   region_type: string;
   path: string;
-  is_seed: boolean;
+  source: string;
 }
 
 export interface RegionSearchResult {
@@ -130,7 +130,6 @@ export interface AccentProfile {
   name: string;
   description: string;
   region_id: number | null;
-  is_seed: boolean;
   source: string;
   sample_count: number;
   patterns: SignaturePattern[];
@@ -217,7 +216,6 @@ export interface AccentProfileSummary {
   description: string;
   region_id: number | null;
   region_name: string | null;
-  is_seed: boolean;
   source: string;
   sample_count: number;
   pattern_count: number;

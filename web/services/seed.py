@@ -8,7 +8,7 @@ def seed_regions(db: Session) -> None:
     """Load regions from JSON if table is empty."""
     from web.models import Region
 
-    if db.query(Region).filter(Region.is_seed == 1).count() > 0:
+    if db.query(Region).filter(Region.source == "bundled").count() > 0:
         return
 
     data = json.loads(
@@ -28,7 +28,7 @@ def _insert_regions_recursive(db: Session, items: list, parent_id: int | None) -
             parent_id=parent_id,
             path=item["path"],
             iso_code=item.get("iso_code"),
-            is_seed=1,
+            source="bundled",
         )
         db.add(region)
         db.flush()
@@ -40,7 +40,7 @@ def seed_accent_profiles(db: Session) -> None:
     """Load accent profiles from JSON if table is empty."""
     from web.models import AccentProfile, Region, SignaturePattern
 
-    if db.query(AccentProfile).filter(AccentProfile.is_seed == 1).count() > 0:
+    if db.query(AccentProfile).filter(AccentProfile.source == "bundled").count() > 0:
         return
 
     data_path = Path(__file__).parent.parent / "seed_data" / "accent_profiles.json"
@@ -61,8 +61,7 @@ def seed_accent_profiles(db: Session) -> None:
             name=profile_data["name"],
             description=profile_data.get("description", ""),
             region_id=region.id if region else None,
-            is_seed=1,
-            source="manual",
+            source="bundled",
         )
         db.add(profile)
         db.flush()
