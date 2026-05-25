@@ -29,6 +29,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Link to="/discovery" className="text-sm text-gray-400 hover:text-gray-200 transition">
           Discover
         </Link>
+        <Link to="/settings" className="text-sm text-gray-400 hover:text-gray-200 transition ml-auto">
+          Settings
+        </Link>
       </nav>
       <main className="flex-1 p-6">{children}</main>
     </div>

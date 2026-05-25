@@ -187,6 +187,18 @@ export const api = {
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },
+  corpus: {
+    forvo: {
+      lookup: (data: { word: string; language?: string }) =>
+        request<any>("/corpus/forvo/lookup", { method: "POST", body: JSON.stringify(data) }),
+      status: () => request<{ configured: boolean }>("/corpus/forvo/status"),
+    },
+  },
+  settings: {
+    list: () => request<any[]>("/settings"),
+    update: (key: string, data: { value: string; is_secret?: boolean }) =>
+      request<any>(`/settings/${key}`, { method: "PUT", body: JSON.stringify(data) }),
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),

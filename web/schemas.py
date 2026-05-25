@@ -350,3 +350,32 @@ class DiscoveryStats(BaseModel):
     total_samples: int = 0
     total_profiles: int = 0
     total_regions: int = 0
+
+
+# --- Forvo / Settings schemas ---
+
+class ForvoLookupRequest(BaseModel):
+    word: str
+    language: str = "en"
+
+
+class ForvoLookupResponse(BaseModel):
+    samples: list[SampleResponse] = []
+    count: int = 0
+
+
+class ForvoStatusResponse(BaseModel):
+    configured: bool
+
+
+class AppSettingResponse(BaseModel):
+    key: str
+    value: str
+    is_secret: bool
+
+    model_config = {"from_attributes": True}
+
+
+class AppSettingUpdate(BaseModel):
+    value: str
+    is_secret: bool = False

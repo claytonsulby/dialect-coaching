@@ -231,6 +231,24 @@ export interface DiscoveryResult {
   total_count: number;
 }
 
+// --- Forvo / Settings types ---
+
+export interface AppSetting {
+  key: string;
+  value: string;
+  is_secret: boolean;
+}
+
+export interface ForvoLookupRequest {
+  word: string;
+  language: string;
+}
+
+export interface ForvoResult {
+  samples: SpeakerSample[];
+  count: number;
+}
+
 export interface DiscoveryStats {
   total_speakers: number;
   total_samples: number;
