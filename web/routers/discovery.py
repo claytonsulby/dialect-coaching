@@ -70,6 +70,8 @@ def discovery_search(
     tag: str | None = None,
     source: str | None = None,
     is_curated: bool | None = None,
+    project_id: int | None = None,
+    actor_id: int | None = None,
     entity_type: str | None = None,
     limit: int = 50,
     offset: int = 0,
