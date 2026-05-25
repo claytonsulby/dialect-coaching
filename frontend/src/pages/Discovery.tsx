@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { api } from "../api/client";
+import { api, downloadBlob } from "../api/client";
 import FacetSidebar from "../components/FacetSidebar";
 import SearchResults from "../components/SearchResults";
 import type { DiscoveryResult, DiscoveryStats } from "../types";
@@ -152,6 +152,37 @@ export default function Discovery() {
               </button>
             ))}
           </div>
+
+          {/* Export button */}
+          {results.total_count > 0 && (
+            <div className="flex justify-end">
+              <button
+                onClick={() => {
+                  const rows: string[][] = [];
+                  rows.push(["type", "id", "name", "accent_profile", "accent_strength", "quality_rating", "tags", "curated"]);
+                  for (const s of results.speakers) {
+                    rows.push(["speaker", String(s.id), s.name, "", "", "", "", ""]);
+                  }
+                  for (const s of results.samples) {
+                    rows.push([
+                      "sample", String(s.id), s.speaker_name,
+                      s.accent_profile_name || "", s.accent_strength != null ? String(s.accent_strength) : "",
+                      s.quality_rating != null ? String(s.quality_rating) : "",
+                      s.tags.join("; "), s.is_curated ? "yes" : "no",
+                    ]);
+                  }
+                  for (const p of results.profiles) {
+                    rows.push(["profile", String(p.id), p.name, "", "", "", "", ""]);
+                  }
+                  const csv = rows.map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(",")).join("\n");
+                  downloadBlob(new Blob([csv], { type: "text/csv" }), "discovery-results.csv");
+                }}
+                className="px-3 py-1.5 text-xs bg-gray-700 hover:bg-gray-600 rounded text-gray-200 transition"
+              >
+                Export Results
+              </button>
+            </div>
+          )}
 
           {/* Results */}
           {loading ? (

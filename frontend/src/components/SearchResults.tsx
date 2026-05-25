@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import type { DiscoveryResult, Speaker, SpeakerSample, AccentProfileSummary } from "../types";
 import SourceBadge from "./SourceBadge";
+import AddToProjectModal from "./AddToProjectModal";
 
 interface Props {
   results: DiscoveryResult;
@@ -31,51 +33,73 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 }
 
 function SampleCard({ sample }: { sample: SpeakerSample }) {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <Link
-      to={`/audio/${sample.audio_resource_id}`}
-      className="block p-4 bg-gray-900 border border-gray-800 rounded-lg hover:border-gray-600 transition"
-    >
-      <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
-          <div className="font-medium text-white">{sample.speaker_name}</div>
-          {sample.accent_profile_name && (
-            <div className="text-sm text-gray-400 mt-0.5">
-              {sample.accent_profile_name}
-            </div>
-          )}
-          <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-500">
-            {sample.accent_strength != null && (
-              <span>Strength: {Math.round(sample.accent_strength)}%</span>
+    <>
+      <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg hover:border-gray-600 transition">
+        <div className="flex items-start justify-between">
+          <div className="flex-1 min-w-0">
+            <div className="font-medium text-white">{sample.speaker_name}</div>
+            {sample.accent_profile_name && (
+              <div className="text-sm text-gray-400 mt-0.5">
+                {sample.accent_profile_name}
+              </div>
             )}
-            {sample.quality_rating != null && (
-              <span>
-                {"*".repeat(sample.quality_rating)}
-                {"*".repeat(Math.max(0, 5 - sample.quality_rating)).replace(/\*/g, "")}
-                {" "}({sample.quality_rating}/5)
-              </span>
+            <div className="flex flex-wrap gap-3 mt-2 text-xs text-gray-500">
+              {sample.accent_strength != null && (
+                <span>Strength: {Math.round(sample.accent_strength)}%</span>
+              )}
+              {sample.quality_rating != null && (
+                <span>
+                  {"*".repeat(sample.quality_rating)}
+                  {"*".repeat(Math.max(0, 5 - sample.quality_rating)).replace(/\*/g, "")}
+                  {" "}({sample.quality_rating}/5)
+                </span>
+              )}
+            </div>
+            {sample.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {sample.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             )}
           </div>
-          {sample.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
-              {sample.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+          {sample.is_curated && (
+            <span className="text-xs px-2 py-0.5 rounded bg-emerald-600/20 text-emerald-400">
+              Curated
+            </span>
           )}
         </div>
-        {sample.is_curated && (
-          <span className="text-xs px-2 py-0.5 rounded bg-emerald-600/20 text-emerald-400">
-            Curated
-          </span>
-        )}
+        <div className="flex justify-end gap-2 mt-3 pt-3 border-t border-gray-800">
+          <button
+            onClick={() => setShowModal(true)}
+            className="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 rounded text-white transition"
+          >
+            Add to Project
+          </button>
+          <Link
+            to={`/audio/${sample.audio_resource_id}`}
+            className="px-3 py-1 text-xs bg-gray-700 hover:bg-gray-600 rounded text-gray-200 transition"
+          >
+            Open Audio
+          </Link>
+        </div>
       </div>
-    </Link>
+      {showModal && (
+        <AddToProjectModal
+          sampleId={sample.id}
+          onClose={() => setShowModal(false)}
+          onAssigned={() => setShowModal(false)}
+        />
+      )}
+    </>
   );
 }
 

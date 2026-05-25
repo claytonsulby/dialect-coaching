@@ -196,6 +196,7 @@ class SpeakerSample(Base):
     speaker_id = Column(Integer, ForeignKey("speakers.id", ondelete="CASCADE"), nullable=False)
     accent_profile_id = Column(Integer, ForeignKey("accent_profiles.id", ondelete="SET NULL"), nullable=True)
     audio_resource_id = Column(Integer, ForeignKey("audio_resources.id", ondelete="CASCADE"), nullable=False)
+    project_id = Column(Integer, ForeignKey("projects.id", ondelete="SET NULL"), nullable=True)
     quality_rating = Column(Integer, nullable=True)
     accent_strength = Column(Float, nullable=True)
     is_curated = Column(Integer, default=0)
