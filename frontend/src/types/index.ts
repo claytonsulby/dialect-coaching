@@ -170,6 +170,7 @@ export interface SpeakerSample {
   accent_profile_id: number | null;
   accent_profile_name: string | null;
   audio_resource_id: number;
+  project_id: number | null;
   quality_rating: number | null;
   accent_strength: number | null;
   is_curated: boolean;

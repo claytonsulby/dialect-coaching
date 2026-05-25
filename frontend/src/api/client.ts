@@ -170,6 +170,11 @@ export const api = {
     update: (id: number, data: any) =>
       request<any>(`/samples/${id}`, { method: "PUT", body: JSON.stringify(data) }),
     delete: (id: number) => request<void>(`/samples/${id}`, { method: "DELETE" }),
+    setProject: (id: number, projectId: number | null) =>
+      request<any>(`/samples/${id}/project`, {
+        method: "PUT",
+        body: JSON.stringify({ project_id: projectId }),
+      }),
   },
   tags: {
     list: () => request<any[]>("/tags"),

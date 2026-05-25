@@ -1,9 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
 from web.database import get_db
 from web.models import SpeakerSample, Tag, sample_tag
 from web.schemas import SampleCreate, SampleResponse, SampleUpdate
+
+
+class SetProjectRequest(BaseModel):
+    project_id: int | None = None
 
 router = APIRouter(prefix="/api/samples", tags=["samples"])
 
@@ -113,6 +118,16 @@ def update_sample(sample_id: int, data: SampleUpdate, db: Session = Depends(get_
     db.commit()
     db.refresh(sample)
     return _sample_to_response(sample)
+
+
+@router.put("/{sample_id}/project")
+def set_sample_project(sample_id: int, data: SetProjectRequest, db: Session = Depends(get_db)):
+    sample = db.get(SpeakerSample, sample_id)
+    if not sample:
+        raise HTTPException(404, "Sample not found")
+    sample.project_id = data.project_id
+    db.commit()
+    return {"ok": True}
 
 
 @router.delete("/{sample_id}", status_code=204)
