@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { SpeakerSample } from "../types";
 import SourceBadge from "./SourceBadge";
+import AudioLink from "./AudioLink";
 
 interface SampleCardProps {
   sample: SpeakerSample;
@@ -28,12 +29,14 @@ export default function SampleCard({ sample }: SampleCardProps) {
       : null;
 
   return (
-    <Link
-      to={`/audio/${sample.audio_resource_id}`}
-      className="block p-4 bg-gray-900 border border-gray-800 rounded-lg hover:border-gray-600 transition"
-    >
+    <div className="block p-4 bg-gray-900 border border-gray-800 rounded-lg hover:border-gray-600 transition">
       <div className="flex items-start justify-between gap-2">
-        <div className="font-medium text-white truncate">{sample.speaker_name || `Speaker #${sample.speaker_id}`}</div>
+        <Link
+          to={`/audio/${sample.audio_resource_id}`}
+          className="font-medium text-white truncate hover:text-blue-300 transition"
+        >
+          {sample.speaker_name || `Speaker #${sample.speaker_id}`}
+        </Link>
         <div className="flex gap-1 shrink-0">
           {(sample as any).source && <SourceBadge source={(sample as any).source} />}
           {sample.is_curated && (
@@ -68,9 +71,12 @@ export default function SampleCard({ sample }: SampleCardProps) {
         </div>
       )}
 
-      {sample.notes && (
-        <div className="text-xs text-gray-500 mt-2 line-clamp-2">{sample.notes}</div>
-      )}
-    </Link>
+      <div className="flex items-center justify-between mt-3">
+        {sample.notes && (
+          <div className="text-xs text-gray-500 line-clamp-2 flex-1">{sample.notes}</div>
+        )}
+        <AudioLink audioResourceId={sample.audio_resource_id} />
+      </div>
+    </div>
   );
 }
