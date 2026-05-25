@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../api/client";
 import type { ImportEntry, ImportJob } from "../types";
 
-type Tab = "common_voice" | "speech_accent_archive" | "phoible" | "forvo" | "custom";
+type Tab = "common_voice" | "speech_accent_archive" | "idea" | "phoible" | "forvo" | "custom";
 
 const TABS: { key: Tab; label: string }[] = [
   { key: "common_voice", label: "Common Voice" },
   { key: "speech_accent_archive", label: "Speech Accent Archive" },
+  { key: "idea", label: "IDEA" },
   { key: "phoible", label: "PHOIBLE" },
   { key: "forvo", label: "Forvo" },
   { key: "custom", label: "Custom" },
@@ -168,6 +169,46 @@ function SpeechAccentArchiveTab() {
         <div className="text-sm text-gray-400">
           {status.status === "processing" && <ProgressBar processed={status.processed ?? 0} total={status.total ?? 700} />}
           {status.speaker_count != null && <p>{status.speaker_count} speakers currently imported.</p>}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function IdeaTab() {
+  const [syncing, setSyncing] = useState(false);
+  const [status, setStatus] = useState<any>(null);
+  const [error, setError] = useState("");
+
+  useEffect(() => { loadStatus(); }, []);
+
+  async function loadStatus() {
+    try { setStatus(await api.corpus.idea.status()); } catch { /* not available yet */ }
+  }
+
+  async function handleSync() {
+    setError("");
+    setSyncing(true);
+    try {
+      await api.corpus.idea.sync();
+      await loadStatus();
+    } catch (err: any) { setError(err.message || "Sync failed"); }
+    finally { setSyncing(false); }
+  }
+
+  return (
+    <div className="space-y-4">
+      <p className="text-sm text-gray-400">
+        Synchronize all samples from the IDEA (International Dialects of English Archive). This imports speakers with dialect recordings from around the world.
+      </p>
+      <button onClick={handleSync} disabled={syncing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
+        {syncing ? "Syncing..." : "Sync All Samples"}
+      </button>
+      {error && <p className="text-sm text-red-400">{error}</p>}
+      {status && (
+        <div className="text-sm text-gray-400">
+          {status.status === "processing" && <ProgressBar processed={status.processed ?? 0} total={status.total ?? 1} />}
+          {status.sample_count != null && <p>{status.sample_count} samples currently imported.</p>}
         </div>
       )}
     </div>
@@ -466,6 +507,7 @@ export default function ImportManager() {
   const tabSourceMap: Record<Tab, string[]> = {
     common_voice: ["common_voice"],
     speech_accent_archive: ["speech_accent_archive"],
+    idea: ["idea"],
     phoible: ["phoible"],
     forvo: ["forvo"],
     custom: ["idea", "csv"],
@@ -497,6 +539,7 @@ export default function ImportManager() {
       <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg">
         {activeTab === "common_voice" && <CommonVoiceTab />}
         {activeTab === "speech_accent_archive" && <SpeechAccentArchiveTab />}
+        {activeTab === "idea" && <IdeaTab />}
         {activeTab === "phoible" && <PhoibleTab />}
         {activeTab === "forvo" && <ForvoTab />}
         {activeTab === "custom" && <CustomTab onImported={loadJobs} />}

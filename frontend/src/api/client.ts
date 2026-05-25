@@ -209,6 +209,10 @@ export const api = {
       status: () =>
         request<any>("/corpus/speech-accent-archive/status"),
     },
+    idea: {
+      sync: () => request<any>("/corpus/idea/sync", { method: "POST" }),
+      status: () => request<any>("/corpus/idea/status"),
+    },
     forvo: {
       lookup: (data: { word: string; language?: string }) =>
         request<any>("/corpus/forvo/lookup", { method: "POST", body: JSON.stringify(data) }),
