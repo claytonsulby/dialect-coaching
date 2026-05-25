@@ -183,8 +183,8 @@ function PhoibleTab() {
 
   async function loadInventories() {
     try {
-      const data = await api.phonemes.inventories();
-      setInventoryCount(Array.isArray(data) ? data.length : data?.count ?? null);
+      const data = await api.phonemes.list();
+      setInventoryCount(Array.isArray(data) ? data.length : 0);
     } catch { /* not available yet */ }
   }
 
