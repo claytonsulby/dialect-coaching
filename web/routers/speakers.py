@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 
 from web.database import get_db
@@ -14,21 +14,23 @@ def list_speakers(
     gender: str | None = None,
     age_range: str | None = None,
     source: str | None = None,
+    q: str | None = Query(None, alias="q"),
     search: str | None = None,
     db: Session = Depends(get_db),
 ):
-    q = db.query(Speaker)
+    query = db.query(Speaker)
     if region_id:
-        q = q.filter(Speaker.origin_region_id == region_id)
+        query = query.filter(Speaker.origin_region_id == region_id)
     if gender:
-        q = q.filter(Speaker.gender == gender)
+        query = query.filter(Speaker.gender == gender)
     if age_range:
-        q = q.filter(Speaker.age_range == age_range)
+        query = query.filter(Speaker.age_range == age_range)
     if source:
-        q = q.filter(Speaker.source == source)
-    if search:
-        q = q.filter(Speaker.name.ilike(f"%{search}%"))
-    return q.order_by(Speaker.name).all()
+        query = query.filter(Speaker.source == source)
+    term = q or search
+    if term:
+        query = query.filter(Speaker.name.ilike(f"%{term}%"))
+    return query.order_by(Speaker.name).all()
 
 
 @router.post("", response_model=SpeakerResponse, status_code=201)

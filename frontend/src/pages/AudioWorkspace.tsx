@@ -4,6 +4,7 @@ import { api } from "../api/client";
 import Waveform, { type WaveformHandle } from "../components/Waveform";
 import TranscriptView from "../components/TranscriptView";
 import SelectionPanel from "../components/SelectionPanel";
+import CreateSamplePanel from "../components/CreateSamplePanel";
 import type { AudioDetail, Segment } from "../types";
 
 export default function AudioWorkspace() {
@@ -15,6 +16,7 @@ export default function AudioWorkspace() {
   const [activeSegmentId, setActiveSegmentId] = useState<number | null>(null);
   const [selectedSegmentIds, setSelectedSegmentIds] = useState<Set<number>>(new Set());
   const [freeformRanges, setFreeformRanges] = useState<[number, number][]>([]);
+  const [showCreateSample, setShowCreateSample] = useState(false);
   const pollRef = useRef<ReturnType<typeof setInterval>>();
   const waveformRef = useRef<WaveformHandle>(null);
 
@@ -107,15 +109,32 @@ export default function AudioWorkspace() {
             </span>
           </div>
         </div>
-        {!isReady && audio.status !== "processing" && (
+        <div className="flex gap-2">
+          {!isReady && audio.status !== "processing" && (
+            <button
+              onClick={async () => { await api.audio.transcribe(audioId); load(); }}
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium transition"
+            >
+              Transcribe
+            </button>
+          )}
           <button
-            onClick={async () => { await api.audio.transcribe(audioId); load(); }}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium transition"
+            onClick={() => setShowCreateSample((v) => !v)}
+            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded text-sm font-medium transition"
           >
-            Transcribe
+            {showCreateSample ? "Hide Sample Form" : "Create Sample"}
           </button>
-        )}
+        </div>
       </div>
+
+      {showCreateSample && (
+        <CreateSamplePanel
+          audioResourceId={audioId}
+          projectId={audio.project_id}
+          onCreated={() => setShowCreateSample(false)}
+          onCancel={() => setShowCreateSample(false)}
+        />
+      )}
 
       {audio.error_message && (
         <div className="p-3 bg-red-500/10 border border-red-500/30 rounded text-sm text-red-400">
