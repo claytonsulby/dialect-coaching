@@ -345,6 +345,19 @@ class DiscoveryResult(BaseModel):
     total_count: int = 0
 
 
+# --- Common Voice schemas (Unit 7) ---
+
+class CommonVoiceImportRequest(BaseModel):
+    directory: str
+    locale: str = "en"
+    limit: int = 100
+
+
+class CommonVoiceStatusResponse(BaseModel):
+    active: bool
+    job: "ImportJobResponse | None" = None
+
+
 class DiscoveryStats(BaseModel):
     total_speakers: int = 0
     total_samples: int = 0

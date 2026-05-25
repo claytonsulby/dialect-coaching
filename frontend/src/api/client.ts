@@ -194,6 +194,16 @@ export const api = {
     get: (id: number) => request<any>(`/phonemes/inventories/${id}`),
     getByLanguage: (iso: string) => request<any[]>(`/phonemes/languages/${iso}`),
   },
+  corpus: {
+    commonVoice: {
+      import: (data: { directory: string; locale?: string; limit?: number }) =>
+        request<any>("/corpus/common-voice/import", {
+          method: "POST",
+          body: JSON.stringify(data),
+        }),
+      status: () => request<any>("/corpus/common-voice/status"),
+    },
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),

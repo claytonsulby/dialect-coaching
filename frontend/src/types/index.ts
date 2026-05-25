@@ -209,6 +209,19 @@ export interface ImportJob {
   created_at: string;
 }
 
+// --- Common Voice types ---
+
+export interface CommonVoiceImportRequest {
+  directory: string;
+  locale?: string;
+  limit?: number;
+}
+
+export interface CommonVoiceStatusResponse {
+  active: boolean;
+  job: ImportJob | null;
+}
+
 // --- Discovery types (Unit 6) ---
 
 export interface AccentProfileSummary {
