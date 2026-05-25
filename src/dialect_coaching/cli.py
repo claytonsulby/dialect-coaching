@@ -3,9 +3,8 @@ from typing import Annotated, Optional
 
 import typer
 from rich.console import Console
-from rich.table import Table
 
-from dialect_coaching.transcriber import transcribe_phones, transcribe_phones_with_timestamps
+from dialect_coaching.transcriber import transcribe_aligned, format_aligned
 
 app = typer.Typer(
     name="dialect-coaching",
@@ -17,29 +16,27 @@ console = Console()
 @app.command()
 def transcribe(
     audio_file: Annotated[Path, typer.Argument(help="Path to audio file (wav, mp3, flac)")],
-    timestamps: Annotated[bool, typer.Option("--timestamps", "-t", help="Show phone-level timestamps")] = False,
+    whisper_model: Annotated[str, typer.Option("--model", "-m", help="Whisper model size: tiny, base, small, medium, large")] = "base",
     output: Annotated[Optional[Path], typer.Option("--output", "-o", help="Write output to file")] = None,
 ):
-    """Transcribe audio to IPA phones based on actual pronunciation."""
+    """Transcribe audio to aligned text + IPA phonetic transcription."""
     if not audio_file.exists():
         console.print(f"[red]Error:[/red] File not found: {audio_file}")
         raise typer.Exit(1)
 
     console.print(f"[dim]Processing:[/dim] {audio_file.name}")
-    console.print("[dim]Loading model (first run downloads ~1.2GB)...[/dim]")
 
-    if timestamps:
-        phones = transcribe_phones_with_timestamps(audio_file)
-        table = Table(title="Phonetic Transcription")
-        table.add_column("Time", style="dim")
-        table.add_column("Phone", style="bold green")
-        for time_s, phone in phones:
-            table.add_row(f"{time_s:.3f}s", phone)
-        console.print(table)
-        text_output = " ".join(phone for _, phone in phones)
-    else:
-        text_output = transcribe_phones(audio_file)
-        console.print(f"\n[bold green]{text_output}[/bold green]\n")
+    def status(msg):
+        console.print(f"[dim]{msg}[/dim]")
+
+    segments = transcribe_aligned(audio_file, whisper_size=whisper_model, on_status=status)
+    text_output = format_aligned(segments)
+
+    console.print()
+    for seg in segments:
+        console.print(f"[bold]{seg.text}[/bold]")
+        console.print(f"[green]/{seg.phonemes}/[/green]")
+        console.print()
 
     if output:
         output.write_text(text_output)
