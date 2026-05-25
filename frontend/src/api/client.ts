@@ -209,6 +209,16 @@ export const api = {
       status: () =>
         request<any>("/corpus/speech-accent-archive/status"),
     },
+    forvo: {
+      lookup: (data: { word: string; language?: string }) =>
+        request<any>("/corpus/forvo/lookup", { method: "POST", body: JSON.stringify(data) }),
+      status: () => request<{ configured: boolean }>("/corpus/forvo/status"),
+    },
+  },
+  settings: {
+    list: () => request<any[]>("/settings"),
+    update: (key: string, data: { value: string; is_secret?: boolean }) =>
+      request<any>(`/settings/${key}`, { method: "PUT", body: JSON.stringify(data) }),
   },
   discovery: {
     search: (params: Record<string, string>) =>

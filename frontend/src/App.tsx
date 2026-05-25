@@ -13,6 +13,7 @@ import SampleLibrary from "./pages/SampleLibrary";
 import ImportManager from "./pages/ImportManager";
 import Discovery from "./pages/Discovery";
 import PhonemeInventories from "./pages/PhonemeInventories";
+import Settings from "./pages/Settings";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/imports" element={<ImportManager />} />
         <Route path="/phonemes" element={<PhonemeInventories />} />
         <Route path="/discovery" element={<Discovery />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Layout>
   );

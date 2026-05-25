@@ -232,6 +232,16 @@ class PhonemeInventory(Base):
     )
 
 
+class AppSetting(Base):
+    __tablename__ = "app_settings"
+
+    id = Column(Integer, primary_key=True)
+    key = Column(String, nullable=False, unique=True)
+    value = Column(Text, default="")
+    is_secret = Column(Integer, default=0)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+
 class ImportJob(Base):
     __tablename__ = "import_jobs"
 
