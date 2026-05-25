@@ -184,6 +184,7 @@ export const api = {
       request<any>("/imports/speech-accent-archive", { method: "POST", body: JSON.stringify({ entries }) }),
     startCsv: (entries: any[]) =>
       request<any>("/imports/csv", { method: "POST", body: JSON.stringify({ entries }) }),
+    autoSyncStatus: () => request<any>("/imports/auto-sync-status"),
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },

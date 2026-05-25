@@ -1,7 +1,61 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
 import type { Project, Actor } from "../types";
+
+function AutoSyncBanner() {
+  const [syncStatus, setSyncStatus] = useState<any>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    loadStatus();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  useEffect(() => {
+    const saa = syncStatus?.saa;
+    const phoible = syncStatus?.phoible;
+    const anyActive =
+      saa?.status === "processing" || saa?.status === "pending" ||
+      phoible?.status === "processing" || phoible?.status === "pending";
+    if (anyActive && !intervalRef.current) {
+      intervalRef.current = setInterval(loadStatus, 5000);
+    } else if (!anyActive && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, [syncStatus]);
+
+  async function loadStatus() {
+    try { setSyncStatus(await api.imports.autoSyncStatus()); } catch { /* ignore */ }
+  }
+
+  if (!syncStatus) return null;
+  const saa = syncStatus.saa;
+  const phoible = syncStatus.phoible;
+  const anyActive =
+    saa?.status === "processing" || saa?.status === "pending" ||
+    phoible?.status === "processing" || phoible?.status === "pending";
+
+  if (!anyActive) return null;
+
+  return (
+    <div className="p-3 bg-blue-900/40 border border-blue-800 rounded-lg flex items-center gap-3">
+      <svg className="animate-spin h-4 w-4 text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+      </svg>
+      <div className="text-sm text-blue-200">
+        <span className="font-medium">Setting up corpus data...</span>
+        <span className="text-blue-300 ml-2">
+          {(saa?.status === "processing" || saa?.status === "pending") && `SAA: ${saa.processed_entries}/${saa.total_entries || "?"}`}
+          {(saa?.status === "processing" || saa?.status === "pending") && (phoible?.status === "processing" || phoible?.status === "pending") && " | "}
+          {(phoible?.status === "processing" || phoible?.status === "pending") && `PHOIBLE: ${phoible.processed_entries}/${phoible.total_entries || "?"}`}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 export default function Dashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -39,6 +93,7 @@ export default function Dashboard() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
+      <AutoSyncBanner />
       <div>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold">Projects</h2>

@@ -137,12 +137,32 @@ function CommonVoiceTab() {
 function SpeechAccentArchiveTab() {
   const [syncing, setSyncing] = useState(false);
   const [status, setStatus] = useState<any>(null);
+  const [autoSync, setAutoSync] = useState<any>(null);
   const [error, setError] = useState("");
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => { loadStatus(); }, []);
+  useEffect(() => {
+    loadStatus();
+    loadAutoSync();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
+
+  useEffect(() => {
+    const isActive = autoSync?.saa?.status === "processing" || autoSync?.saa?.status === "pending";
+    if (isActive && !intervalRef.current) {
+      intervalRef.current = setInterval(loadAutoSync, 5000);
+    } else if (!isActive && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, [autoSync]);
 
   async function loadStatus() {
     try { setStatus(await api.corpus.speechAccentArchive.status()); } catch { /* not available yet */ }
+  }
+
+  async function loadAutoSync() {
+    try { setAutoSync(await api.imports.autoSyncStatus()); } catch { /* ignore */ }
   }
 
   async function handleSync() {
@@ -151,20 +171,36 @@ function SpeechAccentArchiveTab() {
     try {
       await api.corpus.speechAccentArchive.sync();
       await loadStatus();
+      await loadAutoSync();
     } catch (err: any) { setError(err.message || "Sync failed"); }
     finally { setSyncing(false); }
   }
+
+  const saa = autoSync?.saa;
+  const isSynced = saa?.status === "completed";
+  const isActive = saa?.status === "processing" || saa?.status === "pending";
 
   return (
     <div className="space-y-4">
       <p className="text-sm text-gray-400">
         Synchronize all speakers from the George Mason University Speech Accent Archive. This imports approximately 700 speakers with demographic data and audio recordings.
       </p>
-      <button onClick={handleSync} disabled={syncing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
-        {syncing ? "Syncing..." : "Sync All Speakers"}
+      {isSynced && (
+        <span className="inline-block px-3 py-1 bg-green-700 text-green-100 rounded text-sm font-medium">
+          Synced ({saa.speakers} speakers)
+        </span>
+      )}
+      {isActive && (
+        <div className="space-y-2">
+          <p className="text-sm text-gray-300">Syncing... {saa.processed_entries}/{saa.total_entries || "?"}</p>
+          <ProgressBar processed={saa.processed_entries ?? 0} total={saa.total_entries || 700} />
+        </div>
+      )}
+      <button onClick={handleSync} disabled={syncing || isActive} className={`px-4 py-2 rounded text-sm font-medium transition text-white ${isSynced ? "bg-gray-700 hover:bg-gray-600" : "bg-blue-600 hover:bg-blue-700"} disabled:bg-blue-800 disabled:cursor-not-allowed`}>
+        {syncing ? "Syncing..." : isSynced ? "Re-sync" : "Sync All Speakers"}
       </button>
       {error && <p className="text-sm text-red-400">{error}</p>}
-      {status && (
+      {status && !isSynced && !isActive && (
         <div className="text-sm text-gray-400">
           {status.status === "processing" && <ProgressBar processed={status.processed ?? 0} total={status.total ?? 700} />}
           {status.speaker_count != null && <p>{status.speaker_count} speakers currently imported.</p>}
@@ -176,16 +212,27 @@ function SpeechAccentArchiveTab() {
 
 function PhoibleTab() {
   const [syncing, setSyncing] = useState(false);
-  const [inventoryCount, setInventoryCount] = useState<number | null>(null);
+  const [autoSync, setAutoSync] = useState<any>(null);
   const [error, setError] = useState("");
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  useEffect(() => { loadInventories(); }, []);
+  useEffect(() => {
+    loadAutoSync();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, []);
 
-  async function loadInventories() {
-    try {
-      const data = await api.phonemes.list();
-      setInventoryCount(Array.isArray(data) ? data.length : 0);
-    } catch { /* not available yet */ }
+  useEffect(() => {
+    const isActive = autoSync?.phoible?.status === "processing" || autoSync?.phoible?.status === "pending";
+    if (isActive && !intervalRef.current) {
+      intervalRef.current = setInterval(loadAutoSync, 5000);
+    } else if (!isActive && intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, [autoSync]);
+
+  async function loadAutoSync() {
+    try { setAutoSync(await api.imports.autoSyncStatus()); } catch { /* ignore */ }
   }
 
   async function handleSync() {
@@ -193,21 +240,33 @@ function PhoibleTab() {
     setSyncing(true);
     try {
       await api.phonemes.sync();
-      await loadInventories();
+      await loadAutoSync();
     } catch (err: any) { setError(err.message || "Sync failed"); }
     finally { setSyncing(false); }
   }
+
+  const phoible = autoSync?.phoible;
+  const isSynced = phoible?.status === "completed";
+  const isActive = phoible?.status === "processing" || phoible?.status === "pending";
 
   return (
     <div className="space-y-4">
       <p className="text-sm text-gray-400">
         PHOIBLE is a repository of cross-linguistic phonological inventory data. Syncing imports phoneme inventories for languages and dialects, enabling phonological comparison across accent profiles.
       </p>
-      {inventoryCount != null && (
-        <p className="text-sm text-gray-300">{inventoryCount} phoneme inventories currently imported.</p>
+      {isSynced && (
+        <span className="inline-block px-3 py-1 bg-green-700 text-green-100 rounded text-sm font-medium">
+          Synced ({phoible.inventories} inventories)
+        </span>
       )}
-      <button onClick={handleSync} disabled={syncing} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded text-sm font-medium transition text-white">
-        {syncing ? "Syncing..." : "Sync Phoneme Data"}
+      {isActive && (
+        <div className="space-y-2">
+          <p className="text-sm text-gray-300">Syncing... {phoible.processed_entries}/{phoible.total_entries || "?"}</p>
+          <ProgressBar processed={phoible.processed_entries ?? 0} total={phoible.total_entries || 1} />
+        </div>
+      )}
+      <button onClick={handleSync} disabled={syncing || isActive} className={`px-4 py-2 rounded text-sm font-medium transition text-white ${isSynced ? "bg-gray-700 hover:bg-gray-600" : "bg-blue-600 hover:bg-blue-700"} disabled:bg-blue-800 disabled:cursor-not-allowed`}>
+        {syncing ? "Syncing..." : isSynced ? "Re-sync" : "Sync Phoneme Data"}
       </button>
       {error && <p className="text-sm text-red-400">{error}</p>}
     </div>
