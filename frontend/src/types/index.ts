@@ -231,6 +231,22 @@ export interface DiscoveryResult {
   total_count: number;
 }
 
+// --- Phoneme Inventory types ---
+
+export interface PhonemeInventory {
+  id: number;
+  inventory_id: number;
+  language_name: string;
+  iso639_3: string | null;
+  glottocode: string | null;
+  source_dataset: string | null;
+  consonants: string[];
+  vowels: string[];
+  tones: string[];
+  total_segments: number;
+  created_at: string;
+}
+
 export interface DiscoveryStats {
   total_speakers: number;
   total_samples: number;

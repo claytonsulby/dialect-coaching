@@ -23,6 +23,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Link to="/samples" className="text-sm text-gray-400 hover:text-gray-200 transition">
           Samples
         </Link>
+        <Link to="/phonemes" className="text-sm text-gray-400 hover:text-gray-200 transition">
+          Phonemes
+        </Link>
         <Link to="/imports" className="text-sm text-gray-400 hover:text-gray-200 transition">
           Import
         </Link>

@@ -211,6 +211,27 @@ class SpeakerSample(Base):
 
 # --- External Corpus Integration (Unit 5) ---
 
+class PhonemeInventory(Base):
+    __tablename__ = "phoneme_inventories"
+
+    id = Column(Integer, primary_key=True)
+    inventory_id = Column(Integer, nullable=False)
+    language_name = Column(String, nullable=False)
+    iso639_3 = Column(String, nullable=True)
+    glottocode = Column(String, nullable=True)
+    source_dataset = Column(String, nullable=True)
+    consonants_json = Column(Text, default="[]")
+    vowels_json = Column(Text, default="[]")
+    tones_json = Column(Text, default="[]")
+    total_segments = Column(Integer, default=0)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+
+    __table_args__ = (
+        Index("ix_phoneme_inventories_iso", "iso639_3"),
+        Index("ix_phoneme_inventories_inv_id", "inventory_id", unique=True),
+    )
+
+
 class ImportJob(Base):
     __tablename__ = "import_jobs"
 

@@ -350,3 +350,26 @@ class DiscoveryStats(BaseModel):
     total_samples: int = 0
     total_profiles: int = 0
     total_regions: int = 0
+
+
+# --- Phoneme Inventory schemas ---
+
+class PhonemeInventoryResponse(BaseModel):
+    id: int
+    inventory_id: int
+    language_name: str
+    iso639_3: str | None
+    glottocode: str | None
+    source_dataset: str | None
+    consonants: list[str] = []
+    vowels: list[str] = []
+    tones: list[str] = []
+    total_segments: int
+    created_at: datetime
+
+    model_config = {"from_attributes": True}
+
+
+class PhoibleSyncResponse(BaseModel):
+    job: ImportJobResponse
+    message: str

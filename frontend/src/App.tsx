@@ -12,6 +12,7 @@ import AccentProfileDetail from "./pages/AccentProfileDetail";
 import SampleLibrary from "./pages/SampleLibrary";
 import ImportManager from "./pages/ImportManager";
 import Discovery from "./pages/Discovery";
+import PhonemeInventories from "./pages/PhonemeInventories";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="/accent-profiles/:id" element={<AccentProfileDetail />} />
         <Route path="/samples" element={<SampleLibrary />} />
         <Route path="/imports" element={<ImportManager />} />
+        <Route path="/phonemes" element={<PhonemeInventories />} />
         <Route path="/discovery" element={<Discovery />} />
       </Routes>
     </Layout>

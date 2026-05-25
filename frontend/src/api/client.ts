@@ -187,6 +187,13 @@ export const api = {
     listJobs: () => request<any[]>("/imports/jobs"),
     getJob: (id: number) => request<any>(`/imports/jobs/${id}`),
   },
+  phonemes: {
+    sync: () => request<any>("/phonemes/sync", { method: "POST" }),
+    list: (params?: Record<string, string>) =>
+      request<any[]>(`/phonemes/inventories${params ? '?' + new URLSearchParams(params).toString() : ''}`),
+    get: (id: number) => request<any>(`/phonemes/inventories/${id}`),
+    getByLanguage: (iso: string) => request<any[]>(`/phonemes/languages/${iso}`),
+  },
   discovery: {
     search: (params: Record<string, string>) =>
       request<any>(`/discovery/search?${new URLSearchParams(params).toString()}`),
