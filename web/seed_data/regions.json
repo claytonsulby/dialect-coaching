@@ -1,0 +1,927 @@
+[
+  {
+    "name": "United States",
+    "region_type": "country",
+    "iso_code": "US",
+    "path": "us",
+    "children": [
+      {
+        "name": "Alabama",
+        "region_type": "state",
+        "iso_code": "US-AL",
+        "path": "us/al",
+        "children": [
+          {"name": "Birmingham", "region_type": "city", "path": "us/al/birmingham"},
+          {"name": "Mobile", "region_type": "city", "path": "us/al/mobile"}
+        ]
+      },
+      {
+        "name": "Alaska",
+        "region_type": "state",
+        "iso_code": "US-AK",
+        "path": "us/ak"
+      },
+      {
+        "name": "Arizona",
+        "region_type": "state",
+        "iso_code": "US-AZ",
+        "path": "us/az",
+        "children": [
+          {"name": "Phoenix", "region_type": "city", "path": "us/az/phoenix"},
+          {"name": "Tucson", "region_type": "city", "path": "us/az/tucson"}
+        ]
+      },
+      {
+        "name": "Arkansas",
+        "region_type": "state",
+        "iso_code": "US-AR",
+        "path": "us/ar"
+      },
+      {
+        "name": "California",
+        "region_type": "state",
+        "iso_code": "US-CA",
+        "path": "us/ca",
+        "children": [
+          {"name": "Los Angeles", "region_type": "city", "path": "us/ca/los_angeles"},
+          {"name": "San Francisco", "region_type": "city", "path": "us/ca/san_francisco"},
+          {"name": "San Diego", "region_type": "city", "path": "us/ca/san_diego"},
+          {"name": "San Jose", "region_type": "city", "path": "us/ca/san_jose"},
+          {"name": "Sacramento", "region_type": "city", "path": "us/ca/sacramento"}
+        ]
+      },
+      {
+        "name": "Colorado",
+        "region_type": "state",
+        "iso_code": "US-CO",
+        "path": "us/co",
+        "children": [
+          {"name": "Denver", "region_type": "city", "path": "us/co/denver"}
+        ]
+      },
+      {
+        "name": "Connecticut",
+        "region_type": "state",
+        "iso_code": "US-CT",
+        "path": "us/ct",
+        "children": [
+          {"name": "Hartford", "region_type": "city", "path": "us/ct/hartford"},
+          {"name": "New Haven", "region_type": "city", "path": "us/ct/new_haven"}
+        ]
+      },
+      {
+        "name": "Delaware",
+        "region_type": "state",
+        "iso_code": "US-DE",
+        "path": "us/de"
+      },
+      {
+        "name": "Florida",
+        "region_type": "state",
+        "iso_code": "US-FL",
+        "path": "us/fl",
+        "children": [
+          {"name": "Miami", "region_type": "city", "path": "us/fl/miami"},
+          {"name": "Jacksonville", "region_type": "city", "path": "us/fl/jacksonville"},
+          {"name": "Tampa", "region_type": "city", "path": "us/fl/tampa"}
+        ]
+      },
+      {
+        "name": "Georgia",
+        "region_type": "state",
+        "iso_code": "US-GA",
+        "path": "us/ga",
+        "children": [
+          {"name": "Atlanta", "region_type": "city", "path": "us/ga/atlanta"},
+          {"name": "Savannah", "region_type": "city", "path": "us/ga/savannah"},
+          {"name": "Augusta", "region_type": "city", "path": "us/ga/augusta"},
+          {"name": "Macon", "region_type": "city", "path": "us/ga/macon"}
+        ]
+      },
+      {
+        "name": "Hawaii",
+        "region_type": "state",
+        "iso_code": "US-HI",
+        "path": "us/hi",
+        "children": [
+          {"name": "Honolulu", "region_type": "city", "path": "us/hi/honolulu"}
+        ]
+      },
+      {
+        "name": "Idaho",
+        "region_type": "state",
+        "iso_code": "US-ID",
+        "path": "us/id"
+      },
+      {
+        "name": "Illinois",
+        "region_type": "state",
+        "iso_code": "US-IL",
+        "path": "us/il",
+        "children": [
+          {"name": "Chicago", "region_type": "city", "path": "us/il/chicago"},
+          {"name": "Springfield", "region_type": "city", "path": "us/il/springfield"}
+        ]
+      },
+      {
+        "name": "Indiana",
+        "region_type": "state",
+        "iso_code": "US-IN",
+        "path": "us/in",
+        "children": [
+          {"name": "Indianapolis", "region_type": "city", "path": "us/in/indianapolis"}
+        ]
+      },
+      {
+        "name": "Iowa",
+        "region_type": "state",
+        "iso_code": "US-IA",
+        "path": "us/ia"
+      },
+      {
+        "name": "Kansas",
+        "region_type": "state",
+        "iso_code": "US-KS",
+        "path": "us/ks"
+      },
+      {
+        "name": "Kentucky",
+        "region_type": "state",
+        "iso_code": "US-KY",
+        "path": "us/ky",
+        "children": [
+          {"name": "Louisville", "region_type": "city", "path": "us/ky/louisville"},
+          {"name": "Lexington", "region_type": "city", "path": "us/ky/lexington"}
+        ]
+      },
+      {
+        "name": "Louisiana",
+        "region_type": "state",
+        "iso_code": "US-LA",
+        "path": "us/la",
+        "children": [
+          {"name": "New Orleans", "region_type": "city", "path": "us/la/new_orleans"},
+          {"name": "Baton Rouge", "region_type": "city", "path": "us/la/baton_rouge"},
+          {"name": "Lafayette", "region_type": "city", "path": "us/la/lafayette"},
+          {"name": "Cajun Country", "region_type": "custom", "path": "us/la/cajun_country"}
+        ]
+      },
+      {
+        "name": "Maine",
+        "region_type": "state",
+        "iso_code": "US-ME",
+        "path": "us/me",
+        "children": [
+          {"name": "Portland", "region_type": "city", "path": "us/me/portland"}
+        ]
+      },
+      {
+        "name": "Maryland",
+        "region_type": "state",
+        "iso_code": "US-MD",
+        "path": "us/md",
+        "children": [
+          {"name": "Baltimore", "region_type": "city", "path": "us/md/baltimore"}
+        ]
+      },
+      {
+        "name": "Massachusetts",
+        "region_type": "state",
+        "iso_code": "US-MA",
+        "path": "us/ma",
+        "children": [
+          {"name": "Boston", "region_type": "city", "path": "us/ma/boston"},
+          {"name": "Cambridge", "region_type": "city", "path": "us/ma/cambridge"},
+          {"name": "Worcester", "region_type": "city", "path": "us/ma/worcester"},
+          {"name": "Cape Cod", "region_type": "custom", "path": "us/ma/cape_cod"},
+          {"name": "South Shore", "region_type": "custom", "path": "us/ma/south_shore"}
+        ]
+      },
+      {
+        "name": "Michigan",
+        "region_type": "state",
+        "iso_code": "US-MI",
+        "path": "us/mi",
+        "children": [
+          {"name": "Detroit", "region_type": "city", "path": "us/mi/detroit"},
+          {"name": "Grand Rapids", "region_type": "city", "path": "us/mi/grand_rapids"},
+          {"name": "Upper Peninsula", "region_type": "custom", "path": "us/mi/upper_peninsula"}
+        ]
+      },
+      {
+        "name": "Minnesota",
+        "region_type": "state",
+        "iso_code": "US-MN",
+        "path": "us/mn",
+        "children": [
+          {"name": "Minneapolis", "region_type": "city", "path": "us/mn/minneapolis"},
+          {"name": "Saint Paul", "region_type": "city", "path": "us/mn/saint_paul"},
+          {"name": "Iron Range", "region_type": "custom", "path": "us/mn/iron_range"}
+        ]
+      },
+      {
+        "name": "Mississippi",
+        "region_type": "state",
+        "iso_code": "US-MS",
+        "path": "us/ms",
+        "children": [
+          {"name": "Jackson", "region_type": "city", "path": "us/ms/jackson"},
+          {"name": "Mississippi Delta", "region_type": "custom", "path": "us/ms/delta"}
+        ]
+      },
+      {
+        "name": "Missouri",
+        "region_type": "state",
+        "iso_code": "US-MO",
+        "path": "us/mo",
+        "children": [
+          {"name": "Saint Louis", "region_type": "city", "path": "us/mo/saint_louis"},
+          {"name": "Kansas City", "region_type": "city", "path": "us/mo/kansas_city"},
+          {"name": "Ozarks", "region_type": "custom", "path": "us/mo/ozarks"}
+        ]
+      },
+      {
+        "name": "Montana",
+        "region_type": "state",
+        "iso_code": "US-MT",
+        "path": "us/mt"
+      },
+      {
+        "name": "Nebraska",
+        "region_type": "state",
+        "iso_code": "US-NE",
+        "path": "us/ne"
+      },
+      {
+        "name": "Nevada",
+        "region_type": "state",
+        "iso_code": "US-NV",
+        "path": "us/nv",
+        "children": [
+          {"name": "Las Vegas", "region_type": "city", "path": "us/nv/las_vegas"}
+        ]
+      },
+      {
+        "name": "New Hampshire",
+        "region_type": "state",
+        "iso_code": "US-NH",
+        "path": "us/nh"
+      },
+      {
+        "name": "New Jersey",
+        "region_type": "state",
+        "iso_code": "US-NJ",
+        "path": "us/nj",
+        "children": [
+          {"name": "Newark", "region_type": "city", "path": "us/nj/newark"},
+          {"name": "Jersey City", "region_type": "city", "path": "us/nj/jersey_city"},
+          {"name": "North Jersey", "region_type": "custom", "path": "us/nj/north_jersey"},
+          {"name": "South Jersey", "region_type": "custom", "path": "us/nj/south_jersey"},
+          {"name": "Jersey Shore", "region_type": "custom", "path": "us/nj/jersey_shore"}
+        ]
+      },
+      {
+        "name": "New Mexico",
+        "region_type": "state",
+        "iso_code": "US-NM",
+        "path": "us/nm"
+      },
+      {
+        "name": "New York",
+        "region_type": "state",
+        "iso_code": "US-NY",
+        "path": "us/ny",
+        "children": [
+          {"name": "New York City", "region_type": "city", "path": "us/ny/new_york_city",
+           "children": [
+              {"name": "Manhattan", "region_type": "neighborhood", "path": "us/ny/new_york_city/manhattan"},
+              {"name": "Brooklyn", "region_type": "neighborhood", "path": "us/ny/new_york_city/brooklyn"},
+              {"name": "Queens", "region_type": "neighborhood", "path": "us/ny/new_york_city/queens"},
+              {"name": "The Bronx", "region_type": "neighborhood", "path": "us/ny/new_york_city/the_bronx"},
+              {"name": "Staten Island", "region_type": "neighborhood", "path": "us/ny/new_york_city/staten_island"}
+           ]
+          },
+          {"name": "Long Island", "region_type": "custom", "path": "us/ny/long_island"},
+          {"name": "Buffalo", "region_type": "city", "path": "us/ny/buffalo"},
+          {"name": "Rochester", "region_type": "city", "path": "us/ny/rochester"},
+          {"name": "Syracuse", "region_type": "city", "path": "us/ny/syracuse"},
+          {"name": "Albany", "region_type": "city", "path": "us/ny/albany"},
+          {"name": "Hudson Valley", "region_type": "custom", "path": "us/ny/hudson_valley"}
+        ]
+      },
+      {
+        "name": "North Carolina",
+        "region_type": "state",
+        "iso_code": "US-NC",
+        "path": "us/nc",
+        "children": [
+          {"name": "Charlotte", "region_type": "city", "path": "us/nc/charlotte"},
+          {"name": "Raleigh", "region_type": "city", "path": "us/nc/raleigh"},
+          {"name": "Outer Banks", "region_type": "custom", "path": "us/nc/outer_banks"},
+          {"name": "Appalachian Region", "region_type": "custom", "path": "us/nc/appalachian"}
+        ]
+      },
+      {
+        "name": "North Dakota",
+        "region_type": "state",
+        "iso_code": "US-ND",
+        "path": "us/nd"
+      },
+      {
+        "name": "Ohio",
+        "region_type": "state",
+        "iso_code": "US-OH",
+        "path": "us/oh",
+        "children": [
+          {"name": "Cleveland", "region_type": "city", "path": "us/oh/cleveland"},
+          {"name": "Columbus", "region_type": "city", "path": "us/oh/columbus"},
+          {"name": "Cincinnati", "region_type": "city", "path": "us/oh/cincinnati"},
+          {"name": "Akron", "region_type": "city", "path": "us/oh/akron"}
+        ]
+      },
+      {
+        "name": "Oklahoma",
+        "region_type": "state",
+        "iso_code": "US-OK",
+        "path": "us/ok",
+        "children": [
+          {"name": "Oklahoma City", "region_type": "city", "path": "us/ok/oklahoma_city"},
+          {"name": "Tulsa", "region_type": "city", "path": "us/ok/tulsa"}
+        ]
+      },
+      {
+        "name": "Oregon",
+        "region_type": "state",
+        "iso_code": "US-OR",
+        "path": "us/or",
+        "children": [
+          {"name": "Portland", "region_type": "city", "path": "us/or/portland"}
+        ]
+      },
+      {
+        "name": "Pennsylvania",
+        "region_type": "state",
+        "iso_code": "US-PA",
+        "path": "us/pa",
+        "children": [
+          {"name": "Philadelphia", "region_type": "city", "path": "us/pa/philadelphia",
+           "children": [
+              {"name": "South Philadelphia", "region_type": "neighborhood", "path": "us/pa/philadelphia/south_philadelphia"},
+              {"name": "North Philadelphia", "region_type": "neighborhood", "path": "us/pa/philadelphia/north_philadelphia"},
+              {"name": "Kensington", "region_type": "neighborhood", "path": "us/pa/philadelphia/kensington"},
+              {"name": "Center City", "region_type": "neighborhood", "path": "us/pa/philadelphia/center_city"}
+           ]
+          },
+          {"name": "Pittsburgh", "region_type": "city", "path": "us/pa/pittsburgh",
+           "children": [
+              {"name": "South Side", "region_type": "neighborhood", "path": "us/pa/pittsburgh/south_side"},
+              {"name": "Strip District", "region_type": "neighborhood", "path": "us/pa/pittsburgh/strip_district"},
+              {"name": "Oakland", "region_type": "neighborhood", "path": "us/pa/pittsburgh/oakland"}
+           ]
+          },
+          {"name": "Delaware County", "region_type": "county", "path": "us/pa/delaware_county"},
+          {"name": "Chester County", "region_type": "county", "path": "us/pa/chester_county"},
+          {"name": "Montgomery County", "region_type": "county", "path": "us/pa/montgomery_county"},
+          {"name": "Bucks County", "region_type": "county", "path": "us/pa/bucks_county"},
+          {"name": "Lancaster County", "region_type": "county", "path": "us/pa/lancaster_county"},
+          {"name": "Lehigh Valley", "region_type": "custom", "path": "us/pa/lehigh_valley"},
+          {"name": "Scranton", "region_type": "city", "path": "us/pa/scranton"},
+          {"name": "Erie", "region_type": "city", "path": "us/pa/erie"}
+        ]
+      },
+      {
+        "name": "Rhode Island",
+        "region_type": "state",
+        "iso_code": "US-RI",
+        "path": "us/ri",
+        "children": [
+          {"name": "Providence", "region_type": "city", "path": "us/ri/providence"}
+        ]
+      },
+      {
+        "name": "South Carolina",
+        "region_type": "state",
+        "iso_code": "US-SC",
+        "path": "us/sc",
+        "children": [
+          {"name": "Charleston", "region_type": "city", "path": "us/sc/charleston"},
+          {"name": "Columbia", "region_type": "city", "path": "us/sc/columbia"},
+          {"name": "Lowcountry", "region_type": "custom", "path": "us/sc/lowcountry"}
+        ]
+      },
+      {
+        "name": "South Dakota",
+        "region_type": "state",
+        "iso_code": "US-SD",
+        "path": "us/sd"
+      },
+      {
+        "name": "Tennessee",
+        "region_type": "state",
+        "iso_code": "US-TN",
+        "path": "us/tn",
+        "children": [
+          {"name": "Nashville", "region_type": "city", "path": "us/tn/nashville"},
+          {"name": "Memphis", "region_type": "city", "path": "us/tn/memphis"},
+          {"name": "Knoxville", "region_type": "city", "path": "us/tn/knoxville"},
+          {"name": "Appalachian Region", "region_type": "custom", "path": "us/tn/appalachian"}
+        ]
+      },
+      {
+        "name": "Texas",
+        "region_type": "state",
+        "iso_code": "US-TX",
+        "path": "us/tx",
+        "children": [
+          {"name": "Houston", "region_type": "city", "path": "us/tx/houston"},
+          {"name": "Dallas", "region_type": "city", "path": "us/tx/dallas"},
+          {"name": "San Antonio", "region_type": "city", "path": "us/tx/san_antonio"},
+          {"name": "Austin", "region_type": "city", "path": "us/tx/austin"},
+          {"name": "Fort Worth", "region_type": "city", "path": "us/tx/fort_worth"},
+          {"name": "El Paso", "region_type": "city", "path": "us/tx/el_paso"},
+          {"name": "West Texas", "region_type": "custom", "path": "us/tx/west_texas"},
+          {"name": "East Texas", "region_type": "custom", "path": "us/tx/east_texas"},
+          {"name": "Rio Grande Valley", "region_type": "custom", "path": "us/tx/rio_grande_valley"}
+        ]
+      },
+      {
+        "name": "Utah",
+        "region_type": "state",
+        "iso_code": "US-UT",
+        "path": "us/ut",
+        "children": [
+          {"name": "Salt Lake City", "region_type": "city", "path": "us/ut/salt_lake_city"}
+        ]
+      },
+      {
+        "name": "Vermont",
+        "region_type": "state",
+        "iso_code": "US-VT",
+        "path": "us/vt"
+      },
+      {
+        "name": "Virginia",
+        "region_type": "state",
+        "iso_code": "US-VA",
+        "path": "us/va",
+        "children": [
+          {"name": "Richmond", "region_type": "city", "path": "us/va/richmond"},
+          {"name": "Norfolk", "region_type": "city", "path": "us/va/norfolk"},
+          {"name": "Tidewater", "region_type": "custom", "path": "us/va/tidewater"},
+          {"name": "Shenandoah Valley", "region_type": "custom", "path": "us/va/shenandoah_valley"}
+        ]
+      },
+      {
+        "name": "Washington",
+        "region_type": "state",
+        "iso_code": "US-WA",
+        "path": "us/wa",
+        "children": [
+          {"name": "Seattle", "region_type": "city", "path": "us/wa/seattle"}
+        ]
+      },
+      {
+        "name": "West Virginia",
+        "region_type": "state",
+        "iso_code": "US-WV",
+        "path": "us/wv",
+        "children": [
+          {"name": "Charleston", "region_type": "city", "path": "us/wv/charleston"}
+        ]
+      },
+      {
+        "name": "Wisconsin",
+        "region_type": "state",
+        "iso_code": "US-WI",
+        "path": "us/wi",
+        "children": [
+          {"name": "Milwaukee", "region_type": "city", "path": "us/wi/milwaukee"},
+          {"name": "Madison", "region_type": "city", "path": "us/wi/madison"}
+        ]
+      },
+      {
+        "name": "Wyoming",
+        "region_type": "state",
+        "iso_code": "US-WY",
+        "path": "us/wy"
+      }
+    ]
+  },
+  {
+    "name": "United Kingdom",
+    "region_type": "country",
+    "iso_code": "GB",
+    "path": "gb",
+    "children": [
+      {
+        "name": "England",
+        "region_type": "state",
+        "iso_code": "GB-ENG",
+        "path": "gb/eng",
+        "children": [
+          {"name": "London", "region_type": "city", "path": "gb/eng/london",
+           "children": [
+              {"name": "East London", "region_type": "neighborhood", "path": "gb/eng/london/east_london"},
+              {"name": "South London", "region_type": "neighborhood", "path": "gb/eng/london/south_london"},
+              {"name": "North London", "region_type": "neighborhood", "path": "gb/eng/london/north_london"},
+              {"name": "Cockney", "region_type": "custom", "path": "gb/eng/london/cockney"}
+           ]
+          },
+          {"name": "Liverpool", "region_type": "city", "path": "gb/eng/liverpool"},
+          {"name": "Manchester", "region_type": "city", "path": "gb/eng/manchester"},
+          {"name": "Birmingham", "region_type": "city", "path": "gb/eng/birmingham"},
+          {"name": "Newcastle", "region_type": "city", "path": "gb/eng/newcastle"},
+          {"name": "Leeds", "region_type": "city", "path": "gb/eng/leeds"},
+          {"name": "Sheffield", "region_type": "city", "path": "gb/eng/sheffield"},
+          {"name": "Bristol", "region_type": "city", "path": "gb/eng/bristol"},
+          {"name": "Nottingham", "region_type": "city", "path": "gb/eng/nottingham"},
+          {"name": "Leicester", "region_type": "city", "path": "gb/eng/leicester"},
+          {"name": "Cornwall", "region_type": "county", "path": "gb/eng/cornwall"},
+          {"name": "Devon", "region_type": "county", "path": "gb/eng/devon"},
+          {"name": "Norfolk", "region_type": "county", "path": "gb/eng/norfolk"},
+          {"name": "Suffolk", "region_type": "county", "path": "gb/eng/suffolk"},
+          {"name": "Yorkshire", "region_type": "county", "path": "gb/eng/yorkshire"},
+          {"name": "Lancashire", "region_type": "county", "path": "gb/eng/lancashire"},
+          {"name": "Essex", "region_type": "county", "path": "gb/eng/essex"},
+          {"name": "Kent", "region_type": "county", "path": "gb/eng/kent"},
+          {"name": "Somerset", "region_type": "county", "path": "gb/eng/somerset"},
+          {"name": "Dorset", "region_type": "county", "path": "gb/eng/dorset"},
+          {"name": "Northumberland", "region_type": "county", "path": "gb/eng/northumberland"},
+          {"name": "Cumbria", "region_type": "county", "path": "gb/eng/cumbria"},
+          {"name": "Black Country", "region_type": "custom", "path": "gb/eng/black_country"}
+        ]
+      },
+      {
+        "name": "Scotland",
+        "region_type": "state",
+        "iso_code": "GB-SCT",
+        "path": "gb/sct",
+        "children": [
+          {"name": "Glasgow", "region_type": "city", "path": "gb/sct/glasgow"},
+          {"name": "Edinburgh", "region_type": "city", "path": "gb/sct/edinburgh"},
+          {"name": "Aberdeen", "region_type": "city", "path": "gb/sct/aberdeen"},
+          {"name": "Dundee", "region_type": "city", "path": "gb/sct/dundee"},
+          {"name": "Highlands", "region_type": "custom", "path": "gb/sct/highlands"},
+          {"name": "Lowlands", "region_type": "custom", "path": "gb/sct/lowlands"}
+        ]
+      },
+      {
+        "name": "Wales",
+        "region_type": "state",
+        "iso_code": "GB-WLS",
+        "path": "gb/wls",
+        "children": [
+          {"name": "Cardiff", "region_type": "city", "path": "gb/wls/cardiff"},
+          {"name": "Swansea", "region_type": "city", "path": "gb/wls/swansea"},
+          {"name": "North Wales", "region_type": "custom", "path": "gb/wls/north_wales"},
+          {"name": "South Wales Valleys", "region_type": "custom", "path": "gb/wls/south_wales_valleys"}
+        ]
+      },
+      {
+        "name": "Northern Ireland",
+        "region_type": "state",
+        "iso_code": "GB-NIR",
+        "path": "gb/nir",
+        "children": [
+          {"name": "Belfast", "region_type": "city", "path": "gb/nir/belfast"},
+          {"name": "Derry", "region_type": "city", "path": "gb/nir/derry"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ireland",
+    "region_type": "country",
+    "iso_code": "IE",
+    "path": "ie",
+    "children": [
+      {
+        "name": "Leinster",
+        "region_type": "state",
+        "path": "ie/leinster",
+        "children": [
+          {"name": "Dublin", "region_type": "city", "path": "ie/leinster/dublin",
+           "children": [
+              {"name": "North Dublin", "region_type": "neighborhood", "path": "ie/leinster/dublin/north_dublin"},
+              {"name": "South Dublin", "region_type": "neighborhood", "path": "ie/leinster/dublin/south_dublin"}
+           ]
+          },
+          {"name": "Kilkenny", "region_type": "county", "path": "ie/leinster/kilkenny"},
+          {"name": "Wexford", "region_type": "county", "path": "ie/leinster/wexford"},
+          {"name": "Wicklow", "region_type": "county", "path": "ie/leinster/wicklow"},
+          {"name": "Meath", "region_type": "county", "path": "ie/leinster/meath"},
+          {"name": "Westmeath", "region_type": "county", "path": "ie/leinster/westmeath"},
+          {"name": "Louth", "region_type": "county", "path": "ie/leinster/louth"},
+          {"name": "Kildare", "region_type": "county", "path": "ie/leinster/kildare"}
+        ]
+      },
+      {
+        "name": "Munster",
+        "region_type": "state",
+        "path": "ie/munster",
+        "children": [
+          {"name": "Cork", "region_type": "city", "path": "ie/munster/cork"},
+          {"name": "Limerick", "region_type": "city", "path": "ie/munster/limerick"},
+          {"name": "Kerry", "region_type": "county", "path": "ie/munster/kerry"},
+          {"name": "Clare", "region_type": "county", "path": "ie/munster/clare"},
+          {"name": "Tipperary", "region_type": "county", "path": "ie/munster/tipperary"},
+          {"name": "Waterford", "region_type": "county", "path": "ie/munster/waterford"}
+        ]
+      },
+      {
+        "name": "Connacht",
+        "region_type": "state",
+        "path": "ie/connacht",
+        "children": [
+          {"name": "Galway", "region_type": "city", "path": "ie/connacht/galway"},
+          {"name": "Mayo", "region_type": "county", "path": "ie/connacht/mayo"},
+          {"name": "Sligo", "region_type": "county", "path": "ie/connacht/sligo"},
+          {"name": "Roscommon", "region_type": "county", "path": "ie/connacht/roscommon"},
+          {"name": "Leitrim", "region_type": "county", "path": "ie/connacht/leitrim"}
+        ]
+      },
+      {
+        "name": "Ulster",
+        "region_type": "state",
+        "path": "ie/ulster",
+        "children": [
+          {"name": "Donegal", "region_type": "county", "path": "ie/ulster/donegal"},
+          {"name": "Cavan", "region_type": "county", "path": "ie/ulster/cavan"},
+          {"name": "Monaghan", "region_type": "county", "path": "ie/ulster/monaghan"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Australia",
+    "region_type": "country",
+    "iso_code": "AU",
+    "path": "au",
+    "children": [
+      {
+        "name": "New South Wales",
+        "region_type": "state",
+        "iso_code": "AU-NSW",
+        "path": "au/nsw",
+        "children": [
+          {"name": "Sydney", "region_type": "city", "path": "au/nsw/sydney"},
+          {"name": "Newcastle", "region_type": "city", "path": "au/nsw/newcastle"}
+        ]
+      },
+      {
+        "name": "Victoria",
+        "region_type": "state",
+        "iso_code": "AU-VIC",
+        "path": "au/vic",
+        "children": [
+          {"name": "Melbourne", "region_type": "city", "path": "au/vic/melbourne"}
+        ]
+      },
+      {
+        "name": "Queensland",
+        "region_type": "state",
+        "iso_code": "AU-QLD",
+        "path": "au/qld",
+        "children": [
+          {"name": "Brisbane", "region_type": "city", "path": "au/qld/brisbane"},
+          {"name": "Gold Coast", "region_type": "city", "path": "au/qld/gold_coast"}
+        ]
+      },
+      {
+        "name": "South Australia",
+        "region_type": "state",
+        "iso_code": "AU-SA",
+        "path": "au/sa",
+        "children": [
+          {"name": "Adelaide", "region_type": "city", "path": "au/sa/adelaide"}
+        ]
+      },
+      {
+        "name": "Western Australia",
+        "region_type": "state",
+        "iso_code": "AU-WA",
+        "path": "au/wa",
+        "children": [
+          {"name": "Perth", "region_type": "city", "path": "au/wa/perth"}
+        ]
+      },
+      {
+        "name": "Tasmania",
+        "region_type": "state",
+        "iso_code": "AU-TAS",
+        "path": "au/tas",
+        "children": [
+          {"name": "Hobart", "region_type": "city", "path": "au/tas/hobart"}
+        ]
+      },
+      {
+        "name": "Northern Territory",
+        "region_type": "state",
+        "iso_code": "AU-NT",
+        "path": "au/nt",
+        "children": [
+          {"name": "Darwin", "region_type": "city", "path": "au/nt/darwin"}
+        ]
+      },
+      {
+        "name": "Australian Capital Territory",
+        "region_type": "state",
+        "iso_code": "AU-ACT",
+        "path": "au/act",
+        "children": [
+          {"name": "Canberra", "region_type": "city", "path": "au/act/canberra"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Canada",
+    "region_type": "country",
+    "iso_code": "CA",
+    "path": "ca",
+    "children": [
+      {
+        "name": "Ontario",
+        "region_type": "state",
+        "iso_code": "CA-ON",
+        "path": "ca/on",
+        "children": [
+          {"name": "Toronto", "region_type": "city", "path": "ca/on/toronto"},
+          {"name": "Ottawa", "region_type": "city", "path": "ca/on/ottawa"},
+          {"name": "Hamilton", "region_type": "city", "path": "ca/on/hamilton"}
+        ]
+      },
+      {
+        "name": "Quebec",
+        "region_type": "state",
+        "iso_code": "CA-QC",
+        "path": "ca/qc",
+        "children": [
+          {"name": "Montreal", "region_type": "city", "path": "ca/qc/montreal"},
+          {"name": "Quebec City", "region_type": "city", "path": "ca/qc/quebec_city"}
+        ]
+      },
+      {
+        "name": "British Columbia",
+        "region_type": "state",
+        "iso_code": "CA-BC",
+        "path": "ca/bc",
+        "children": [
+          {"name": "Vancouver", "region_type": "city", "path": "ca/bc/vancouver"},
+          {"name": "Victoria", "region_type": "city", "path": "ca/bc/victoria"}
+        ]
+      },
+      {
+        "name": "Alberta",
+        "region_type": "state",
+        "iso_code": "CA-AB",
+        "path": "ca/ab",
+        "children": [
+          {"name": "Calgary", "region_type": "city", "path": "ca/ab/calgary"},
+          {"name": "Edmonton", "region_type": "city", "path": "ca/ab/edmonton"}
+        ]
+      },
+      {
+        "name": "Manitoba",
+        "region_type": "state",
+        "iso_code": "CA-MB",
+        "path": "ca/mb",
+        "children": [
+          {"name": "Winnipeg", "region_type": "city", "path": "ca/mb/winnipeg"}
+        ]
+      },
+      {
+        "name": "Saskatchewan",
+        "region_type": "state",
+        "iso_code": "CA-SK",
+        "path": "ca/sk",
+        "children": [
+          {"name": "Regina", "region_type": "city", "path": "ca/sk/regina"},
+          {"name": "Saskatoon", "region_type": "city", "path": "ca/sk/saskatoon"}
+        ]
+      },
+      {
+        "name": "Nova Scotia",
+        "region_type": "state",
+        "iso_code": "CA-NS",
+        "path": "ca/ns",
+        "children": [
+          {"name": "Halifax", "region_type": "city", "path": "ca/ns/halifax"},
+          {"name": "Cape Breton", "region_type": "custom", "path": "ca/ns/cape_breton"}
+        ]
+      },
+      {
+        "name": "New Brunswick",
+        "region_type": "state",
+        "iso_code": "CA-NB",
+        "path": "ca/nb",
+        "children": [
+          {"name": "Saint John", "region_type": "city", "path": "ca/nb/saint_john"},
+          {"name": "Moncton", "region_type": "city", "path": "ca/nb/moncton"}
+        ]
+      },
+      {
+        "name": "Newfoundland and Labrador",
+        "region_type": "state",
+        "iso_code": "CA-NL",
+        "path": "ca/nl",
+        "children": [
+          {"name": "St. John's", "region_type": "city", "path": "ca/nl/st_johns"}
+        ]
+      },
+      {
+        "name": "Prince Edward Island",
+        "region_type": "state",
+        "iso_code": "CA-PE",
+        "path": "ca/pe"
+      },
+      {
+        "name": "Northwest Territories",
+        "region_type": "state",
+        "iso_code": "CA-NT",
+        "path": "ca/nt"
+      },
+      {
+        "name": "Yukon",
+        "region_type": "state",
+        "iso_code": "CA-YT",
+        "path": "ca/yt"
+      },
+      {
+        "name": "Nunavut",
+        "region_type": "state",
+        "iso_code": "CA-NU",
+        "path": "ca/nu"
+      }
+    ]
+  },
+  {
+    "name": "New Zealand",
+    "region_type": "country",
+    "iso_code": "NZ",
+    "path": "nz",
+    "children": [
+      {
+        "name": "North Island",
+        "region_type": "state",
+        "path": "nz/north_island",
+        "children": [
+          {"name": "Auckland", "region_type": "city", "path": "nz/north_island/auckland"},
+          {"name": "Wellington", "region_type": "city", "path": "nz/north_island/wellington"}
+        ]
+      },
+      {
+        "name": "South Island",
+        "region_type": "state",
+        "path": "nz/south_island",
+        "children": [
+          {"name": "Christchurch", "region_type": "city", "path": "nz/south_island/christchurch"},
+          {"name": "Dunedin", "region_type": "city", "path": "nz/south_island/dunedin"},
+          {"name": "Southland", "region_type": "custom", "path": "nz/south_island/southland"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "South Africa",
+    "region_type": "country",
+    "iso_code": "ZA",
+    "path": "za",
+    "children": [
+      {
+        "name": "Gauteng",
+        "region_type": "state",
+        "iso_code": "ZA-GP",
+        "path": "za/gp",
+        "children": [
+          {"name": "Johannesburg", "region_type": "city", "path": "za/gp/johannesburg"},
+          {"name": "Pretoria", "region_type": "city", "path": "za/gp/pretoria"}
+        ]
+      },
+      {
+        "name": "Western Cape",
+        "region_type": "state",
+        "iso_code": "ZA-WC",
+        "path": "za/wc",
+        "children": [
+          {"name": "Cape Town", "region_type": "city", "path": "za/wc/cape_town"}
+        ]
+      },
+      {
+        "name": "KwaZulu-Natal",
+        "region_type": "state",
+        "iso_code": "ZA-KZN",
+        "path": "za/kzn",
+        "children": [
+          {"name": "Durban", "region_type": "city", "path": "za/kzn/durban"}
+        ]
+      },
+      {
+        "name": "Eastern Cape",
+        "region_type": "state",
+        "iso_code": "ZA-EC",
+        "path": "za/ec"
+      }
+    ]
+  }
+]
