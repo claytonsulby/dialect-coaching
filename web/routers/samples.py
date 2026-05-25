@@ -31,6 +31,7 @@ def _sample_to_response(sample: SpeakerSample) -> dict:
         "accent_profile_id": sample.accent_profile_id,
         "accent_profile_name": sample.accent_profile.name if sample.accent_profile else None,
         "audio_resource_id": sample.audio_resource_id,
+        "project_id": sample.project_id,
         "quality_rating": sample.quality_rating,
         "accent_strength": sample.accent_strength,
         "is_curated": bool(sample.is_curated),
@@ -42,6 +43,7 @@ def _sample_to_response(sample: SpeakerSample) -> dict:
 
 @router.get("", response_model=list[SampleResponse])
 def list_samples(
+    project_id: int | None = None,
     speaker_id: int | None = None,
     accent_profile_id: int | None = None,
     min_strength: float | None = None,
@@ -52,6 +54,8 @@ def list_samples(
     db: Session = Depends(get_db),
 ):
     q = db.query(SpeakerSample)
+    if project_id is not None:
+        q = q.filter(SpeakerSample.project_id == project_id)
     if speaker_id is not None:
         q = q.filter(SpeakerSample.speaker_id == speaker_id)
     if accent_profile_id is not None:
